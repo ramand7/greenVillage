@@ -11,10 +11,6 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: DetailsRepository::class)]
 class Details
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column]
-    private ?int $id = null;
 
     #[ORM\Column]
     private ?int $quantite = null;
@@ -22,16 +18,13 @@ class Details
     #[ORM\Column(type: Types::DECIMAL, precision: 7, scale: 2)]
     private ?string $prixunitaire = null;
 
+    #[ORM\Id]
     #[ORM\OneToOne(cascade: ['persist', 'remove'])]
     private ?Commande $commande = null;
 
+    #[ORM\Id]
     #[ORM\ManyToOne(inversedBy: 'details')]
     private ?Produit $produit = null;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function getQuantite(): ?int
     {

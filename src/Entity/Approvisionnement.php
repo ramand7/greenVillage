@@ -10,10 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: ApprovisionnementRepository::class)]
 class Approvisionnement
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column]
-    private ?int $id = null;
+
 
     #[ORM\Column(options: ['default' => 'CURRENT_TIMESTAMP'])]
     private ?\DateTimeImmutable $date = null;
@@ -21,16 +18,13 @@ class Approvisionnement
     #[ORM\Column]
     private ?int $quantite = null;
 
+    #[ORM\Id]
     #[ORM\ManyToOne(inversedBy: 'approvisionnements')]
     private ?Fournisseur $fournisseur = null;
 
+    #[ORM\Id]
     #[ORM\ManyToOne(inversedBy: 'approvisionnements')]
     private ?Produit $produit = null;
-
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
 
     public function getDate(): ?\DateTimeImmutable
     {
