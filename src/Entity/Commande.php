@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Trait\DateTrait;
 use App\Repository\CommandeRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -11,6 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: CommandeRepository::class)]
 class Commande
 {
+    use DateTrait;
+    
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -24,9 +27,6 @@ class Commande
 
     #[ORM\Column(type: Types::DECIMAL, precision: 5, scale: 2)]
     private ?string $frais = null;
-
-    #[ORM\Column(options: ['default' => 'CURRENT_TIMESTAMP'])]
-    private ?\DateTimeImmutable $date = null;
 
     #[ORM\OneToMany(targetEntity: Facture::class, mappedBy: 'commande')]
     private Collection $factures;
@@ -42,6 +42,7 @@ class Commande
         $this->factures = new ArrayCollection();
         $this->livraisons = new ArrayCollection();
         $this->coupons = new ArrayCollection();
+        $this->date = new \DateTimeImmutable();
     }
 
     public function getId(): ?int
@@ -81,18 +82,6 @@ class Commande
     public function setFrais(string $frais): static
     {
         $this->frais = $frais;
-
-        return $this;
-    }
-
-    public function getDate(): ?\DateTimeInterface
-    {
-        return $this->date;
-    }
-
-    public function setDate(\DateTimeInterface $date): static
-    {
-        $this->date = $date;
 
         return $this;
     }

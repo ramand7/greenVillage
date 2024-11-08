@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\Trait\DateTrait;
 use App\Entity\User\Utilisateur;
 use App\Repository\CouponRepository;
 use Doctrine\DBAL\Types\Types;
@@ -10,6 +11,8 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: CouponRepository::class)]
 class Coupon
 {
+    use DateTrait;
+    
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -30,8 +33,7 @@ class Coupon
     #[ORM\Column]
     private ?bool $is_valid = null;
 
-    #[ORM\Column(options: ['default' => 'CURRENT_TIMESTAMP'])]
-    private ?\DateTimeImmutable $created_at = null;
+
 
     #[ORM\ManyToOne(inversedBy: 'coupons')]
     private ?Commande $commande = null;
@@ -100,18 +102,6 @@ class Coupon
     public function setIsValid(bool $is_valid): static
     {
         $this->is_valid = $is_valid;
-
-        return $this;
-    }
-
-    public function getCreatedAt(): ?\DateTimeImmutable
-    {
-        return $this->created_at;
-    }
-
-    public function setCreatedAt(\DateTimeImmutable $created_at): static
-    {
-        $this->created_at = $created_at;
 
         return $this;
     }

@@ -16,7 +16,7 @@ class Produit
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 10)]
+    #[ORM\Column(length: 15)]
     private ?string $libelle = null;
 
     #[ORM\Column(length: 255)]
