@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfilController!{% endblock %}
+
+{% block body %}
+
+ 
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-sm-8 offset-sm-2">
+                <h1>Vos informations</h1>
+                <table class="table table-light table-hover">
+
+{#    
+				<div class="row">
+            {% for information in informations %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{ asset('images/' ~ produit.image) }}" class="card-img-top" alt="{{ produit.nom }}">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ produit.nom }}</h3>
+                            <p class="card-text">Prix : {{ produit.prix }}€</p>       
+                            <a href="#" class="btn btn-primary">Acheter</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}     
+        </div>
+
+#}
+                    <thead>
+                    <tr>
+                        <th>E-mail</th>
+												<th>Nom</th>
+												<th>Prénom</th>
+												<th>Rôles</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{ userInfo.email }}</td>
+												<td>{{ userInfo.nom }}</td>
+												<td>{{ userInfo.prenom }}</td> 
+												<td>
+													
+												{% for role in userInfo.roles %}
+												{{ role }}{% if not loop.last %}, {% endif %}
+
+
+												{% endfor %}
+													</td> 
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

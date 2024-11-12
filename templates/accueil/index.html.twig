@@ -1,0 +1,137 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Village Green - Accueil{% endblock %}
+
+{% block stylesheets %} 
+
+{% endblock %}
+
+{% block body %}
+
+{% include "_partials/_nav.html.twig" %}
+
+<!-- En-tête du site avec Bootstrap Navbar -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="{{ asset('images/logo1.png') }}" alt="Nom du Site" height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Promotions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Rechercher des produits..." aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Rechercher</button>
+                </form>
+                <div class="ms-3">
+                    <a href="{{ path('app_login') }}" class="btn btn-outline-light">Mon Compte</a>
+                    <a href="{{ path('app_register') }}" class="btn btn-outline-light">S'inscrire</a>
+                    <a href="#" class="btn btn-outline-light">Panier</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="ms-3">
+                    <a href="#" class="btn btn-outline-light">Guitares</a>
+                    <a href="#" class="btn btn-outline-light">Claviers</a>
+                    <a href="#" class="btn btn-outline-light">Batteries</a>
+                    <a href="#" class="btn btn-outline-light">Saxophone</a>
+                    <a href="#" class="btn btn-outline-light">Accessoires</a>
+                    <a href="#" class="btn btn-outline-light">Sonorisation</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Bannière principale -->
+<section class="banner text-center position-relative">
+    <img src="{{ asset('images/banniere.jpg') }}" class="img-fluid" alt="Promotion">
+    <div class="banner-text position-absolute top-50 start-50 translate-middle text-white">
+        <h1>Bienvenue sur Village Green</h1>
+        <p>Découvrez nos meilleures offres du moment !</p>
+        <a href="#" class="btn btn-primary">Voir les Offres</a>
+    </div>
+</section>
+
+<!-- Section des produits phares -->
+
+ <!-- Intégrer le carousel pour faire défiler les produits phares -->
+
+{% include "_partials/_carousel.html.twig" %}
+
+<!-- Section des témoignages / avis clients -->
+<section class="testimonials bg-light text-center py-5">
+    <h2>Ce que disent nos clients</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <blockquote class="blockquote">
+                    <p>"Produit de qualité et service rapide ! Je recommande vivement."</p>
+                    <footer class="blockquote-footer">Client satisfait</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-6 mb-4">
+                <blockquote class="blockquote">
+                    <p>"Excellent rapport qualité-prix. Livraison rapide."</p>
+                    <footer class="blockquote-footer">Client fidèle</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pied de page -->
+<footer class="bg-dark text-white py-4">
+    <div class="container bg-dark text-white">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>À propos</h5>
+                <h6>Description rapide de votre site e-commerce.</h6> 
+            </div>
+            <div class="col-md-4">
+                <h5>Liens utiles</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Mentions légales</a></li>
+                    <li><a href="#" class="text-white">Politique de confidentialité</a></li>
+                    <li><a href="#" class="text-white">Conditions générales</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Suivez-nous</h5>
+                <a href="#" class="text-white me-2">Facebook</a>
+                <a href="#" class="text-white me-2">Instagram</a>
+                <a href="#" class="text-white">Twitter</a>
+            </div>
+        </div>
+        <div class="text-red text-center mt-3">
+            &copy; 2024 Village Green. Tous droits réservés.
+        </div>
+    </div>
+</footer>
+
+{% endblock %}

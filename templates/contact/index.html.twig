@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire de contact{% endblock %}
+
+{% block body %}
+
+	<section class="container my-3">
+    <div class="row">
+			<div class="col">
+    		
+				{{ form_start(form) }}
+
+      	{{ form_errors(form) }}
+
+
+			<fieldset class="my-3">
+
+	   			{{ form_row(form.objet) }}
+
+			</fieldset>
+			<fieldset class="my-3">
+
+       		{{ form_row(form.email) }}
+
+			</fieldset>
+			<fieldset class="my-3">
+  
+	     		{{ form_row(form.message) }} 
+
+			</fieldset>
+
+		 		</div>
+			</fieldset>
+    		
+				{{ form_end(form) }}
+
+			</div>
+
+			<button type="submit" class="btn btn-success btn-lg mt-3">
+				<h6>Envoyer</h6>
+			</button>
+
+		</div>
+
+	</section>
+
+
+
+{% endblock %}

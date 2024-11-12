@@ -1,0 +1,30 @@
+<body>
+    <h1>Informations sur l'utilisateur connecté</h1>
+    
+    <table border="1">
+        <tr>
+            <th>Propriété</th>
+            <th>Valeur</th>
+        </tr>
+        <tr>
+            <td>E-mail</td>
+            <td>{{ userInfo.email }}</td>
+        </tr>
+        <tr>
+            <td>Nom</td>
+            <td>{{ userInfo.nom }}</td>
+        </tr>
+        <tr>
+            <td>Prénom</td>
+            <td>{{ userInfo.prenom }}</td>
+        </tr>
+        <tr>
+            <td>Roles</td>
+            <td>
+                {% for role in userInfo.roles %}
+                    {{ role }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+</body>

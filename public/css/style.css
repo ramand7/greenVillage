@@ -1,0 +1,18 @@
+body {
+  background-color: #e9e2e2;
+}
+h1 {
+  color: #0a6922;
+}
+p {
+  color: #131212;
+} 
+/* Pour centrer le carrousel */
+.featured-products .carousel {
+    max-width: 600px; /* Largeur maximale du carrousel */
+    margin: 0 auto; /* Centrage */
+}
+/* Pour le copyright */
+.copyright {
+  color: #ff2222;
+}
