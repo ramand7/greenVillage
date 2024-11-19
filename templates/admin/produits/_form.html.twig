@@ -1,16 +1,16 @@
 {{ form_start(form) }}
 
-    {{ form_widget(form) }}
+    {# {{ form_widget(form) }} #}
 
-    {# {{ form_row(form.libelle) }} #}
+    {{ form_row(form.libelle) }}
     {{ form_row(form.description) }} 
-    {{ form_row(form.message) }}
-    {{ form_row(form.message) }}
-    {{ form_row(form.message) }}
-    {{ form_row(form.message) }}
+    {{ form_row(form.prixht) }}
+    {{ form_row(form.tva) }}
+    {{ form_row(form.stock) }}
+    {{ form_row(form.photo) }}
 
-    		
+    <button class="btn">{{ button_label|default('Save') }}</button>    		
+
 {{ form_end(form) }}
 
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+

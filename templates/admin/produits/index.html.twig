@@ -3,10 +3,14 @@
 {% block title %}Produit index{% endblock %}
 
 {% block body %}
-    <h1>Produit index</h1>
-
-    <table class="table">
-        <thead>
+    
+    <h1 class="my-4 text-center text-primary">LISTE DES PRODUITS</h1>
+    <a href="{{ path('app_produit_new') }}" class="btn btn-success mb-3">CRÉER</a>
+    <table class="table table-striped-column table-bordered">
+    {# <h1>Produit index</h1> #}
+     <thead class="table-light">
+    {# <table class="table"> #}
+        {# <thead> #}
             <tr>
                 <th>Id</th>
                 <th>Libelle</th>
@@ -14,8 +18,7 @@
                 <th>Prixht</th>
                 <th>Tva</th>
                 <th>Stock</th>
-                <th>Photo</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -27,19 +30,25 @@
                 <td>{{ produit.prixht }}</td>
                 <td>{{ produit.tva }}</td>
                 <td>{{ produit.stock }}</td>
-                <td>{{ produit.photo }}</td>
-                <td>
-                    <a href="{{ path('app_produit_show', {'id': produit.id}) }}">show</a>
-                    <a href="{{ path('app_produit_edit', {'id': produit.id}) }}">edit</a>
+                {# <td>{{ produit.photo }}</td> #}
+                <td class="col text-center ">
+                   
+									  {# <a href="{{ path('app_produit_show', {'id': produit.id}) }}">VOIR</a> #}
+										<a href="{{ path('app_produit_show', {'id': produit.id}) }}" class="btn btn-primary my-0">VOIR</a>
+                    <a href="{{ path('app_produit_edit', {'id': produit.id}) }}" class="btn btn-secondary my-0">MODIFIER</a> 
+										<form method="post" action="{{ path('app_produit_delete', {'id': produit.id}) }}" style="display:inline;" onsubmit="return confirm('Êtes-vous sûr ?');">
+                        {# <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ produit.id) }}"> #}
+                        <button class="btn btn-danger btn-sm align-center"><h6>SUPPRIMER</h6></button>
+                    </form>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="8" class="text-center">Aucun produit trouvé.</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_produit_new') }}">Create new</a>
+    {# <a href="{{ path('app_produit_new') }}">Create new</a> #}
 {% endblock %}

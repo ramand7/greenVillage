@@ -28,7 +28,7 @@ class AdminController extends AbstractController
 
 		// Pour la gestion des produits
 
-		#[Route('/produits', name: 'app_produit_index', methods: ['GET'])]
+	#[Route('/produits', name: 'app_produit_index', methods: ['GET'])]
     public function indexProduit(ProduitRepository $produitRepository): Response
     {
         return $this->render('admin/produits/index.html.twig', [
@@ -36,7 +36,7 @@ class AdminController extends AbstractController
         ]);
     }
 
-    #[Route('produits/new', name: 'app_produit_new', methods: ['GET', 'POST'])]
+    #[Route('/produits/new', name: 'app_produit_new', methods: ['GET', 'POST'])]
     public function newProd(Request $request, EntityManagerInterface $entityManager): Response
     {
         $produit = new Produit();
@@ -70,7 +70,7 @@ class AdminController extends AbstractController
         ]);
     }
 
-    #[Route('produits/{id}/edit', name: 'app_produit_edit', methods: ['GET', 'POST'])]
+    #[Route('/produits/{id}/edit', name: 'app_produit_edit', methods: ['GET', 'POST'])]
     public function editProd(Request $request, Produit $produit, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(ProduitType::class, $produit);
@@ -161,9 +161,9 @@ class AdminController extends AbstractController
     }
     
     #[Route('/{id}/edit', name: 'app_categories_edit', methods: ['GET', 'POST'])]
-    public function editCat(Request $request, Categories $category, EntityManagerInterface $entityManager): Response
+    public function editCat(Request $request, Categories $categorie, EntityManagerInterface $entityManager): Response
     {
-        $form = $this->createForm(CategoriesType::class, $category);
+        $form = $this->createForm(CategoriesType::class, $categorie);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -173,7 +173,7 @@ class AdminController extends AbstractController
         }
 
         return $this->render('admin/categories/edit.html.twig', [
-            'category' => $category,
+            'categorie' => $categorie,
             'form' => $form,
         ]);
     }
