@@ -22,7 +22,7 @@ class ProfilController extends AbstractController
 		#[Route('/', name: 'display')]
     public function index(): Response
     {
-    //    $user = new Utilisateur();
+    //  $user = new Utilisateur();
 				$user = $this->getUser(); // On s'assure qu'un utilisateur est connecté avant d'accéder à ses informations
 
 				if(!$user instanceof Utilisateur){
@@ -33,7 +33,8 @@ class ProfilController extends AbstractController
 				
 				if($identifiant){
 						
-						$info = $this->userRepo->findOneBy(["email" => $identifiant]); // On vérifie qu'on a bien un utilisateur qui a ce mail dans la base de données
+						// $info = 
+                        $this->userRepo->findOneBy(["email" => $identifiant]); // On vérifie qu'on a bien un utilisateur qui a ce mail dans la base de données
 				
 				// Créer un tableau des informations de l'utilisateur
 				
@@ -51,7 +52,7 @@ class ProfilController extends AbstractController
         ]);
     }
 
-		    // Pour la mise à jour des rôles 
+		    // Pour la mise à jour des rôles  !!! Seul un ROLE_ADMIN a le droit de le faire !!!
 
     #[Route('/', name: 'update')]
 
@@ -69,13 +70,15 @@ class ProfilController extends AbstractController
 			$info = $this->userRepo->findOneBy(["email" => $identifiant1()]);
 
     	if ($request->isMethod('POST')) {
+
         $roles = $request->request->get('roles', []);
         $info->setRoles($roles[]);
         $this->userRepo->save($info, true);
 
         $this->addFlash('success', 'Rôles mis à jour avec succès !');
         
-        return $this->redirectToRoute('app_profil');
+        return $this->redirectToRoute('profil_');
+
     	}
 
     	return $this->render('profil/update.html.twig', [

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Entity\Trait\SlugTrait;
 use App\Repository\CategoriesRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -9,6 +10,8 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CategoriesRepository::class)]
+#[ApiResource]
+
 class Categories
 {
     use SlugTrait;
@@ -20,6 +23,13 @@ class Categories
 
     #[ORM\Column(length: 100)]
     private ?string $nom = null;
+
+    // Ajoutez une méthode __toString()
+    public function __toString(): string
+    {
+        // Retournez ici une propriété descriptive, par exemple "nom"
+        return $this->nom ?? 'Unknown Category';
+    }
 
     #[ORM\ManyToOne(targetEntity: self::class, inversedBy: 'categories')]
     #[ORM\JoinColumn(onDelete: 'CASCADE')]

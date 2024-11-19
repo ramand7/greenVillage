@@ -2,6 +2,7 @@
 
 namespace App\Entity\User;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Entity\Coupon;
 use App\Entity\Trait\DateTrait;
 use App\Repository\UtilisateurRepository;
@@ -12,8 +13,10 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
+#[ApiResource]
 #[ORM\Entity(repositoryClass: UtilisateurRepository::class)]
 #[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
+
 class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 {
     use DateTrait;
