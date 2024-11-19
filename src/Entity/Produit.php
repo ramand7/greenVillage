@@ -43,9 +43,13 @@ class Produit
     #[ORM\OneToMany(targetEntity: Details::class, mappedBy: 'produit')]
     private Collection $details;
 
+    #[ORM\OneToMany(targetEntity: CartItem::class, mappedBy: 'produit')]
+    private Collection $cartItems;
+
     public function __construct()
     {
         $this->details = new ArrayCollection();
+        $this->cartItems = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -161,6 +165,36 @@ class Produit
             // set the owning side to null (unless already changed)
             if ($detail->getProduit() === $this) {
                 $detail->setProduit(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, CartItem>
+     */
+    public function getCartItems(): Collection
+    {
+        return $this->cartItems;
+    }
+
+    public function addCartItems(CartItem $cartItem): static
+    {
+        if (!$this->cartItems->contains($cartItem)) {
+            $this->cartItems->add($cartItem);
+            $cartItem->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCartItems(CartItem $cartItem): static
+    {
+        if ($this->cartItems->removeElement($cartItem)) {
+            // set the owning side to null (unless already changed)
+            if ($cartItem->getProduit() === $this) {
+                $cartItem->setProduit(null);
             }
         }
 
