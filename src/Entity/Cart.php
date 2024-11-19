@@ -19,7 +19,7 @@ class Cart
     #[ORM\OneToMany(targetEntity: CartItem::class, mappedBy: 'cart', cascade: ['persist', 'remove'])]
     private Collection $items;
 
-    #[ORM\Column(type: 'bool')]
+    #[ORM\Column(type: 'boolean')]
     private ?bool $isActive = true;
 
     #[ORM\ManyToOne(targetEntity: Utilisateur::class, inversedBy: 'carts')]

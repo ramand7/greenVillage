@@ -5,10 +5,10 @@
 {% block body %}
     
     <h1 class="my-4 text-center text-primary">LISTE DES PRODUITS</h1>
-    <a href="{{ path('app_produit_new') }}" class="btn btn-success mb-3">CRÉER</a>
+    <a href="{{ path('app_produit_new') }}" class="btn btn-success mb-1">CRÉER</a>
     <table class="table table-striped-column table-bordered">
     {# <h1>Produit index</h1> #}
-     <thead class="table-light">
+     <thead class="table-light text-center">
     {# <table class="table"> #}
         {# <thead> #}
             <tr>
@@ -24,23 +24,23 @@
         <tbody>
         {% for produit in produits %}
             <tr>
-                <td>{{ produit.id }}</td>
-                <td>{{ produit.libelle }}</td>
-                <td>{{ produit.description }}</td>
-                <td>{{ produit.prixht }}</td>
-                <td>{{ produit.tva }}</td>
-                <td>{{ produit.stock }}</td>
+              <td>{{ produit.id }}</td>
+              <td>{{ produit.libelle }}</td>
+              <td>{{ produit.description }}</td>
+              <td>{{ produit.prixht }}</td>
+              <td>{{ produit.tva }}</td>
+              <td>{{ produit.stock }}</td>
                 {# <td>{{ produit.photo }}</td> #}
-                <td class="col text-center ">
+              <td class="col text-center ">
                    
-									  {# <a href="{{ path('app_produit_show', {'id': produit.id}) }}">VOIR</a> #}
-										<a href="{{ path('app_produit_show', {'id': produit.id}) }}" class="btn btn-primary my-0">VOIR</a>
-                    <a href="{{ path('app_produit_edit', {'id': produit.id}) }}" class="btn btn-secondary my-0">MODIFIER</a> 
-										<form method="post" action="{{ path('app_produit_delete', {'id': produit.id}) }}" style="display:inline;" onsubmit="return confirm('Êtes-vous sûr ?');">
-                        {# <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ produit.id) }}"> #}
-                        <button class="btn btn-danger btn-sm align-center"><h6>SUPPRIMER</h6></button>
-                    </form>
-                </td>
+							{# <a href="{{ path('app_produit_show', {'id': produit.id}) }}">VOIR</a> #}
+								<a href="{{ path('app_produit_show', {'id': produit.id}) }}" class="btn btn-outline-primary btn-sm my-1">Voir</a>
+                <a href="{{ path('app_produit_edit', {'id': produit.id}) }}" class="btn btn-outline-secondary btn-sm my-1">Editer</a> 
+								<form method="post" action="{{ path('app_produit_delete', {'id': produit.id}) }}" style="display:inline;" onsubmit="return confirm('Êtes-vous sûr ?');">
+                  {# <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ produit.id) }}"> #}
+                	<button class="btn btn-outline-danger btn-sm align-center">Supprimer</button>
+                </form>
+              </td>
             </tr>
         {% else %}
             <tr>

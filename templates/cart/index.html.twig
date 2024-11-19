@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panier de commande{% endblock %}
+
+{% block body %}
+
+<h1>Votre panier</h1>
+
+<div>
+    {% for item in cart.items %}
+        <div>
+            <img src="{{ item.produit.image }}" alt="{{ item.produit.libelle }}" width="100">
+            <h2>{{ item.produit.libelle }}</h2>
+            <p>Prix unitaire : {{ item.produit.prixht }} €</p>
+            <p>Quantité : {{ item.quantity }}</p>
+            <p>Sous-total : {{ item.produit.prixht * item.quantity }} €</p>
+            <a href="{{ path('cart_remove', { id: item.produit.id }) }}">Supprimer</a>
+        </div>
+    {% endfor %}
+</div>
+
+<h2>Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h2>
+
+
+{% endblock %}
