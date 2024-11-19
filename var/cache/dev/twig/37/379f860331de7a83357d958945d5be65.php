@@ -48,11 +48,8 @@ class __TwigTemplate_46b8493c00760585e2d0e8ebc3c4a090 extends Template
         yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 1, $this->source); })()), 'form_start');
         yield "
     ";
-        // line 2
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), 'widget');
-        yield "
-    <button class=\"btn\">";
         // line 3
+        yield "    <button class=\"btn btn-outline-success\">";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 3, $this->source); })()), "Save")) : ("Save")), "html", null, true);
         yield "</button>
 ";
@@ -90,14 +87,14 @@ class __TwigTemplate_46b8493c00760585e2d0e8ebc3c4a090 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  60 => 4,  56 => 3,  52 => 2,  48 => 1,);
+        return array (  57 => 4,  52 => 3,  48 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class=\"btn\">{{ button_label|default('Save') }}</button>
+    {# {{ form_widget(form) }} #}
+    <button class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
 ", "admin/categories/_form.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/templates/admin/categories/_form.html.twig");
     }

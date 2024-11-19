@@ -75,13 +75,13 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
         } else {
             // line 16
             yield "\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
+\t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"";
             // line 17
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             yield "\">M'inscrire</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
+\t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"";
             // line 20
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             yield "\">Me connecter</a>
@@ -93,23 +93,23 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
         // line 25
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_index");
         yield "\">
 \t\t\t\t\t\t\t\t<img src=\"";
         // line 26
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/cart_2.png"), "html", null, true);
-        yield "\" class=\"img-fluid\" width=\"30px\" height=\"35px\" alt=\"Panier\">
+        yield "\" class=\"img-fluid\" width=\"40px\" height=\"10px\" alt=\"Panier\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
         // line 30
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_display");
         yield "\">
 \t\t\t\t\t\t\t\t<img src=\"";
         // line 31
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/usericon_1.png"), "html", null, true);
-        yield "\" class=\"img-fluid\" width=\"32x\" height=\"32px\" alt=\"Mon compte\">
+        yield "\" class=\"img-fluid\" width=\"42x\" height=\"42px\" alt=\"Mon compte\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
     \t</div>
@@ -167,21 +167,21 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('app_register') }}\">M'inscrire</a>
+\t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"{{ path('app_register') }}\">M'inscrire</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('app_login') }}\">Me connecter</a>
+\t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"{{ path('app_login') }}\">Me connecter</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('app_contact') }}\">
-\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/cart_2.png') }}\" class=\"img-fluid\" width=\"30px\" height=\"35px\" alt=\"Panier\">
+\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('cart_index') }}\">
+\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/cart_2.png') }}\" class=\"img-fluid\" width=\"40px\" height=\"10px\" alt=\"Panier\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('app_contact') }}\">
-\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/usericon_1.png') }}\" class=\"img-fluid\" width=\"32x\" height=\"32px\" alt=\"Mon compte\">
+\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('profil_display') }}\">
+\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/usericon_1.png') }}\" class=\"img-fluid\" width=\"42x\" height=\"42px\" alt=\"Mon compte\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
     \t</div>

@@ -1,13 +1,49 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Categories{% endblock %}
+{% block title %}Editer les Categories{% endblock %}
 
 {% block body %}
-    <h1>Edit Categories</h1>
 
-    {{ include('admin/categories/_form.html.twig', {'button_label': 'Update'}) }}
+  <h1 class="text-center">MODIFIER LA CATEGORIE DES PRODUITS</h1>
+	<section class="container my-3">
+    <div class="row">
+			<div class="col">  
 
-    <a href="{{ path('app_categories_index') }}">back to list</a>
+				{{ form_start(form) }}
+      	{{ form_errors(form) }}
 
-    {{ include('admin/categories/_delete_form.html.twig') }}
+				<fieldset class="my-3">
+	   			{{ form_row(form.nom) }}
+				</fieldset>
+
+				<fieldset class="my-3">
+       		{{ form_row(form.slug) }}
+				</fieldset>
+
+				<fieldset class="my-3">
+	     		{{ form_row(form.image) }} 
+				</fieldset>
+
+				<fieldset class="my-3">
+	     		{{ form_row(form.parent) }} 
+				</fieldset>
+		 	</div>
+    		
+				{{ form_end(form) }}
+
+			</div>
+
+			<div class="row">
+				<div class="col">
+					{{ include('admin/categories/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+				</div>
+				<div class="col">
+					<a href="{{ path('app_categories_index') }}" class="btn btn-outline-primary">Retour à la liste</a>
+				</div>
+				<div class="col">
+					{{ include('admin/categories/_delete_form.html.twig') }}
+				</div>
+			</div>
+
+	</section>
 {% endblock %}

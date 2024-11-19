@@ -24,6 +24,9 @@ class Categories
     #[ORM\Column(length: 100)]
     private ?string $nom = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image = null;
+
     // Ajoutez une méthode __toString()
     public function __toString(): string
     {
@@ -40,6 +43,8 @@ class Categories
 
     #[ORM\OneToMany(targetEntity: Produit::class, mappedBy: 'categorie')]
     private Collection $produits;
+
+
 
     public function __construct()
     {
@@ -60,6 +65,18 @@ class Categories
     public function setNom(string $nom): static
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+        public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): static
+    {
+        $this->image = $image;
 
         return $this;
     }
@@ -135,4 +152,5 @@ class Categories
 
         return $this;
     }
+
 }

@@ -52,7 +52,7 @@ class __TwigTemplate_3537c95d5b058ad5ef70f079c1555fe6 extends Template
         // line 2
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . CoreExtension::getAttribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
         yield "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-outline-danger\">Supprimer</button>
 </form>
 ";
         
@@ -92,7 +92,7 @@ class __TwigTemplate_3537c95d5b058ad5ef70f079c1555fe6 extends Template
     {
         return new Source("<form method=\"post\" action=\"{{ path('app_categories_delete', {'id': categorie.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ categorie.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-outline-danger\">Supprimer</button>
 </form>
 ", "admin/categories/_delete_form.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/templates/admin/categories/_delete_form.html.twig");
     }

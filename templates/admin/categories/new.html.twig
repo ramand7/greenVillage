@@ -3,9 +3,39 @@
 {% block title %}New Categories{% endblock %}
 
 {% block body %}
-    <h1>Create new Categories</h1>
+
+  <h1 class="text-center">CRÉER UNE NOUVELLE CATEGORIE DE PRODUITS</h1>
+	<section class="container my-3">
+    <div class="row">
+			<div class="col">  
+
+				{{ form_start(form) }}
+      	{{ form_errors(form) }}
+
+				<fieldset class="my-3">
+	   			{{ form_row(form.nom) }}
+				</fieldset>
+
+				<fieldset class="my-3">
+       		{{ form_row(form.slug) }}
+				</fieldset>
+
+				<fieldset class="my-3">
+	     		{{ form_row(form.image) }} 
+				</fieldset>
+
+				<fieldset class="my-3">
+	     		{{ form_row(form.parent) }} 
+				</fieldset>
+		 	</div>
+    		
+				{{ form_end(form) }}
+
+			</div>
 
     {{ include('admin/categories/_form.html.twig') }}
 
-    <a href="{{ path('app_categories_index') }}">back to list</a>
+    <a href="{{ path('app_categories_index') }}" class="btn btn-outline-primary">back to list</a>
+	</section>
+
 {% endblock %}

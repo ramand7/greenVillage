@@ -122,21 +122,28 @@ class __TwigTemplate_07134ee5c6d17b5a8a758d0c2969847e extends Template
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 20, $this->source); })()), "slug", [], "any", false, false, false, 20), "html", null, true);
         yield "</td>
             </tr>
+            <tr>
+                <th>Image</th>
+                <td>";
+        // line 24
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 24, $this->source); })()), "image", [], "any", false, false, false, 24), "html", null, true);
+        yield "</td>
+            </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 25
+        // line 29
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_index");
         yield "\">back to list</a>
 
     <a href=\"";
-        // line 27
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 27, $this->source); })()), "id", [], "any", false, false, false, 27)]), "html", null, true);
+        // line 31
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 31, $this->source); })()), "id", [], "any", false, false, false, 31)]), "html", null, true);
         yield "\">edit</a>
 
     ";
-        // line 29
+        // line 33
         yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/categories/_delete_form.html.twig");
         yield "
 ";
@@ -170,7 +177,7 @@ class __TwigTemplate_07134ee5c6d17b5a8a758d0c2969847e extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  140 => 29,  135 => 27,  130 => 25,  122 => 20,  115 => 16,  108 => 12,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  147 => 33,  142 => 31,  137 => 29,  129 => 24,  122 => 20,  115 => 16,  108 => 12,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -195,6 +202,10 @@ class __TwigTemplate_07134ee5c6d17b5a8a758d0c2969847e extends Template
             <tr>
                 <th>Slug</th>
                 <td>{{ categorie.slug }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ categorie.image }}</td>
             </tr>
         </tbody>
     </table>

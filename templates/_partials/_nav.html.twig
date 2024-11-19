@@ -14,21 +14,21 @@
 						</li>
 						{% else %}
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="{{ path('app_register') }}">M'inscrire</a>
+							<a class="nav-link active text-bold" aria-current="page" href="{{ path('app_register') }}">M'inscrire</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="{{ path('app_login') }}">Me connecter</a>
+							<a class="nav-link active text-bold" aria-current="page" href="{{ path('app_login') }}">Me connecter</a>
 						</li>
 						{% endif %}
 
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="{{ path('app_contact') }}">
-								<img src="{{ asset('images/cart_2.png') }}" class="img-fluid" width="30px" height="35px" alt="Panier">
+							<a class="nav-link active" aria-current="page" href="{{ path('cart_index') }}">
+								<img src="{{ asset('images/cart_2.png') }}" class="img-fluid" width="40px" height="10px" alt="Panier">
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="{{ path('app_contact') }}">
-								<img src="{{ asset('images/usericon_1.png') }}" class="img-fluid" width="32x" height="32px" alt="Mon compte">
+							<a class="nav-link active" aria-current="page" href="{{ path('profil_display') }}">
+								<img src="{{ asset('images/usericon_1.png') }}" class="img-fluid" width="42x" height="42px" alt="Mon compte">
 							</a>
 						</li>
     	</div>

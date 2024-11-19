@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Categories index{% endblock %}
+{% block title %}Liste des catégories{% endblock %}
 
 {% block body %}
-    <h1>Categories index</h1>
+    <h1 class="text-center">LISTE DES CATEGORIES DE PRODUITS (index)</h1>
 
     <table class="table">
         <thead>
@@ -21,13 +21,13 @@
                 <td>{{ category.nom }}</td>
                 <td>{{ category.slug }}</td>
                 <td>
-                    <a href="{{ path('app_categories_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('app_categories_edit', {'id': category.id}) }}">edit</a>
+                    <a href="{{ path('app_categories_show', {'id': category.id}) }}" class="btn btn-outline-primary">Voir</a>
+                    <a href="{{ path('app_categories_edit', {'id': category.id}) }}" class="btn btn-outline-success">Editer</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="4">Aucune catégorie trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
