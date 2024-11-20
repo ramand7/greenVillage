@@ -76,7 +76,7 @@ class __TwigTemplate_b2c638e7705ae4869598d50641ccf7e6 extends Template
         yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "photo", [], "any", false, false, false, 10), 'row');
         yield "
 
-    <button class=\"btn\">";
+    <button class=\"btn btn-outline-success\">";
         // line 12
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 12, $this->source); })()), "Save")) : ("Save")), "html", null, true);
         yield "</button>    \t\t
@@ -134,11 +134,11 @@ class __TwigTemplate_b2c638e7705ae4869598d50641ccf7e6 extends Template
     {{ form_row(form.stock) }}
     {{ form_row(form.photo) }}
 
-    <button class=\"btn\">{{ button_label|default('Save') }}</button>    \t\t
+    <button class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</button>    \t\t
 
 {{ form_end(form) }}
 
 
-", "admin/produits/_form.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/templates/admin/produits/_form.html.twig");
+", "admin/produits/_form.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/admin/produits/_form.html.twig");
     }
 }

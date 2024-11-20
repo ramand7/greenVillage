@@ -676,6 +676,6 @@ class __TwigTemplate_daf283b022b530e390fc5aa2289a41e2 extends Template
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/notifier.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/vendor/symfony/web-profiler-bundle/Resources/views/Collector/notifier.html.twig");
+", "@WebProfiler/Collector/notifier.html.twig", "/home/ramand/Bureau/greenVillage20112024/vendor/symfony/web-profiler-bundle/Resources/views/Collector/notifier.html.twig");
     }
 }

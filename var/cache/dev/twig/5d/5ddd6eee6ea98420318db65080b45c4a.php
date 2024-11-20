@@ -246,6 +246,6 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
     <a href=\"{{ path('app_produit_edit', {'id': produit.id}) }}\">edit</a>
 
     {{ include('admin/produits/_delete_form.html.twig') }}
-{% endblock %}", "admin/produits/show.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/templates/admin/produits/show.html.twig");
+{% endblock %}", "admin/produits/show.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/admin/produits/show.html.twig");
     }
 }

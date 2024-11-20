@@ -4,9 +4,72 @@
 
 {% block body %}
 
-<h1>Votre panier</h1>
+{% include ('_partials/_nav.html.twig')  %}
 
-<div>
+<h1 class="text-center text-success">Votre panier</h1>
+
+    <table class="table table-dark table-hover table-sm table-bordered border-light">
+        <thead>
+            <tr>
+                <th>Réf.</th>
+                <th>Désignation</th>
+								<th>Prix unitaire</th>
+								<th>Quantité</th>   
+                <th>TVA</th>
+								<th>Sous-total TTC</th>
+								<th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        <div>
+					{% for item in cart.items %}
+						<div>
+							<tr>
+								<td>{{ item.produit.id }}</td>
+								<td>{{ item.produit.libelle }}</td>
+								<td>{{ item.produit.prixht }}</td>
+								<td>{{ item.quantity }}</td>
+								<td>{{ item.produit.tva }}</td>
+								<td><a href="{{ path('cart_remove', { id: item.produit.id }) }}">Supprimer</a></td>	
+							</tr>
+						</div>
+						<div>
+							<td>{{ item.produit.prixht * item.quantity }} €</td>
+						</div>
+    			{% endfor %}
+
+							
+							
+							{# <div>
+								{% for item in cart.items %}
+        					<div>
+										{# <img src="{{ item.produit.image }}" alt="{{ item.produit.libelle }}" width="100"> #}
+										{# <h2>{{ item.produit.libelle }}</h2>
+										<p>Prix unitaire : {{ item.produit.prixht }} €</p>
+										<p>Quantité : {{ item.quantity }}</p>
+										{# <p>Sous-total : {{ item.produit.prixht * item.quantity }} €</p> #}
+										{# <a href="{{ path('cart_remove', { id: item.produit.id }) }}">Supprimer</a> #}
+        					{# </div> #}
+    						{# {% endfor %}
+									<td>{{ item.produit.prixht * item.quantity }}
+            </tr> 
+         #}
+				{# {% else %}
+            <tr>
+              <td colspan="4">Aucune catégorie trouvée</td>
+            </tr>
+        {% endfor %}
+        {# </tbody>
+    </table> #}
+
+    {# <a href="{{ path('app_categories_new') }}">Create new</a> #} 
+
+
+
+
+
+
+{# <div>
     {% for item in cart.items %}
         <div>
             <img src="{{ item.produit.image }}" alt="{{ item.produit.libelle }}" width="100">
@@ -17,9 +80,8 @@
             <a href="{{ path('cart_remove', { id: item.produit.id }) }}">Supprimer</a>
         </div>
     {% endfor %}
-</div>
+</div> #}
 
 <h2>Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h2>
-
 
 {% endblock %}

@@ -54,7 +54,7 @@ class __TwigTemplate_b5b9265dfa907dd8a5ef5c18b06c141b extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@WebProfiler/Collector/form.html.twig"));
 
         // line 3
-        $macros["__internal_parse_0"] = $this->macros["__internal_parse_0"] = $this;
+        $macros["__internal_parse_1"] = $this->macros["__internal_parse_1"] = $this;
         // line 1
         $this->parent = $this->loadTemplate("@WebProfiler/Profiler/layout.html.twig", "@WebProfiler/Collector/form.html.twig", 1);
         yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
@@ -377,7 +377,7 @@ class __TwigTemplate_b5b9265dfa907dd8a5ef5c18b06c141b extends Template
             foreach ($context['_seq'] as $context["formName"] => $context["formData"]) {
                 // line 183
                 yield "                ";
-                yield CoreExtension::callMacro($macros["__internal_parse_0"], "macro_form_tree_entry", [$context["formName"], $context["formData"], true], 183, $context, $this->getSourceContext());
+                yield CoreExtension::callMacro($macros["__internal_parse_1"], "macro_form_tree_entry", [$context["formName"], $context["formData"], true], 183, $context, $this->getSourceContext());
                 yield "
             ";
             }
@@ -409,7 +409,7 @@ class __TwigTemplate_b5b9265dfa907dd8a5ef5c18b06c141b extends Template
             foreach ($context['_seq'] as $context["formName"] => $context["formData"]) {
                 // line 190
                 yield "                ";
-                yield CoreExtension::callMacro($macros["__internal_parse_0"], "macro_form_tree_details", [$context["formName"], $context["formData"], CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new RuntimeError('Variable "collector" does not exist.', 190, $this->source); })()), "data", [], "any", false, false, false, 190), "forms_by_hash", [], "any", false, false, false, 190), CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 190)], 190, $context, $this->getSourceContext());
+                yield CoreExtension::callMacro($macros["__internal_parse_1"], "macro_form_tree_details", [$context["formName"], $context["formData"], CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["collector"]) || array_key_exists("collector", $context) ? $context["collector"] : (function () { throw new RuntimeError('Variable "collector" does not exist.', 190, $this->source); })()), "data", [], "any", false, false, false, 190), "forms_by_hash", [], "any", false, false, false, 190), CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 190)], 190, $context, $this->getSourceContext());
                 yield "
             ";
                 ++$context['loop']['index0'];
@@ -2243,6 +2243,6 @@ class __TwigTemplate_b5b9265dfa907dd8a5ef5c18b06c141b extends Template
         </tbody>
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+", "@WebProfiler/Collector/form.html.twig", "/home/ramand/Bureau/greenVillage20112024/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
     }
 }

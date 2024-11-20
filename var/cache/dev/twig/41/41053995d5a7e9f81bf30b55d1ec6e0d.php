@@ -111,6 +111,6 @@ class __TwigTemplate_e3b697a3cc8b5523fe3334a3dd1e4ec8 extends Template
 .container.body_default {
     border-top: 8px solid #aaaaaa;
 }
-", "@email/zurb_2/notification/local.css", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/vendor/symfony/twig-bridge/Resources/views/Email/zurb_2/notification/local.css");
+", "@email/zurb_2/notification/local.css", "/home/ramand/Bureau/greenVillage20112024/vendor/symfony/twig-bridge/Resources/views/Email/zurb_2/notification/local.css");
     }
 }

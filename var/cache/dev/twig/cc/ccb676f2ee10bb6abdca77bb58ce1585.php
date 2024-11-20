@@ -284,6 +284,6 @@ class __TwigTemplate_4872875bdb371aafc8e852cfac0ed625 extends Template
 
     {# <a href=\"{{ path('app_produit_new') }}\">Create new</a> #}
 {% endblock %}
-", "admin/produits/index.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/templates/admin/produits/index.html.twig");
+", "admin/produits/index.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/admin/produits/index.html.twig");
     }
 }

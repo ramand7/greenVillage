@@ -234,6 +234,6 @@ class __TwigTemplate_1455dcfaed911de9ce9332d2461b8936 extends Template
 
     <a href=\"{{ path('app_categories_new') }}\">Create new</a>
 {% endblock %}
-", "admin/categories/index.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/templates/admin/categories/index.html.twig");
+", "admin/categories/index.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/admin/categories/index.html.twig");
     }
 }

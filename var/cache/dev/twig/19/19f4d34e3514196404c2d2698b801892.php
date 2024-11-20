@@ -91,6 +91,6 @@ class __TwigTemplate_f2afa76070c7e0256ffd9b6600c62d78 extends Template
     <line x1=\"21\" y1=\"12\" x2=\"18\" y2=\"12\"></line>
     <line x1=\"12\" y1=\"12\" x2=\"12\" y2=\"12.01\"></line>
 </svg>
-", "@Debug/Profiler/icon.svg", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/vendor/symfony/debug-bundle/Resources/views/Profiler/icon.svg");
+", "@Debug/Profiler/icon.svg", "/home/ramand/Bureau/greenVillage20112024/vendor/symfony/debug-bundle/Resources/views/Profiler/icon.svg");
     }
 }

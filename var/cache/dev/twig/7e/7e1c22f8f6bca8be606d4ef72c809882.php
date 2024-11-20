@@ -231,6 +231,6 @@ class __TwigTemplate_1eb020b9d1de0afe73cff7deb1f65648 extends Template
     word-wrap: break-word;
     word-break: break-all;
 }
-", "@WebProfiler/Profiler/open.css.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.css.twig");
+", "@WebProfiler/Profiler/open.css.twig", "/home/ramand/Bureau/greenVillage20112024/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.css.twig");
     }
 }

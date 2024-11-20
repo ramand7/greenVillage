@@ -85,6 +85,6 @@ class __TwigTemplate_e336bc00aa85217f5864f0192d05f441 extends Template
     <path d=\"M12 14a6 6 0 0 1 6 -6h3v1a6 6 0 0 1 -6 6h-3\"></path>
     <line x1=\"12\" y1=\"20\" x2=\"12\" y2=\"10\"></line>
 </svg>
-", "@WebProfiler/Icon/twig.svg", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/vendor/symfony/web-profiler-bundle/Resources/views/Icon/twig.svg");
+", "@WebProfiler/Icon/twig.svg", "/home/ramand/Bureau/greenVillage20112024/vendor/symfony/web-profiler-bundle/Resources/views/Icon/twig.svg");
     }
 }

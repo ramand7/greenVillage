@@ -236,6 +236,6 @@ class __TwigTemplate_ab1f6fb89f7c538aedf1f97f198b3f09 extends Template
 \t</section>
 
 {% endblock %}
-", "admin/categories/new.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/templates/admin/categories/new.html.twig");
+", "admin/categories/new.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/admin/categories/new.html.twig");
     }
 }

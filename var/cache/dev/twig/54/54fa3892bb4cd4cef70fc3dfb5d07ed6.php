@@ -1575,6 +1575,6 @@ $context["voter_detail"], "vote", [], "array", false, false, false, 423) == Twig
         </div>
     {% endif %}
 {% endblock %}
-", "@Security/Collector/security.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
+", "@Security/Collector/security.html.twig", "/home/ramand/Bureau/greenVillage20112024/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
     }
 }

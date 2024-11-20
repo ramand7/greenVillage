@@ -657,6 +657,6 @@ class __TwigTemplate_52e9b091a5c1b46cf08beea8184422ea extends Template
 </footer>
 
 {% endblock %}
-", "categories/guitares/guitares.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/templates/categories/guitares/guitares.html.twig");
+", "categories/guitares/guitares.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/categories/guitares/guitares.html.twig");
     }
 }

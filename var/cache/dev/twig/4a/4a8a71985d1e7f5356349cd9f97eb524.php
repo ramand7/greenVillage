@@ -83,6 +83,6 @@ class __TwigTemplate_90a042b62b399e2c87003b7738a2fb4b extends Template
     <line x1=\"3\" y1=\"19\" x2=\"21\" y2=\"19\" />
     <rect x=\"5\" y=\"6\" width=\"14\" height=\"10\" rx=\"1\" />
 </svg>
-", "@WebProfiler/Icon/settings-theme-system.svg", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/vendor/symfony/web-profiler-bundle/Resources/views/Icon/settings-theme-system.svg");
+", "@WebProfiler/Icon/settings-theme-system.svg", "/home/ramand/Bureau/greenVillage20112024/vendor/symfony/web-profiler-bundle/Resources/views/Icon/settings-theme-system.svg");
     }
 }

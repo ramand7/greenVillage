@@ -176,6 +176,6 @@ class __TwigTemplate_6ee453b88696bd73c3f2e1ae85266979 extends Template
     </ul>
 </div>
 {% endblock %}
-", "panier/index.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage19112024/templates/panier/index.html.twig");
+", "panier/index.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/panier/index.html.twig");
     }
 }

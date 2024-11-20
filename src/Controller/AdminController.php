@@ -59,11 +59,11 @@ class AdminController extends AbstractController
     #[Route('/produits/{id}', name: 'app_produit_show', requirements: ['id' => '\d+'], methods: ['GET'])]
     public function show(int $id, ProduitRepository $produitRepository): Response
     {
-    $produit = $produitRepository->find($id);
+        $produit = $produitRepository->find($id);
 
-    if (!$produit) {
+        if (!$produit) {
         throw $this->createNotFoundException('Produit non trouvé.');
-    }
+        }
 
         return $this->render('admin/produits/show.html.twig', [
         'produit' => $produit,
@@ -102,8 +102,7 @@ class AdminController extends AbstractController
     // Pour la gestion CRUD des catégories de produit
 
     #[Route('/categories', name: 'app_categories_index', methods: ['GET'])]
-    
-		public function indexCat(CategoriesRepository $categoriesRepository): Response
+	public function indexCat(CategoriesRepository $categoriesRepository): Response
     {
         return $this->render('admin/categories/index.html.twig', [
             'categories' => $categoriesRepository->findAll(),
