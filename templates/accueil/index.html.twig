@@ -25,7 +25,7 @@
             <a class="nav-link active" href="#">Accueil</a>
           </li>    
           <li class="nav-item">
-          	<a class="nav-link" href="#">Produits</a>
+          	<a class="nav-link" href="{{ path('sous_categories') }}">Catégories</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">Promotions</a>
@@ -55,7 +55,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="ms-3">
-          <a href="#" class="btn btn-outline-light">Guitares</a>
+          <a href="#", class="btn btn-outline-light">Guitares</a>
           <a href="#" class="btn btn-outline-light">Claviers</a>
           <a href="#" class="btn btn-outline-light">Batteries</a>
           <a href="#" class="btn btn-outline-light">Saxophone</a>
@@ -86,43 +86,39 @@
 <!-- Les différentes catégories ici -->
 
 <section class="testimonials bg-light text-center py-5">
-    <h2>Nos catégories de produit</h2>
+    <h1>Nos catégories de produit</h1>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-3 mb-0">
                 <div class="card my-3">
-									<img src="{{ asset('images/guitare.jpg') }}" alt="Guitare" class="card-img-top img-fluid">
+									<a class="link" href="{{ path('guitares') }}"><img src="{{ asset('images/guitare.jpg') }}" alt="Guitare" class="card-img-top img-fluid"></a>
 									<div class="card-body">
-<!--										<h5 class="card-title">Card title</h5>
-										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-										<a href="#" class="btn btn-primary">Guitares</a>
+										<a href="{{ path('guitares') }}" class="btn btn-primary">Guitares</a>
 									</div>
 								</div>
             </div>
             <div class="col-md-3 mb-0">
                 <div class="card my-3">
-									<img src="{{ asset('images/clavier.jpg') }}" alt="Clavier" class="card-img-top img-fluid">
+									<a class="link" href="{{ path('claviers') }}"><img src="{{ asset('images/clavier.jpg') }}" alt="Clavier" class="card-img-top img-fluid"></a>
+									<div class="card-body">
+										<a href="{{ path('claviers') }}" class="btn btn-primary">Claviers</a>
+									</div>
+								</div>
+            </div>
+            <div class="col-md-3 mb-0">
+                <div class="card my-3">
+									<a class="link" href="{{ path('saxophones') }}"><img src="{{ asset('images/saxophone.jpg') }}" alt="Saxophone" class="card-img-top img-fluid"></a>
+									<div class="card-body">							
+										<a href="{{ path('saxophones') }}" class="btn btn-primary">Saxophones</a>
+									</div>
+								</div>
+            </div>
+            <div class="col-md-3 mb-0">
+                <div class="card my-3">
+									<a class="link" href="{{ path('logiciels') }}"><img src="{{ asset('images/fl-studio.webp') }}" alt="Logiciels" class="card-img-top img-fluid"></a>
 									<div class="card-body">
 
-										<a href="#" class="btn btn-primary">Claviers</a>
-									</div>
-								</div>
-            </div>
-            <div class="col-md-3 mb-0">
-                <div class="card my-3">
-									<img src="{{ asset('images/saxophone.jpg') }}" alt="Saxophone" class="card-img-top img-fluid">
-									<div class="card-body">
-<!--										<h5 class="card-title">Card title</h5>  -->									
-										<a href="#" class="btn btn-primary">Saxophones</a>
-									</div>
-								</div>
-            </div>
-            <div class="col-md-3 mb-0">
-                <div class="card my-3">
-									<img src="{{ asset('images/fl-studio.webp') }}" alt="Logiciels" class="card-img-top img-fluid">
-									<div class="card-body">
-
-										<a href="#" class="btn btn-primary">Logiciels</a>
+										<a href="{{ path('logiciels') }}" class="btn btn-primary">Logiciels</a>
 									</div>
 								</div>
             </div>
@@ -132,37 +128,37 @@
         <div class="row">
             <div class="col-md-3 mb-2">
                 <div class="card my-3">
-									<img src="{{ asset('images/batteries.png') }}" alt="Batteries" class="card-img-top img-fluid">
+									<a class="link" href="{{ path('batteries') }}"><img src="{{ asset('images/batteries.png') }}" alt="Batteries" class="card-img-top img-fluid"></a>
 									<div class="card-body">
 
 
-										<a href="#" class="btn btn-primary">Batteries</a>
+										<a href="{{ path('batteries') }}" class="btn btn-primary">Batteries</a>
 									</div>
 								</div>
 						</div>
 						<div class="col-md-3 mb-2">
                 <div class="card my-3">
-									<img src="{{ asset('images/accessoires.webp') }}" alt="Accessoires" class="card-img-top img-fluid">
+									<a class="link" href="{{ path('accessoires') }}"><img src="{{ asset('images/accessoires.webp') }}" alt="Accessoires" class="card-img-top img-fluid"></a>
 									<div class="card-body">
 
 <!--			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-										<a href="#" class="btn btn-primary">Accessoires</a>
+										<a href="{{ path('accessoires') }}" class="btn btn-primary">Accessoires</a>
 									</div>
 								</div>
 						</div>
 						<div class="col-md-3 mb-2">
                 <div class="card my-3">
-									<img src="{{ asset('images/sonorisation.jpg') }}" alt="Sonorisation" class="card-img-top img-fluid">
+									<a class="link" href="{{ path('sonorisation') }}"><img src="{{ asset('images/sonorisation.jpg') }}" alt="Sonorisation" class="card-img-top img-fluid"></a>
 									<div class="card-body">
-										<a href="#" class="btn btn-primary">Sonorisation</a>
+										<a href="{{ path('sonorisation') }}" class="btn btn-primary">Sonorisation</a>
 									</div>
 								</div>		
 						</div>
             <div class="col-md-3 mb-0">
                 <div class="card my-3">
-									<img src="{{ asset('images/librairie.png') }}" alt="Librairie" class="card-img-top img-fluid">
+									<a class="link" href="{{ path('librairie') }}"><img src="{{ asset('images/librairie.png') }}" alt="Librairie" class="card-img-top img-fluid"></a>
 									<div class="card-body">
-										<a href="#" class="btn btn-primary">Librairie</a>
+										<a href="{{ path('librairie') }}" class="btn btn-primary">Librairie</a>
 									</div>
 								</div>
             </div>                        							

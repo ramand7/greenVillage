@@ -44,7 +44,7 @@ class CategoriesController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_categories_show', requirements: ['id' => '\d+'], methods: ['GET'])]
-    public function showCat(int $id, CategoriesRepository $categoriesRepository): Response
+    public function show(int $id, CategoriesRepository $categoriesRepository): Response
     {   
     $categorie = $categoriesRepository->find($id);
     // dd($categorie);

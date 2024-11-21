@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Village Green - Guitares{% endblock %}
+
+{% block stylesheets %} {% endblock %}
+
+
+
+{% block body %}
+
+{% include "_partials/_nav.html.twig" %}
+
+
+
+<!-- Les différentes catégories ici -->
+
+<section class="testimonials bg-light text-center py-5">
+    <h2>GUITARES ACOUSTIQUES</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 mb-0">
+                <div class="card my-3">
+									<img src="{{ asset('images/guitare.jpg') }}" alt="Guitare" class="card-img-top img-fluid">
+									<div class="card-body">
+<!--										<h5 class="card-title">Card title</h5>
+										<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+										<a href="#" class="btn btn-primary">Guitares 1/2</a>
+									</div>
+								</div>
+            </div>
+            <div class="col-md-3 mb-0">
+                <div class="card my-3">
+									<img src="{{ asset('images/clavier.jpg') }}" alt="Clavier" class="card-img-top img-fluid">
+									<div class="card-body">
+
+										<a href="#" class="btn btn-primary">Guitares 3/4</a>
+									</div>
+								</div>
+            </div>
+            <div class="col-md-3 mb-0">
+                <div class="card my-3">
+									<img src="{{ asset('images/saxophone.jpg') }}" alt="Saxophone" class="card-img-top img-fluid">
+									<div class="card-body">
+<!--										<h5 class="card-title">Card title</h5>  -->									
+										<a href="#" class="btn btn-primary">Guitares 4/4</a>
+									</div>
+								</div>
+            </div>
+            <div class="col-md-3 mb-0">
+                <div class="card my-3">
+									<img src="{{ asset('images/fl-studio.webp') }}" alt="Logiciels" class="card-img-top img-fluid">
+									<div class="card-body">
+
+										<a href="#" class="btn btn-primary">Packs</a>
+									</div>
+								</div>
+            </div>
+        </div>
+    </div>
+		<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 mb-2">
+                <div class="card my-3">
+									<img src="{{ asset('images/batteries.png') }}" alt="Batteries" class="card-img-top img-fluid">
+									<div class="card-body">
+										<a href="#" class="btn btn-primary">Batteries</a>
+									</div>
+								</div>
+						</div>
+						<div class="col-md-3 mb-2">
+                <div class="card my-3">
+									<img src="{{ asset('images/accessoires.webp') }}" alt="Accessoires" class="card-img-top img-fluid">
+									<div class="card-body">
+
+<!--			<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+										<a href="#" class="btn btn-primary">Accessoires</a>
+									</div>
+								</div>
+						</div>
+						<div class="col-md-3 mb-2">
+                <div class="card my-3">
+									<img src="{{ asset('images/sonorisation.jpg') }}" alt="Sonorisation" class="card-img-top img-fluid">
+									<div class="card-body">
+										<a href="#" class="btn btn-primary">Sonorisation</a>
+									</div>
+								</div>		
+						</div>
+            <div class="col-md-3 mb-0">
+                <div class="card my-3">
+									<img src="{{ asset('images/librairie.png') }}" alt="Librairie" class="card-img-top img-fluid">
+									<div class="card-body">
+										<a href="#" class="btn btn-primary">Librairie</a>
+									</div>
+								</div>
+            </div>                        							
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}

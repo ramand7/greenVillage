@@ -100,8 +100,8 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
         yield "
     <h1 class=\"text-center\">DETAILS DU PRODUIT</h1>
 
-  <div class=\"container ms-9 my-4 mb-2\">
-    <table class=\"table table-striped-column table w-auto table-sm table-bordered border-dark text-center ms-6\">
+  <div class=\"container w-50 ms-9 my-4 mb-2\">
+    <table class=\"table table-striped-column table-secondary table w-auto table-sm table-bordered border-dark text-center ms-6\">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -157,12 +157,12 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
     <a href=\"";
         // line 42
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_index");
-        yield "\">back to list</a>
+        yield "\" class\"btn btn-outline-primary\"><b>Retour à la liste</b></a>
 
     <a href=\"";
         // line 44
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 44, $this->source); })()), "id", [], "any", false, false, false, 44)]), "html", null, true);
-        yield "\">edit</a>
+        yield "\", class=\"btn btn-outline-success\"><b>Modifier</b></a>
 
     ";
         // line 46
@@ -212,8 +212,8 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
 
     <h1 class=\"text-center\">DETAILS DU PRODUIT</h1>
 
-  <div class=\"container ms-9 my-4 mb-2\">
-    <table class=\"table table-striped-column table w-auto table-sm table-bordered border-dark text-center ms-6\">
+  <div class=\"container w-50 ms-9 my-4 mb-2\">
+    <table class=\"table table-striped-column table-secondary table w-auto table-sm table-bordered border-dark text-center ms-6\">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -245,11 +245,11 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
         </tbody>
     </table>
 </div>
-    <a href=\"{{ path('app_produit_index') }}\">back to list</a>
+    <a href=\"{{ path('app_produit_index') }}\" class\"btn btn-outline-primary\"><b>Retour à la liste</b></a>
 
-    <a href=\"{{ path('app_produit_edit', {'id': produit.id}) }}\">edit</a>
+    <a href=\"{{ path('app_produit_edit', {'id': produit.id}) }}\", class=\"btn btn-outline-success\"><b>Modifier</b></a>
 
     {{ include('admin/produits/_delete_form.html.twig') }}
-{% endblock %}", "admin/produits/show.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/admin/produits/show.html.twig");
+{% endblock %}", "admin/produits/show.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/admin/produits/show.html.twig");
     }
 }

@@ -98,41 +98,46 @@ class __TwigTemplate_dd51c03c267a32bc742404df271e2184 extends Template
 
         // line 6
         yield "
+";
+        // line 7
+        yield from         $this->loadTemplate("_partials/_nav.html.twig", "contact/index.html.twig", 7)->unwrap()->yield($context);
+        // line 8
+        yield "
 \t<section class=\"container my-3\">
     <div class=\"row\">
 \t\t\t<div class=\"col\">
     \t\t
 \t\t\t\t";
-        // line 11
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), 'form_start');
+        // line 13
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'form_start');
         yield "
 
       \t";
-        // line 13
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'errors');
+        // line 15
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'errors');
         yield "
 
 \t\t\t\t<fieldset class=\"my-3\">
 
 \t   \t\t\t";
-        // line 17
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), "objet", [], "any", false, false, false, 17), 'row');
+        // line 19
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), "objet", [], "any", false, false, false, 19), 'row');
         yield "
 
 \t\t\t\t</fieldset>
 \t\t\t\t<fieldset class=\"my-3\">
 
        \t\t";
-        // line 22
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "email", [], "any", false, false, false, 22), 'row');
+        // line 24
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "email", [], "any", false, false, false, 24), 'row');
         yield "
 
 \t\t\t\t</fieldset>
 \t\t\t\t<fieldset class=\"my-3\">
   
 \t     \t\t";
-        // line 27
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 27, $this->source); })()), "message", [], "any", false, false, false, 27), 'row');
+        // line 29
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), "message", [], "any", false, false, false, 29), 'row');
         yield " 
 
 \t\t\t\t</fieldset>
@@ -140,8 +145,8 @@ class __TwigTemplate_dd51c03c267a32bc742404df271e2184 extends Template
 \t\t \t</div>
     \t\t
 \t\t\t\t";
-        // line 33
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), 'form_end');
+        // line 35
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 35, $this->source); })()), 'form_end');
         yield "
 
 \t\t\t</div>
@@ -185,7 +190,7 @@ class __TwigTemplate_dd51c03c267a32bc742404df271e2184 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  144 => 33,  135 => 27,  127 => 22,  119 => 17,  112 => 13,  107 => 11,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  149 => 35,  140 => 29,  132 => 24,  124 => 19,  117 => 15,  112 => 13,  105 => 8,  103 => 7,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -195,6 +200,8 @@ class __TwigTemplate_dd51c03c267a32bc742404df271e2184 extends Template
 {% block title %}Formulaire de contact{% endblock %}
 
 {% block body %}
+
+{% include \"_partials/_nav.html.twig\" %}
 
 \t<section class=\"container my-3\">
     <div class=\"row\">
@@ -235,6 +242,6 @@ class __TwigTemplate_dd51c03c267a32bc742404df271e2184 extends Template
 \t</section>
 
 {% endblock %}
-", "contact/index.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/contact/index.html.twig");
+", "contact/index.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/contact/index.html.twig");
     }
 }

@@ -6,8 +6,8 @@
 
     <h1 class="text-center">DETAILS DU PRODUIT</h1>
 
-  <div class="container ms-9 my-4 mb-2">
-    <table class="table table-striped-column table w-auto table-sm table-bordered border-dark text-center ms-6">
+  <div class="container w-50 ms-9 my-4 mb-2">
+    <table class="table table-striped-column table-secondary table w-auto table-sm table-bordered border-dark text-center ms-6">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -39,9 +39,9 @@
         </tbody>
     </table>
 </div>
-    <a href="{{ path('app_produit_index') }}">back to list</a>
+    <a href="{{ path('app_produit_index') }}" class"btn btn-outline-primary"><b>Retour à la liste</b></a>
 
-    <a href="{{ path('app_produit_edit', {'id': produit.id}) }}">edit</a>
+    <a href="{{ path('app_produit_edit', {'id': produit.id}) }}", class="btn btn-outline-success"><b>Modifier</b></a>
 
     {{ include('admin/produits/_delete_form.html.twig') }}
 {% endblock %}

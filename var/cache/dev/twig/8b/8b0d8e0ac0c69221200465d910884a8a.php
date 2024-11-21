@@ -97,17 +97,22 @@ class __TwigTemplate_e2b2697297e50a0ffddbb2965b0d04fe extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Create new Produit</h1>
+        yield "    <h1 class=\"text-center\">AJOUTER DE NOUVEAUX PRODUITS</h1>
+<section>
+\t<div class=\"container\">
+
 
     ";
-        // line 8
+        // line 11
         yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/produits/_form.html.twig");
         yield "
 
     <a href=\"";
-        // line 10
+        // line 13
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_index");
-        yield "\">back to list</a>
+        yield "\"><b>Retour à la liste</b></a>
+\t</div>
+</section>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -139,7 +144,7 @@ class __TwigTemplate_e2b2697297e50a0ffddbb2965b0d04fe extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  109 => 10,  104 => 8,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  112 => 13,  107 => 11,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -149,12 +154,17 @@ class __TwigTemplate_e2b2697297e50a0ffddbb2965b0d04fe extends Template
 {% block title %}New Produit{% endblock %}
 
 {% block body %}
-    <h1>Create new Produit</h1>
+    <h1 class=\"text-center\">AJOUTER DE NOUVEAUX PRODUITS</h1>
+<section>
+\t<div class=\"container\">
+
 
     {{ include('admin/produits/_form.html.twig') }}
 
-    <a href=\"{{ path('app_produit_index') }}\">back to list</a>
+    <a href=\"{{ path('app_produit_index') }}\"><b>Retour à la liste</b></a>
+\t</div>
+</section>
 {% endblock %}
-", "admin/produits/new.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/admin/produits/new.html.twig");
+", "admin/produits/new.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/admin/produits/new.html.twig");
     }
 }

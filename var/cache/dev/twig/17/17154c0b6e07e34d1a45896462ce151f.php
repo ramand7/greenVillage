@@ -237,6 +237,6 @@ class __TwigTemplate_21d5811fd8d000a382d8302a2b06ef46 extends Template
 
 
 {% endblock %}
-", "registration/register.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/registration/register.html.twig");
+", "registration/register.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/registration/register.html.twig");
     }
 }

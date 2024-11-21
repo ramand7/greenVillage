@@ -107,7 +107,7 @@ class __TwigTemplate_0e37db19269ae31a8c2cded0d061af18 extends Template
     <a href=\"";
         // line 10
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_index");
-        yield "\">back to list</a>
+        yield "\"><b>Retour à la liste</b></a>
 
     ";
         // line 12
@@ -158,10 +158,10 @@ class __TwigTemplate_0e37db19269ae31a8c2cded0d061af18 extends Template
 
     {{ include('admin/produits/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href=\"{{ path('app_produit_index') }}\">back to list</a>
+    <a href=\"{{ path('app_produit_index') }}\"><b>Retour à la liste</b></a>
 
     {{ include('admin/produits/_delete_form.html.twig') }}
 {% endblock %}
-", "admin/produits/edit.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/admin/produits/edit.html.twig");
+", "admin/produits/edit.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/admin/produits/edit.html.twig");
     }
 }

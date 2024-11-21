@@ -151,17 +151,13 @@ class __TwigTemplate_07134ee5c6d17b5a8a758d0c2969847e extends Template
 \t\t\t</div>
 \t\t</div>
     
-
-    
-
     ";
-        // line 45
+        // line 42
         yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/categories/_delete_form.html.twig");
         yield "
 
 \t</div>
 </div>
-
 
 </section>
 
@@ -196,7 +192,7 @@ class __TwigTemplate_07134ee5c6d17b5a8a758d0c2969847e extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  159 => 45,  149 => 38,  143 => 35,  134 => 29,  127 => 25,  120 => 21,  113 => 17,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  156 => 42,  149 => 38,  143 => 35,  134 => 29,  127 => 25,  120 => 21,  113 => 17,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -242,18 +238,14 @@ class __TwigTemplate_07134ee5c6d17b5a8a758d0c2969847e extends Template
 \t\t\t</div>
 \t\t</div>
     
-
-    
-
     {{ include('admin/categories/_delete_form.html.twig') }}
 
 \t</div>
 </div>
 
-
 </section>
 
 {% endblock %}
-", "admin/categories/show.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/admin/categories/show.html.twig");
+", "admin/categories/show.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/admin/categories/show.html.twig");
     }
 }

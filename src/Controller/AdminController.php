@@ -15,28 +15,94 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-// #[Route('/admin')]
+#[Route('/souscategories')]
 class AdminController extends AbstractController
 {
-    #[Route('/admin', name: 'admin_dashboard')]
+    #[Route('/', name: 'sous_categories')]
     public function indexProd(): Response
     {
-        return $this->render('admin/index.html.twig', [
+        return $this->render('souscategories/index.html.twig', [
             'controller_name' => 'AdminController',
         ]);
     }
 
-		// Pour la gestion des produits
+		// Pour l'affichage des catégories de  produits
 
-	// #[Route('/produits', name: 'app_produit_index', methods: ['GET'])]
-    // public function indexProduit(ProduitRepository $produitRepository): Response
+	#[Route('/guitares', name: 'guitares', methods: ['GET'])]
+    public function indexGuit(CategoriesRepository $categoriesRepository): Response
+    {
+        return $this->render('souscategories/guitares/index.html.twig', [
+            'categories' => $categoriesRepository->findAll(),
+         ]);
+    }
+
+		#[Route('/claviers', name: 'claviers', methods: ['GET'])]
+    public function indexClav(CategoriesRepository $categoriesRepository): Response
+    {
+        return $this->render('souscategories/claviers/index.html.twig', [
+            'categories' => $categoriesRepository->findAll(),
+         ]);
+    }
+    
+		#[Route('/saxophones', name: 'saxophones', methods: ['GET'])]
+    public function indexSax(CategoriesRepository $categoriesRepository): Response
+    {
+        return $this->render('souscategories/saxophones/index.html.twig', [
+            'categories' => $categoriesRepository->findAll(),
+         ]);
+    }
+		
+		#[Route('/logiciels', name: 'logiciels', methods: ['GET'])]
+    public function indexLog(CategoriesRepository $categoriesRepository): Response
+    {
+        return $this->render('souscategories/logiciels/index.html.twig', [
+            'categories' => $categoriesRepository->findAll(),
+         ]);
+    }
+
+		#[Route('/batteries', name: 'batteries', methods: ['GET'])]
+    public function indexBat(CategoriesRepository $categoriesRepository): Response
+    {
+        return $this->render('souscategories/batteries/index.html.twig', [
+            'categories' => $categoriesRepository->findAll(),
+         ]);
+    }
+
+		#[Route('/accessoires', name: 'accessoires', methods: ['GET'])]
+    public function indexSono(CategoriesRepository $categoriesRepository): Response
+    {
+        return $this->render('souscategories/accessoires/index.html.twig', [
+            'categories' => $categoriesRepository->findAll(),
+         ]);
+    }
+
+		#[Route('/sonorisation', name: 'sonorisation', methods: ['GET'])]
+    public function indexAccès(CategoriesRepository $categoriesRepository): Response
+    {
+        return $this->render('souscategories/sonorisation/index.html.twig', [
+            'categories' => $categoriesRepository->findAll(),
+         ]);
+    }
+
+		#[Route('/librairie', name: 'librairie', methods: ['GET'])]
+    public function indexLib(CategoriesRepository $categoriesRepository): Response
+    {
+        return $this->render('souscategories/librairie/index.html.twig', [
+            'categories' => $categoriesRepository->findAll(),
+         ]);
+    }
+
+		// #[Route('/claviers', name: 'claviers', methods: ['GET'])]
+    // public function indexClav(CategoriesRepository $categoriesRepository): Response
     // {
-    //     return $this->render('admin/produits/index.html.twig', [
-    //         'produits' => $produitRepository->findAll(),
-    //     ]);
+    //     return $this->render('souscategories/claviers/index.html.twig', [
+    //         'categories' => $categoriesRepository->findAll(),
+    //      ]);
     // }
-
-    // #[Route('/produits/new', name: 'app_produit_new', methods: ['GET', 'POST'])]
+		
+		
+		
+		// #[Route('/produits/new', name: 'app_produit_new', methods: ['GET', 'POST'])]
     // public function newProd(Request $request, EntityManagerInterface $entityManager): Response
     // {
     //     $produit = new Produit();

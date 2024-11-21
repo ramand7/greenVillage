@@ -52,7 +52,7 @@ class __TwigTemplate_23fedad2af95b783228a1a23eee136d6 extends Template
         // line 2
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
         yield "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-outline-danger\"><b>Supprimer</b></button>
 </form>
 ";
         
@@ -92,8 +92,8 @@ class __TwigTemplate_23fedad2af95b783228a1a23eee136d6 extends Template
     {
         return new Source("<form method=\"post\" action=\"{{ path('app_produit_delete', {'id': produit.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ produit.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn btn-outline-danger\"><b>Supprimer</b></button>
 </form>
-", "admin/produits/_delete_form.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/admin/produits/_delete_form.html.twig");
+", "admin/produits/_delete_form.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/admin/produits/_delete_form.html.twig");
     }
 }

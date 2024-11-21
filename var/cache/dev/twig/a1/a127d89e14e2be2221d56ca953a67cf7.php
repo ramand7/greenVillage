@@ -47,8 +47,10 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
         // line 1
         yield "  <nav class=\"navbar navbar-expand-lg bg-body-tertiary\">
   \t<div class=\"container-fluid\">
-    \t<a class=\"navbar-brand\" href=\"#\"><img src=\"";
+    \t<a class=\"navbar-brand\" href=\"";
         // line 3
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accueil");
+        yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo1.png"), "html", null, true);
         yield "\" alt=\"Nom du Site\" height=\"50\"></a>
 \t\t\t<a class=\"navbar-brand\" href=\"#\"><h1>Village Green</h1></a>
@@ -182,14 +184,14 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  147 => 46,  143 => 45,  136 => 41,  132 => 40,  128 => 38,  122 => 35,  116 => 32,  113 => 31,  107 => 28,  101 => 25,  98 => 24,  96 => 23,  92 => 21,  85 => 17,  80 => 14,  78 => 13,  75 => 12,  66 => 9,  63 => 8,  59 => 7,  52 => 3,  48 => 1,);
+        return array (  149 => 46,  145 => 45,  138 => 41,  134 => 40,  130 => 38,  124 => 35,  118 => 32,  115 => 31,  109 => 28,  103 => 25,  100 => 24,  98 => 23,  94 => 21,  87 => 17,  82 => 14,  80 => 13,  77 => 12,  68 => 9,  65 => 8,  61 => 7,  52 => 3,  48 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("  <nav class=\"navbar navbar-expand-lg bg-body-tertiary\">
   \t<div class=\"container-fluid\">
-    \t<a class=\"navbar-brand\" href=\"#\"><img src=\"{{ asset('images/logo1.png') }}\" alt=\"Nom du Site\" height=\"50\"></a>
+    \t<a class=\"navbar-brand\" href=\"{{ path('app_accueil') }}\"><img src=\"{{ asset('images/logo1.png') }}\" alt=\"Nom du Site\" height=\"50\"></a>
 \t\t\t<a class=\"navbar-brand\" href=\"#\"><h1>Village Green</h1></a>
 \t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
 \t\t\t\t\t
@@ -238,6 +240,6 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
     \t</div>
   \t</div>
 \t</nav> 
-", "_partials/_nav.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/_partials/_nav.html.twig");
+", "_partials/_nav.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/_partials/_nav.html.twig");
     }
 }
