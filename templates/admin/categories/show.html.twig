@@ -3,9 +3,14 @@
 {% block title %}Categories{% endblock %}
 
 {% block body %}
-    <h1>Categories</h1>
+    
+    <h1 class="text-center">Categories</h1>
 
-    <table class="table">
+<section class="container w-auto">
+<div class="col-3 justify-content-around">
+	<div class="container w-auto my-5 mb-2">
+    <table class="table table-sm table-centered table-bordered border-dark text-center ms-9">
+
         <tbody>
             <tr>
                 <th>Id</th>
@@ -25,10 +30,20 @@
             </tr>
         </tbody>
     </table>
-
-    <a href="{{ path('app_categories_index') }}">back to list</a>
-
-    <a href="{{ path('app_categories_edit', {'id': categorie.id}) }}">edit</a>
-
+		<div class="row">
+			<div class="col my-2">
+				<a href="{{ path('app_categories_index') }}" class="btn btn-sm btn-outline-primary">Retour à la liste</a>
+			</div>
+			<div class="col my-2">
+				<a href="{{ path('app_categories_edit', {'id': categorie.id}) }}" class="btn btn-sm btn-outline-success">Modifier</a>
+			</div>
+		</div>
+    
     {{ include('admin/categories/_delete_form.html.twig') }}
+
+	</div>
+</div>
+
+</section>
+
 {% endblock %}

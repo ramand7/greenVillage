@@ -73,7 +73,7 @@ class __TwigTemplate_2675e92d2e8344f0ec172419e27bafde extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        yield "Hello AdminController!";
+        yield "Dashboard";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -97,7 +97,7 @@ class __TwigTemplate_2675e92d2e8344f0ec172419e27bafde extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "
+        yield "    <h1 class=\"text-center\">LE TABLEAU DE BORD</h1>
 
 
 ";
@@ -138,13 +138,13 @@ class __TwigTemplate_2675e92d2e8344f0ec172419e27bafde extends Template
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Hello AdminController!{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block body %}
-
+    <h1 class=\"text-center\">LE TABLEAU DE BORD</h1>
 
 
 {% endblock %}
-", "admin/index.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/admin/index.html.twig");
+", "admin/index.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/admin/index.html.twig");
     }
 }

@@ -213,6 +213,6 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js\" integrity=\"sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy\" crossorigin=\"anonymous\"></script>
   </body>
 </html>
-", "base.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/base.html.twig");
+", "base.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/base.html.twig");
     }
 }

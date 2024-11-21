@@ -54,60 +54,96 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t<a class=\"navbar-brand\" href=\"#\"><h1>Village Green</h1></a>
 \t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
 \t\t\t\t\t
+\t\t\t";
+        // line 7
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 7, $this->source); })()), "flashes", ["error"], "method", false, false, false, 7));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 8
+            yield "\t\t\t\t\t<div class=\"alert alert-danger\">
+\t\t\t\t\t\t\t";
+            // line 9
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["message"], "html", null, true);
+            yield "
+\t\t\t\t\t</div>
+\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_key'], $context['message'], $context['_parent']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 12
+        yield "
+\t\t\t";
+        // line 13
+        if ( !Twig\Extension\CoreExtension::testEmpty(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "flashes", ["error"], "method", false, false, false, 13))) {
+            // line 14
+            yield "\t\t\t\t\t<script>
+\t\t\t\t\t\t\t// Redirection après 3 secondes
+\t\t\t\t\t\t\tsetTimeout(function () {
+\t\t\t\t\t\t\t\t\twindow.location.href = \"";
+            // line 17
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("redirect_to", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["redirect_to"]) || array_key_exists("redirect_to", $context) ? $context["redirect_to"] : (function () { throw new RuntimeError('Variable "redirect_to" does not exist.', 17, $this->source); })()), ((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "request", [], "any", false, false, false, 17), "headers", [], "any", false, false, false, 17), "get", ["referer"], "method", false, false, false, 17)) ?: ($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact"))))) : (((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "request", [], "any", false, false, false, 17), "headers", [], "any", false, false, false, 17), "get", ["referer"], "method", false, false, false, 17)) ?: ($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact"))))), "html", null, true);
+            yield "\";
+\t\t\t\t\t\t\t}, 3000);
+\t\t\t\t\t</script>
+\t\t\t";
+        }
+        // line 21
+        yield "
 \t\t\t\t\t<ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\t
 \t\t\t\t\t\t";
-        // line 8
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "user", [], "any", false, false, false, 8)) {
-            // line 9
+        // line 23
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23)) {
+            // line 24
             yield "\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-            // line 10
+            // line 25
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_display");
             yield "\">Mon compte</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-            // line 13
+            // line 28
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             yield "\">Me déconnecter</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         } else {
-            // line 16
+            // line 31
             yield "\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"";
-            // line 17
+            // line 32
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             yield "\">M'inscrire</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"";
-            // line 20
+            // line 35
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             yield "\">Me connecter</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         }
-        // line 23
+        // line 38
         yield "
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 25
+        // line 40
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_index");
         yield "\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 26
+        // line 41
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/cart_2.png"), "html", null, true);
         yield "\" class=\"img-fluid\" width=\"40px\" height=\"10px\" alt=\"Panier\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 30
+        // line 45
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_display");
         yield "\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 31
+        // line 46
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/usericon_1.png"), "html", null, true);
         yield "\" class=\"img-fluid\" width=\"42x\" height=\"42px\" alt=\"Mon compte\">
 \t\t\t\t\t\t\t</a>
@@ -146,7 +182,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  111 => 31,  107 => 30,  100 => 26,  96 => 25,  92 => 23,  86 => 20,  80 => 17,  77 => 16,  71 => 13,  65 => 10,  62 => 9,  60 => 8,  52 => 3,  48 => 1,);
+        return array (  147 => 46,  143 => 45,  136 => 41,  132 => 40,  128 => 38,  122 => 35,  116 => 32,  113 => 31,  107 => 28,  101 => 25,  98 => 24,  96 => 23,  92 => 21,  85 => 17,  80 => 14,  78 => 13,  75 => 12,  66 => 9,  63 => 8,  59 => 7,  52 => 3,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -157,6 +193,21 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t<a class=\"navbar-brand\" href=\"#\"><h1>Village Green</h1></a>
 \t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
 \t\t\t\t\t
+\t\t\t{% for message in app.flashes('error') %}
+\t\t\t\t\t<div class=\"alert alert-danger\">
+\t\t\t\t\t\t\t{{ message }}
+\t\t\t\t\t</div>
+\t\t\t{% endfor %}
+
+\t\t\t{% if app.flashes('error') is not empty %}
+\t\t\t\t\t<script>
+\t\t\t\t\t\t\t// Redirection après 3 secondes
+\t\t\t\t\t\t\tsetTimeout(function () {
+\t\t\t\t\t\t\t\t\twindow.location.href = \"{{ redirect_to|default(app.request.headers.get('referer') ?: path('app_contact')) }}\";
+\t\t\t\t\t\t\t}, 3000);
+\t\t\t\t\t</script>
+\t\t\t{% endif %}
+
 \t\t\t\t\t<ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\t
 \t\t\t\t\t\t{% if(app.user) %}
 \t\t\t\t\t\t<li class=\"nav-item\">
@@ -187,6 +238,6 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
     \t</div>
   \t</div>
 \t</nav> 
-", "_partials/_nav.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/_partials/_nav.html.twig");
+", "_partials/_nav.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/_partials/_nav.html.twig");
     }
 }

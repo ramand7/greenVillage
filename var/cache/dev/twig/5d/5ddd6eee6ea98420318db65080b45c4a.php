@@ -97,73 +97,75 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Produit</h1>
+        yield "
+    <h1 class=\"text-center\">DETAILS DU PRODUIT</h1>
 
-    <table class=\"table\">
+  <div class=\"container ms-9 my-4 mb-2\">
+    <table class=\"table table-striped-column table w-auto table-sm table-bordered border-dark text-center ms-6\">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>";
-        // line 12
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 12, $this->source); })()), "id", [], "any", false, false, false, 12), "html", null, true);
+        // line 14
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 14, $this->source); })()), "id", [], "any", false, false, false, 14), "html", null, true);
         yield "</td>
             </tr>
             <tr>
                 <th>Libelle</th>
                 <td>";
-        // line 16
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 16, $this->source); })()), "libelle", [], "any", false, false, false, 16), "html", null, true);
+        // line 18
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 18, $this->source); })()), "libelle", [], "any", false, false, false, 18), "html", null, true);
         yield "</td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>";
-        // line 20
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 20, $this->source); })()), "description", [], "any", false, false, false, 20), "html", null, true);
+        // line 22
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 22, $this->source); })()), "description", [], "any", false, false, false, 22), "html", null, true);
         yield "</td>
             <tr>
                 <th>Prixht</th>
                 <td>";
-        // line 23
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 23, $this->source); })()), "prixht", [], "any", false, false, false, 23), "html", null, true);
+        // line 25
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 25, $this->source); })()), "prixht", [], "any", false, false, false, 25), "html", null, true);
         yield "</td>
             </tr>
             <tr>
                 <th>Tva</th>
                 <td>";
-        // line 27
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 27, $this->source); })()), "tva", [], "any", false, false, false, 27), "html", null, true);
+        // line 29
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 29, $this->source); })()), "tva", [], "any", false, false, false, 29), "html", null, true);
         yield "</td>
             </tr>
             <tr>
                 <th>Stock</th>
                 <td>";
-        // line 31
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 31, $this->source); })()), "stock", [], "any", false, false, false, 31), "html", null, true);
+        // line 33
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 33, $this->source); })()), "stock", [], "any", false, false, false, 33), "html", null, true);
         yield "</td>
             </tr>
             <tr>
                 <th>Photo</th>
                 <td>";
-        // line 35
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 35, $this->source); })()), "photo", [], "any", false, false, false, 35), "html", null, true);
+        // line 37
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 37, $this->source); })()), "photo", [], "any", false, false, false, 37), "html", null, true);
         yield "</td>
             </tr>
         </tbody>
     </table>
-
+</div>
     <a href=\"";
-        // line 40
+        // line 42
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_index");
         yield "\">back to list</a>
 
     <a href=\"";
-        // line 42
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 42, $this->source); })()), "id", [], "any", false, false, false, 42)]), "html", null, true);
+        // line 44
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 44, $this->source); })()), "id", [], "any", false, false, false, 44)]), "html", null, true);
         yield "\">edit</a>
 
     ";
-        // line 44
+        // line 46
         yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/produits/_delete_form.html.twig");
         yield "
 ";
@@ -197,7 +199,7 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  167 => 44,  162 => 42,  157 => 40,  149 => 35,  142 => 31,  135 => 27,  128 => 23,  122 => 20,  115 => 16,  108 => 12,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  169 => 46,  164 => 44,  159 => 42,  151 => 37,  144 => 33,  137 => 29,  130 => 25,  124 => 22,  117 => 18,  110 => 14,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -207,9 +209,11 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
 {% block title %}Produit{% endblock %}
 
 {% block body %}
-    <h1>Produit</h1>
 
-    <table class=\"table\">
+    <h1 class=\"text-center\">DETAILS DU PRODUIT</h1>
+
+  <div class=\"container ms-9 my-4 mb-2\">
+    <table class=\"table table-striped-column table w-auto table-sm table-bordered border-dark text-center ms-6\">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -240,12 +244,12 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
             </tr>
         </tbody>
     </table>
-
+</div>
     <a href=\"{{ path('app_produit_index') }}\">back to list</a>
 
     <a href=\"{{ path('app_produit_edit', {'id': produit.id}) }}\">edit</a>
 
     {{ include('admin/produits/_delete_form.html.twig') }}
-{% endblock %}", "admin/produits/show.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/admin/produits/show.html.twig");
+{% endblock %}", "admin/produits/show.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/admin/produits/show.html.twig");
     }
 }

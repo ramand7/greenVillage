@@ -155,6 +155,6 @@ class __TwigTemplate_e2b2697297e50a0ffddbb2965b0d04fe extends Template
 
     <a href=\"{{ path('app_produit_index') }}\">back to list</a>
 {% endblock %}
-", "admin/produits/new.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/admin/produits/new.html.twig");
+", "admin/produits/new.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/admin/produits/new.html.twig");
     }
 }

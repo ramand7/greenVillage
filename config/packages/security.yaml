@@ -17,6 +17,14 @@ security:
             lazy: true
             provider: app_user_provider
             custom_authenticator: App\Security\UtilisateurAuthenticator
+
+# security:
+    # firewalls:
+        # main:
+            # Autres paramètres du firewall
+            pattern: ^/
+            access_denied_handler: App\Security\AccessDeniedHandler
+
             logout:
                 path: app_logout
                 # where to redirect after logout
@@ -28,6 +36,8 @@ security:
                 path: /
                 always_remember_me: true
 
+        
+
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
 
@@ -38,6 +48,8 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/categories, roles: ROLE_ADMIN }
+        - { path: ^/produits, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
 
 when@test:

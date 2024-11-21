@@ -96,6 +96,6 @@ class __TwigTemplate_46b8493c00760585e2d0e8ebc3c4a090 extends Template
     {# {{ form_widget(form) }} #}
     <button class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "admin/categories/_form.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/admin/categories/_form.html.twig");
+", "admin/categories/_form.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/admin/categories/_form.html.twig");
     }
 }

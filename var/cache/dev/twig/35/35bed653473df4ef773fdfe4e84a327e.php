@@ -98,7 +98,11 @@ class __TwigTemplate_7f2e81242cf92f04255799f0ee5b350e extends Template
 
         // line 6
         yield "
- 
+ ";
+        // line 7
+        yield from         $this->loadTemplate("_partials/_nav.html.twig", "profil/display.html.twig", 7)->unwrap()->yield($context);
+        // line 8
+        yield "
   <div class=\"container\">
   \t<div class=\"row mt-5\">
       <div class=\"col-sm-8 offset-sm-2\">
@@ -106,7 +110,7 @@ class __TwigTemplate_7f2e81242cf92f04255799f0ee5b350e extends Template
         <table class=\"table table-light table-hover\">
 
 ";
-        // line 31
+        // line 32
         yield "          <thead>
             <tr>
               <th>E-mail</th>
@@ -118,23 +122,23 @@ class __TwigTemplate_7f2e81242cf92f04255799f0ee5b350e extends Template
           <tbody>
             <tr>
               <td>";
-        // line 41
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 41, $this->source); })()), "email", [], "any", false, false, false, 41), "html", null, true);
-        yield "</td>
-\t\t\t\t\t\t\t<td>";
         // line 42
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 42, $this->source); })()), "nom", [], "any", false, false, false, 42), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 42, $this->source); })()), "email", [], "any", false, false, false, 42), "html", null, true);
         yield "</td>
 \t\t\t\t\t\t\t<td>";
         // line 43
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 43, $this->source); })()), "prenom", [], "any", false, false, false, 43), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 43, $this->source); })()), "nom", [], "any", false, false, false, 43), "html", null, true);
+        yield "</td>
+\t\t\t\t\t\t\t<td>";
+        // line 44
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 44, $this->source); })()), "prenom", [], "any", false, false, false, 44), "html", null, true);
         yield "</td> 
 \t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t";
-        // line 46
+        // line 47
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 46, $this->source); })()), "roles", [], "any", false, false, false, 46));
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["userInfo"]) || array_key_exists("userInfo", $context) ? $context["userInfo"] : (function () { throw new RuntimeError('Variable "userInfo" does not exist.', 47, $this->source); })()), "roles", [], "any", false, false, false, 47));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -149,13 +153,13 @@ class __TwigTemplate_7f2e81242cf92f04255799f0ee5b350e extends Template
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-            // line 47
+            // line 48
             yield "\t\t\t\t\t\t\t\t";
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["role"], "html", null, true);
-            if ( !CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "last", [], "any", false, false, false, 47)) {
+            if ( !CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "last", [], "any", false, false, false, 48)) {
                 yield ", ";
             }
-            // line 48
+            // line 49
             yield "
 
 \t\t\t\t\t\t\t\t";
@@ -171,7 +175,7 @@ class __TwigTemplate_7f2e81242cf92f04255799f0ee5b350e extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 52
         yield "\t\t\t\t\t\t\t</td> 
             </tr>
           </tbody>
@@ -212,7 +216,7 @@ class __TwigTemplate_7f2e81242cf92f04255799f0ee5b350e extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  175 => 51,  159 => 48,  153 => 47,  136 => 46,  130 => 43,  126 => 42,  122 => 41,  110 => 31,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  179 => 52,  163 => 49,  157 => 48,  140 => 47,  134 => 44,  130 => 43,  126 => 42,  114 => 32,  105 => 8,  103 => 7,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -223,7 +227,8 @@ class __TwigTemplate_7f2e81242cf92f04255799f0ee5b350e extends Template
 
 {% block body %}
 
- 
+ {% include ('_partials/_nav.html.twig')  %}
+
   <div class=\"container\">
   \t<div class=\"row mt-5\">
       <div class=\"col-sm-8 offset-sm-2\">
@@ -277,6 +282,6 @@ class __TwigTemplate_7f2e81242cf92f04255799f0ee5b350e extends Template
   </div>
 
 {% endblock %}
-", "profil/display.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/profil/display.html.twig");
+", "profil/display.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/profil/display.html.twig");
     }
 }

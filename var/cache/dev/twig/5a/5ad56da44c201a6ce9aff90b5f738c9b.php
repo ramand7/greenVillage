@@ -99,6 +99,6 @@ class __TwigTemplate_4c613de6d9b58ca007284a659351aeea extends Template
 \t\t\t\t</section>
 \t\t\t</div>
 \t\t
-\t\t</footer>", "_partials/_footer.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/_partials/_footer.html.twig");
+\t\t</footer>", "_partials/_footer.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/_partials/_footer.html.twig");
     }
 }

@@ -97,54 +97,57 @@ class __TwigTemplate_1455dcfaed911de9ce9332d2461b8936 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1 class=\"text-center\">LISTE DES CATEGORIES DE PRODUITS (index)</h1>
+        yield "    
+    <h1 class=\"text-center\">LISTE DES CATEGORIES DE PRODUITS (index)</h1>
 
-    <table class=\"table\">
+<div class=\"container my-5 mb-3\">
+    <table class=\"table table-sm table-bordered border-dark text-center ms-6\">
         <thead>
-            <tr>
+            <tr class=\"table table-secondary table-bordered border-dark\">
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Slug</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 18
+        // line 20
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 18, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 20, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 19
+            // line 21
             yield "            <tr>
                 <td>";
-            // line 20
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 20), "html", null, true);
-            yield "</td>
-                <td>";
-            // line 21
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["category"], "nom", [], "any", false, false, false, 21), "html", null, true);
-            yield "</td>
-                <td>";
             // line 22
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["category"], "slug", [], "any", false, false, false, 22), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 22), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 23
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["category"], "nom", [], "any", false, false, false, 23), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 24
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["category"], "slug", [], "any", false, false, false, 24), "html", null, true);
             yield "</td>
                 <td>
                     <a href=\"";
-            // line 24
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 24)]), "html", null, true);
-            yield "\" class=\"btn btn-outline-primary\">Voir</a>
+            // line 26
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 26)]), "html", null, true);
+            yield "\" class=\"btn btn-sm btn-outline-primary\"><b>Voir</b></a>
                     <a href=\"";
-            // line 25
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 25)]), "html", null, true);
-            yield "\" class=\"btn btn-outline-success\">Editer</a>
+            // line 27
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 27)]), "html", null, true);
+            yield "\" class=\"btn btn-sm btn-outline-success\"><b>Editer</b></a>
+
                 </td>
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 29
+            // line 32
             yield "            <tr>
                 <td colspan=\"4\">Aucune catégorie trouvée</td>
             </tr>
@@ -153,14 +156,16 @@ class __TwigTemplate_1455dcfaed911de9ce9332d2461b8936 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['category'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 36
         yield "        </tbody>
     </table>
 
     <a href=\"";
-        // line 36
+        // line 39
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_new");
-        yield "\">Create new</a>
+        yield "\" class=\"btn btn-sm btn-outline-danger\"><b>Créer</b></a>
+</div>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -192,7 +197,7 @@ class __TwigTemplate_1455dcfaed911de9ce9332d2461b8936 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  162 => 36,  157 => 33,  148 => 29,  139 => 25,  135 => 24,  130 => 22,  126 => 21,  122 => 20,  119 => 19,  114 => 18,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  165 => 39,  160 => 36,  151 => 32,  141 => 27,  137 => 26,  132 => 24,  128 => 23,  124 => 22,  121 => 21,  116 => 20,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -202,15 +207,17 @@ class __TwigTemplate_1455dcfaed911de9ce9332d2461b8936 extends Template
 {% block title %}Liste des catégories{% endblock %}
 
 {% block body %}
+    
     <h1 class=\"text-center\">LISTE DES CATEGORIES DE PRODUITS (index)</h1>
 
-    <table class=\"table\">
+<div class=\"container my-5 mb-3\">
+    <table class=\"table table-sm table-bordered border-dark text-center ms-6\">
         <thead>
-            <tr>
+            <tr class=\"table table-secondary table-bordered border-dark\">
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Slug</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -220,8 +227,9 @@ class __TwigTemplate_1455dcfaed911de9ce9332d2461b8936 extends Template
                 <td>{{ category.nom }}</td>
                 <td>{{ category.slug }}</td>
                 <td>
-                    <a href=\"{{ path('app_categories_show', {'id': category.id}) }}\" class=\"btn btn-outline-primary\">Voir</a>
-                    <a href=\"{{ path('app_categories_edit', {'id': category.id}) }}\" class=\"btn btn-outline-success\">Editer</a>
+                    <a href=\"{{ path('app_categories_show', {'id': category.id}) }}\" class=\"btn btn-sm btn-outline-primary\"><b>Voir</b></a>
+                    <a href=\"{{ path('app_categories_edit', {'id': category.id}) }}\" class=\"btn btn-sm btn-outline-success\"><b>Editer</b></a>
+
                 </td>
             </tr>
         {% else %}
@@ -232,8 +240,10 @@ class __TwigTemplate_1455dcfaed911de9ce9332d2461b8936 extends Template
         </tbody>
     </table>
 
-    <a href=\"{{ path('app_categories_new') }}\">Create new</a>
+    <a href=\"{{ path('app_categories_new') }}\" class=\"btn btn-sm btn-outline-danger\"><b>Créer</b></a>
+</div>
+
 {% endblock %}
-", "admin/categories/index.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/admin/categories/index.html.twig");
+", "admin/categories/index.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/admin/categories/index.html.twig");
     }
 }

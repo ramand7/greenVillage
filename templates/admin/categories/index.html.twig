@@ -3,15 +3,17 @@
 {% block title %}Liste des catégories{% endblock %}
 
 {% block body %}
+    
     <h1 class="text-center">LISTE DES CATEGORIES DE PRODUITS (index)</h1>
 
-    <table class="table">
+<div class="container my-5 mb-3">
+    <table class="table table-sm table-bordered border-dark text-center ms-6">
         <thead>
-            <tr>
+            <tr class="table table-secondary table-bordered border-dark">
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Slug</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +23,9 @@
                 <td>{{ category.nom }}</td>
                 <td>{{ category.slug }}</td>
                 <td>
-                    <a href="{{ path('app_categories_show', {'id': category.id}) }}" class="btn btn-outline-primary">Voir</a>
-                    <a href="{{ path('app_categories_edit', {'id': category.id}) }}" class="btn btn-outline-success">Editer</a>
+                    <a href="{{ path('app_categories_show', {'id': category.id}) }}" class="btn btn-sm btn-outline-primary"><b>Voir</b></a>
+                    <a href="{{ path('app_categories_edit', {'id': category.id}) }}" class="btn btn-sm btn-outline-success"><b>Editer</b></a>
+
                 </td>
             </tr>
         {% else %}
@@ -33,5 +36,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_categories_new') }}">Create new</a>
+    <a href="{{ path('app_categories_new') }}" class="btn btn-sm btn-outline-danger"><b>Créer</b></a>
+</div>
+
 {% endblock %}

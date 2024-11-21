@@ -71,6 +71,6 @@ class __TwigTemplate_b403c63daf6ab2ce2f5cf44169b05ca3 extends Template
 
     public function getSourceContext(): Source
     {
-        return new Source("", "categories/claviers/claviers.html.twig", "/home/ramand/Bureau/greenVillage20112024/templates/categories/claviers/claviers.html.twig");
+        return new Source("", "categories/claviers/claviers.html.twig", "/home/ramand/Bureau/greenVillage 20442024 bis/templates/categories/claviers/claviers.html.twig");
     }
 }
