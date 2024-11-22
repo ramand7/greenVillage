@@ -56,6 +56,7 @@ return [
     'accessoires' => [[], ['_controller' => 'App\\Controller\\AdminController::indexSono'], [], [['text', '/souscategories/accessoires']], [], [], []],
     'sonorisation' => [[], ['_controller' => 'App\\Controller\\AdminController::indexAccès'], [], [['text', '/souscategories/sonorisation']], [], [], []],
     'librairie' => [[], ['_controller' => 'App\\Controller\\AdminController::indexLib'], [], [['text', '/souscategories/librairie']], [], [], []],
+    'guit_classiques' => [['id'], ['_controller' => 'App\\Controller\\AdminController::showGuitClass'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/souscategories/guitares']], [], [], []],
     'cart_index' => [[], ['_controller' => 'App\\Controller\\CartController::index'], [], [['text', '/cart']], [], [], []],
     'cart_add' => [['id'], ['_controller' => 'App\\Controller\\CartController::add'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/cart/add']], [], [], []],
     'cart_remove' => [['id'], ['_controller' => 'App\\Controller\\CartController::remove'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/cart/remove']], [], [], []],

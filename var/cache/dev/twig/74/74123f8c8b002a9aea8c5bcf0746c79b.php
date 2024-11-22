@@ -99,6 +99,12 @@ class __TwigTemplate_6ee453b88696bd73c3f2e1ae85266979 extends Template
         // line 6
         yield "
 ";
+        // line 7
+        yield from         $this->loadTemplate("_partials/_nav.html.twig", "panier/index.html.twig", 7)->unwrap()->yield($context);
+        // line 8
+        yield "
+
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -129,7 +135,7 @@ class __TwigTemplate_6ee453b88696bd73c3f2e1ae85266979 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  105 => 8,  103 => 7,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -140,7 +146,10 @@ class __TwigTemplate_6ee453b88696bd73c3f2e1ae85266979 extends Template
 
 {% block body %}
 
+{% include \"_partials/_nav.html.twig\" %}
+
+
 {% endblock %}
-", "panier/index.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/panier/index.html.twig");
+", "panier/index.html.twig", "/home/ramand/Bureau/greenVillage 21112024/templates/panier/index.html.twig");
     }
 }

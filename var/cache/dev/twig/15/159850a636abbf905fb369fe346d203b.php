@@ -151,7 +151,7 @@ class __TwigTemplate_dd51c03c267a32bc742404df271e2184 extends Template
 
 \t\t\t</div>
 
-\t\t\t<button type=\"submit\" class=\"btn btn-success btn-lg mt-3\">
+\t\t\t<button type=\"submit\" class=\"btn btn-sm btn-success btn-lg mt-2\">
 \t\t\t\t<h6>Envoyer</h6>
 \t\t\t</button>
 
@@ -233,7 +233,7 @@ class __TwigTemplate_dd51c03c267a32bc742404df271e2184 extends Template
 
 \t\t\t</div>
 
-\t\t\t<button type=\"submit\" class=\"btn btn-success btn-lg mt-3\">
+\t\t\t<button type=\"submit\" class=\"btn btn-sm btn-success btn-lg mt-2\">
 \t\t\t\t<h6>Envoyer</h6>
 \t\t\t</button>
 
@@ -242,6 +242,6 @@ class __TwigTemplate_dd51c03c267a32bc742404df271e2184 extends Template
 \t</section>
 
 {% endblock %}
-", "contact/index.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/contact/index.html.twig");
+", "contact/index.html.twig", "/home/ramand/Bureau/greenVillage 21112024/templates/contact/index.html.twig");
     }
 }

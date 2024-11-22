@@ -8,11 +8,10 @@
 
 <h1 class="text-center text-success">Votre panier</h1>
 <div class="container w-50">
-	<div class="col-12">
-    <table class="table table-sm table-hover table-primary">
-        <thead>
-            <tr>
-                {# <th>Réf.</th> #}
+	<div class="col-10">
+    <table class="table table-hover table-primary">
+        {# <thead> #}
+            <tr class="text-center">
                 <th>Désignation</th>
 								<th>Prix unitaire</th>
 								<th>Qté</th>   
@@ -20,30 +19,29 @@
 								<th>Sous-total TTC</th>
 								<th>Action</th>
             </tr>
-        </thead>
-        <tbody>
+        {# </thead> #}
+        {# <tbody> #}
         <div>
 					{% for item in cart.items %}
 						<div>
 							<tr>
 								{# <td>{{ item.produit.id }}</td> #}
 								<td>{{ item.produit.libelle }}</td>
-								<td>{{ item.produit.prixht }}</td>
-								<td>{{ item.quantity }}</td>
-								<td>{{ item.produit.tva }}</td>
-								<td><a href="{{ path('cart_remove', { id: item.produit.id }) }}" class="btn btn-outline-danger">Supprimer</a></td>	
-							</tr>
-						</div>
-						<div>
-							<td>{{ item.produit.prixht * item.quantity }} €</td>
+								<td class="text-center">{{ item.produit.prixht }}</td>
+								<td class="text-center">{{ item.quantity }}</td>
+								<td class="text-center">{{ item.produit.tva }}</td>
+								<td class="text-center">{{ item.produit.prixht * item.quantity }} €</td>
+								<td class="text-center"><a href="{{ path('cart_remove', { id: item.produit.id }) }}" class="btn btn-sm btn-outline-danger">Supprimer</a></td>
+							</tr>	
 						</div>
     			{% endfor %}
 				</div>
+			{# </tbody> #}
    	</table>
-	</div>						
+	</div>					
 </div>	
 <div class="col-2 ms-3">			
-	<h4 class="text-left">Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
+	<h4 class="text-center">Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
 	<td><a href="{{ path('app_accueil') }}" class="btn btn-sm btn-outline-success"><b>Page d'accueil</b></a></td>	
 </div>	
 

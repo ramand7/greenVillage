@@ -130,7 +130,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 <!-- En-tête du site avec Bootstrap Navbar -->
 <header>
 <section>
-  <nav class=\"navbar navbar-expand-lg navbar-dark bg-danger\">
+  <nav class=\"navbar navbar-expand-lg navbar-dark bg-secondary\">
     <div class=\"container-fluid\">  
 \t\t  <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"> 
         <span class=\"navbar-toggler-icon\"></span> 
@@ -138,26 +138,23 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 
       <div class=\"collapse navbar-collapse\" id=\"navbarNav\"> 
         <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
-\t\t\t\t\t<li class=\"nav-item\">
-            <a class=\"nav-link active\" href=\"#\">Accueil</a>
-          </li>    
           <li class=\"nav-item\">
           \t<a class=\"nav-link\" href=\"";
-        // line 28
+        // line 25
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sous_categories");
-        yield "\">Catégories</a>
+        yield "\"><b>Catégories</b></a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"\">Promotions</a>
+            <a class=\"nav-link\" href=\"\"><b>Promotions</b></a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"#\">À propos</a>
+            <a class=\"nav-link\" href=\"#\"><b>À propos</b></a>
           </li>
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 37
+        // line 34
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
-        yield "\">Contact</a>
+        yield "\"><b>Contact</b></a>
           </li>                \t\t
         </ul>
         <form class=\"d-flex\" role=\"search\">
@@ -165,36 +162,22 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
           <button class=\"btn btn-outline-light\" type=\"submit\">Rechercher</button>
         </form>
 \t\t\t\t";
-        // line 45
+        // line 42
         yield "\t\t\t\t\t";
-        // line 46
+        // line 43
         yield "\t\t\t\t\t";
-        // line 47
+        // line 44
         yield "\t\t\t\t";
-        // line 48
+        // line 45
         yield "      </div>
     </div>
   </nav>
-  <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-    <div class=\"container-fluid\">
-      <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-        <span class=\"navbar-toggler-icon\"></span>
-      </button>
-      <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
-        <div class=\"ms-3\">
-          <a href=\"#\", class=\"btn btn-outline-light\">Guitares</a>
-          <a href=\"#\" class=\"btn btn-outline-light\">Claviers</a>
-          <a href=\"#\" class=\"btn btn-outline-light\">Batteries</a>
-          <a href=\"#\" class=\"btn btn-outline-light\">Saxophone</a>
-          <a href=\"#\" class=\"btn btn-outline-light\">Accessoires</a>
-          <a href=\"#\" class=\"btn btn-outline-light\">Sonorisation</a>
-          <a href=\"#\" class=\"btn btn-outline-light\">Librairie</a>
-          <a href=\"#\" class=\"btn btn-outline-light\">Logiciels</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-</section>
+  
+  
+  
+  ";
+        // line 70
+        yield "</section>
 </header>
 
 <!-- Bannière principale -->
@@ -427,6 +410,11 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 </footer>
 
 ";
+        // line 230
+        yield from         $this->loadTemplate("_partials/_footer.html.twig", "accueil/index.html.twig", 230)->unwrap()->yield($context);
+        // line 231
+        yield "
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -457,7 +445,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  378 => 179,  376 => 178,  356 => 161,  349 => 159,  340 => 153,  333 => 151,  324 => 145,  315 => 141,  306 => 135,  297 => 131,  284 => 121,  276 => 118,  267 => 112,  260 => 110,  251 => 104,  244 => 102,  235 => 96,  228 => 94,  216 => 84,  211 => 80,  206 => 77,  175 => 48,  173 => 47,  171 => 46,  169 => 45,  159 => 37,  147 => 28,  129 => 12,  127 => 11,  124 => 10,  111 => 9,  88 => 5,  65 => 3,  42 => 1,);
+        return array (  416 => 231,  414 => 230,  361 => 179,  359 => 178,  339 => 161,  332 => 159,  323 => 153,  316 => 151,  307 => 145,  298 => 141,  289 => 135,  280 => 131,  267 => 121,  259 => 118,  250 => 112,  243 => 110,  234 => 104,  227 => 102,  218 => 96,  211 => 94,  199 => 84,  194 => 80,  189 => 77,  180 => 70,  172 => 45,  170 => 44,  168 => 43,  166 => 42,  156 => 34,  144 => 25,  129 => 12,  127 => 11,  124 => 10,  111 => 9,  88 => 5,  65 => 3,  42 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -477,7 +465,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 <!-- En-tête du site avec Bootstrap Navbar -->
 <header>
 <section>
-  <nav class=\"navbar navbar-expand-lg navbar-dark bg-danger\">
+  <nav class=\"navbar navbar-expand-lg navbar-dark bg-secondary\">
     <div class=\"container-fluid\">  
 \t\t  <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"> 
         <span class=\"navbar-toggler-icon\"></span> 
@@ -485,20 +473,17 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 
       <div class=\"collapse navbar-collapse\" id=\"navbarNav\"> 
         <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
-\t\t\t\t\t<li class=\"nav-item\">
-            <a class=\"nav-link active\" href=\"#\">Accueil</a>
-          </li>    
           <li class=\"nav-item\">
-          \t<a class=\"nav-link\" href=\"{{ path('sous_categories') }}\">Catégories</a>
+          \t<a class=\"nav-link\" href=\"{{ path('sous_categories') }}\"><b>Catégories</b></a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"\">Promotions</a>
+            <a class=\"nav-link\" href=\"\"><b>Promotions</b></a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"#\">À propos</a>
+            <a class=\"nav-link\" href=\"#\"><b>À propos</b></a>
           </li>
           <li class=\"nav-item\">
-            <a class=\"nav-link\" href=\"{{ path('app_contact') }}\">Contact</a>
+            <a class=\"nav-link\" href=\"{{ path('app_contact') }}\"><b>Contact</b></a>
           </li>                \t\t
         </ul>
         <form class=\"d-flex\" role=\"search\">
@@ -512,7 +497,10 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
       </div>
     </div>
   </nav>
-  <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
+  
+  
+  
+  {# <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
     <div class=\"container-fluid\">
       <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
         <span class=\"navbar-toggler-icon\"></span>
@@ -530,7 +518,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
         </div>
       </div>
     </div>
-  </nav>
+  </nav> #}
 </section>
 </header>
 
@@ -691,7 +679,9 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
     </div>
 </footer>
 
+{% include \"_partials/_footer.html.twig\" %}
+
 {% endblock %}
-", "accueil/index.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/accueil/index.html.twig");
+", "accueil/index.html.twig", "/home/ramand/Bureau/greenVillage 21112024/templates/accueil/index.html.twig");
     }
 }

@@ -79,10 +79,8 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
     <div id=\"react-root\"></div>
 
   \t";
-        // line 23
-        yield from         $this->loadTemplate("_partials/_footer.html.twig", "base.html.twig", 23)->unwrap()->yield($context);
-        yield " 
-
+        // line 24
+        yield "
 
      
 
@@ -173,7 +171,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  134 => 19,  111 => 6,  91 => 29,  83 => 23,  78 => 20,  76 => 19,  65 => 12,  57 => 6,  50 => 1,);
+        return array (  132 => 19,  109 => 6,  89 => 29,  83 => 24,  78 => 20,  76 => 19,  65 => 12,  57 => 6,  50 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -200,7 +198,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
 
     <div id=\"react-root\"></div>
 
-  \t{% include \"_partials/_footer.html.twig\" %} 
+  \t{# {% include \"_partials/_footer.html.twig\" %}  #}
 
 
      
@@ -213,6 +211,6 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js\" integrity=\"sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy\" crossorigin=\"anonymous\"></script>
   </body>
 </html>
-", "base.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/base.html.twig");
+", "base.html.twig", "/home/ramand/Bureau/greenVillage 21112024/templates/base.html.twig");
     }
 }

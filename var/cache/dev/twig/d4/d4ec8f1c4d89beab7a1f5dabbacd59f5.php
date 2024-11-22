@@ -184,6 +184,6 @@ class __TwigTemplate_dd8be12a59291df9cf185cdcfb4a3bd1 extends Template
             </td>
         </tr>
     </table>
-</body>", "profil/affichage_1.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/profil/affichage_1.html.twig");
+</body>", "profil/affichage_1.html.twig", "/home/ramand/Bureau/greenVillage 21112024/templates/profil/affichage_1.html.twig");
     }
 }

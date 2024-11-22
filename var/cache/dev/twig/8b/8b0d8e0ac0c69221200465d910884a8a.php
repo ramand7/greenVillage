@@ -165,6 +165,6 @@ class __TwigTemplate_e2b2697297e50a0ffddbb2965b0d04fe extends Template
 \t</div>
 </section>
 {% endblock %}
-", "admin/produits/new.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/admin/produits/new.html.twig");
+", "admin/produits/new.html.twig", "/home/ramand/Bureau/greenVillage 21112024/templates/admin/produits/new.html.twig");
     }
 }

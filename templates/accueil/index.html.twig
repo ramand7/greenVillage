@@ -13,7 +13,7 @@
 <!-- En-tête du site avec Bootstrap Navbar -->
 <header>
 <section>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
     <div class="container-fluid">  
 		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
         <span class="navbar-toggler-icon"></span> 
@@ -21,20 +21,17 @@
 
       <div class="collapse navbar-collapse" id="navbarNav"> 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-            <a class="nav-link active" href="#">Accueil</a>
-          </li>    
           <li class="nav-item">
-          	<a class="nav-link" href="{{ path('sous_categories') }}">Catégories</a>
+          	<a class="nav-link" href="{{ path('sous_categories') }}"><b>Catégories</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Promotions</a>
+            <a class="nav-link" href=""><b>Promotions</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">À propos</a>
+            <a class="nav-link" href="#"><b>À propos</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
+            <a class="nav-link" href="{{ path('app_contact') }}"><b>Contact</b></a>
           </li>                		
         </ul>
         <form class="d-flex" role="search">
@@ -48,7 +45,10 @@
       </div>
     </div>
   </nav>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  
+  
+  
+  {# <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -66,7 +66,7 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> #}
 </section>
 </header>
 
@@ -226,5 +226,7 @@
         </div>
     </div>
 </footer>
+
+{% include "_partials/_footer.html.twig" %}
 
 {% endblock %}
