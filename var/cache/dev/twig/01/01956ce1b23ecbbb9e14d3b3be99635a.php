@@ -33,7 +33,9 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'stylesheets' => [$this, 'block_stylesheets'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -60,9 +62,12 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
     <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">   
     <link rel=\"stylesheet\" href=\"/css/style.css\">    
     
-  ";
+   ";
+        // line 11
+        yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
+        yield " 
+    ";
         // line 12
-        yield "    ";
         yield $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("app");
         yield "
   
@@ -86,9 +91,12 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
 
      
 
-  ";
+   ";
+        // line 28
+        yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
+        yield " 
+    ";
         // line 29
-        yield "    ";
         yield $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         yield "
 
@@ -130,6 +138,29 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
         yield from [];
     }
 
+    // line 11
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_stylesheets(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        yield " ";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
     // line 19
     /**
      * @return iterable<null|scalar|\Stringable>
@@ -142,6 +173,28 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 28
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_javascripts(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -173,7 +226,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  134 => 19,  111 => 6,  91 => 29,  83 => 23,  78 => 20,  76 => 19,  65 => 12,  57 => 6,  50 => 1,);
+        return array (  187 => 28,  165 => 19,  142 => 11,  119 => 6,  100 => 29,  96 => 28,  88 => 23,  83 => 20,  81 => 19,  71 => 12,  67 => 11,  59 => 6,  52 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -188,7 +241,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
     <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">   
     <link rel=\"stylesheet\" href=\"/css/style.css\">    
     
-  {#  {% block stylesheets %} {% endblock %}  #}
+   {% block stylesheets %} {% endblock %} 
     {{ encore_entry_link_tags('app') }}
   
   </head>
@@ -205,7 +258,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
 
      
 
-  {#  {% block javascripts %}{% endblock %}  #}
+   {% block javascripts %}{% endblock %} 
     {{ encore_entry_script_tags('app') }}
 
 \t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz\" crossorigin=\"anonymous\"></script>
@@ -213,6 +266,6 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js\" integrity=\"sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy\" crossorigin=\"anonymous\"></script>
   </body>
 </html>
-", "base.html.twig", "/home/ramand/Bureau/greenVillage21112024/templates/base.html.twig");
+", "base.html.twig", "/home/ramand/Bureau/greenVillage/templates/base.html.twig");
     }
 }
