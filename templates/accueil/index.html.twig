@@ -21,52 +21,42 @@
 
       <div class="collapse navbar-collapse" id="navbarNav"> 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle navigation">Nos catégories
+            </a>
+          </li>
+          <ul class="dropdown-menu">
+            <li class="dropdown-item" href="#">Action1</li>
+            <li class="dropdown-item" href="#">Action2</li>
+            <li class="dropdown-item" href="#">Action3</li>
+            <li class="dropdown-item" href="#">Action4</li>
+            <li class="dropdown-item" href="#">Action5</li>
+            <li class="dropdown-item" href="#">Action6</li>
+            <li class="dropdown-item" href="#">Action7</li>
+            <li class="dropdown-item" href="#">Action8</li>
+          
+          </ul>    
           <li class="nav-item">
-          	<a class="nav-link" href="{{ path('sous_categories') }}"><b>Catégories</b></a>
+          	<a class="nav-link" href="{{ path('sous_categories') }}">Catégories</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href=""><b>Promotions</b></a>
+            <a class="nav-link" href="">Promotions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><b>À propos</b></a>
+            <a class="nav-link" href="#">À propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ path('app_contact') }}"><b>Contact</b></a>
+            <a class="nav-link" href="{{ path('app_contact') }}">Contact</a>
           </li>                		
         </ul>
         <form class="d-flex" role="search">
         	<input class="form-control me-2" type="search" placeholder="Rechercher des produits..." aria-label="Search">
           <button class="btn btn-outline-light" type="submit">Rechercher</button>
         </form>
-				{# <div class="ms-3"> #}
-					{# <a href="{{ path('app_login') }}" class="btn btn-outline-light">Mon Compte</a> #}
-					{# <a href="{{ path('app_register') }}" class="btn btn-outline-light">S'inscrire</a> #}
-				{# </div> #}
+
       </div>
     </div>
   </nav>
-  
-  
-  
-  {# <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="ms-3">
-          <a href="#", class="btn btn-outline-light">Guitares</a>
-          <a href="#" class="btn btn-outline-light">Claviers</a>
-          <a href="#" class="btn btn-outline-light">Batteries</a>
-          <a href="#" class="btn btn-outline-light">Saxophone</a>
-          <a href="#" class="btn btn-outline-light">Accessoires</a>
-          <a href="#" class="btn btn-outline-light">Sonorisation</a>
-          <a href="#" class="btn btn-outline-light">Librairie</a>
-          <a href="#" class="btn btn-outline-light">Logiciels</a>
-        </div>
-      </div>
-    </div>
-  </nav> #}
 </section>
 </header>
 
@@ -226,7 +216,5 @@
         </div>
     </div>
 </footer>
-
-{% include "_partials/_footer.html.twig" %}
 
 {% endblock %}
