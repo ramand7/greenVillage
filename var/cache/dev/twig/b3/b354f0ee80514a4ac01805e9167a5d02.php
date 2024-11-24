@@ -51,62 +51,6 @@ class __TwigTemplate_339aa785c8a48afa82e0ce12fe34cddc extends Template
     <div id=\"produitsCarousel\" class=\"carousel slide\" data-bs-ride=\"carousel\" data-bs-interval=\"4000\">
         <div class=\"carousel-inner\">
             ";
-        // line 6
-        $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 6, $this->source); })()));
-        $context['loop'] = [
-          'parent' => $context['_parent'],
-          'index0' => 0,
-          'index'  => 1,
-          'first'  => true,
-        ];
-        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
-            $length = count($context['_seq']);
-            $context['loop']['revindex0'] = $length - 1;
-            $context['loop']['revindex'] = $length;
-            $context['loop']['length'] = $length;
-            $context['loop']['last'] = 1 === $length;
-        }
-        foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 7
-            yield "                <div class=\"carousel-item ";
-            if (CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "first", [], "any", false, false, false, 7)) {
-                yield "active";
-            }
-            yield "\">
-                    <div class=\"card mx-auto\" style=\"width: 30rem;\">
-                        <img src=\"";
-            // line 9
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . CoreExtension::getAttribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 9))), "html", null, true);
-            yield "\" class=\"card-img-top\" alt=\"";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 9), "html", null, true);
-            yield "\">
-                        <div class=\"card-body\">
-                            <h3 class=\"card-title\">";
-            // line 11
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 11), "html", null, true);
-            yield "</h3>
-                            <p class=\"card-text\">Prix : ";
-            // line 12
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 12), "html", null, true);
-            yield "€</p>
-                            <a href=\"#\" class=\"btn btn-primary\">Acheter</a>
-                        </div>
-                    </div>
-                </div>
-            ";
-            ++$context['loop']['index0'];
-            ++$context['loop']['index'];
-            $context['loop']['first'] = false;
-            if (isset($context['loop']['revindex0'], $context['loop']['revindex'])) {
-                --$context['loop']['revindex0'];
-                --$context['loop']['revindex'];
-                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
-            }
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
         // line 18
         yield "        </div>
         
@@ -141,17 +85,9 @@ class __TwigTemplate_339aa785c8a48afa82e0ce12fe34cddc extends Template
     /**
      * @codeCoverageIgnore
      */
-    public function isTraitable(): bool
-    {
-        return false;
-    }
-
-    /**
-     * @codeCoverageIgnore
-     */
     public function getDebugInfo(): array
     {
-        return array (  111 => 18,  91 => 12,  87 => 11,  80 => 9,  72 => 7,  55 => 6,  48 => 1,);
+        return array (  55 => 18,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -161,7 +97,7 @@ class __TwigTemplate_339aa785c8a48afa82e0ce12fe34cddc extends Template
     <h2>Produits phares</h2>
     <div id=\"produitsCarousel\" class=\"carousel slide\" data-bs-ride=\"carousel\" data-bs-interval=\"4000\">
         <div class=\"carousel-inner\">
-            {% for produit in produits %}
+            {# {% for produit in produits %}
                 <div class=\"carousel-item {% if loop.first %}active{% endif %}\">
                     <div class=\"card mx-auto\" style=\"width: 30rem;\">
                         <img src=\"{{ asset('images/' ~ produit.image) }}\" class=\"card-img-top\" alt=\"{{ produit.nom }}\">
@@ -172,7 +108,7 @@ class __TwigTemplate_339aa785c8a48afa82e0ce12fe34cddc extends Template
                         </div>
                     </div>
                 </div>
-            {% endfor %}
+            {% endfor %} #}
         </div>
         
         <!-- Contrôles de navigation du carrousel -->

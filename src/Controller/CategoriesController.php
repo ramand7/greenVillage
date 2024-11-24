@@ -22,7 +22,6 @@ class CategoriesController extends AbstractController
         ]);
     }
 
-
     #[Route('/new', name: 'app_categories_new', methods: ['GET', 'POST'])]
     public function newCat(Request $request, EntityManagerInterface $entityManager): Response
     {

@@ -3,7 +3,7 @@
     <h2>Produits phares</h2>
     <div id="produitsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
         <div class="carousel-inner">
-            {% for produit in produits %}
+            {# {% for produit in produits %}
                 <div class="carousel-item {% if loop.first %}active{% endif %}">
                     <div class="card mx-auto" style="width: 30rem;">
                         <img src="{{ asset('images/' ~ produit.image) }}" class="card-img-top" alt="{{ produit.nom }}">
@@ -14,7 +14,7 @@
                         </div>
                     </div>
                 </div>
-            {% endfor %}
+            {% endfor %} #}
         </div>
         
         <!-- Contrôles de navigation du carrousel -->

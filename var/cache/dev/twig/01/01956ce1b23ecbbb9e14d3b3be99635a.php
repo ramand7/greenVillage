@@ -59,50 +59,50 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
         yield from $this->unwrap()->yieldBlock('title', $context, $blocks);
         yield " - Site Village Green</title>
     <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
-    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">   
-    <link rel=\"stylesheet\" href=\"/css/style.css\">    
-    
-   ";
-        // line 11
-        yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
-        yield " 
     ";
-        // line 12
-        yield $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("app");
-        yield "
+        // line 9
+        yield "    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
+    <link rel=\"stylesheet\" href=\"/css/style.css\">        
   
-  </head>
+   ";
+        // line 12
+        yield from $this->unwrap()->yieldBlock('stylesheets', $context, $blocks);
+        yield "   
+   ";
+        // line 13
+        yield $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("app");
+        yield "  
+   
+   </head>
   
   <body>
        
 
     ";
-        // line 19
-        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
         // line 20
+        yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
+        // line 21
         yield "
     <div id=\"react-root\"></div>
 
   \t";
-        // line 23
-        yield from         $this->loadTemplate("_partials/_footer.html.twig", "base.html.twig", 23)->unwrap()->yield($context);
-        yield " 
-
-
-     
-
-   ";
-        // line 28
-        yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
-        yield " 
-    ";
-        // line 29
-        yield $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
+        // line 25
         yield "
 
-\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz\" crossorigin=\"anonymous\"></script>
-    <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js\" integrity=\"sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r\" crossorigin=\"anonymous\"></script>
+   ";
+        // line 27
+        yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
+        // line 28
+        yield "   ";
+        yield $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
+        yield "
+    
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js\"></script>
+    ";
+        // line 32
+        yield "    <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js\" integrity=\"sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r\" crossorigin=\"anonymous\"></script>
     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js\" integrity=\"sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy\" crossorigin=\"anonymous\"></script>
+     
   </body>
 </html>
 ";
@@ -138,7 +138,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
         yield from [];
     }
 
-    // line 11
+    // line 12
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -151,7 +151,6 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        yield " ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -161,7 +160,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
         yield from [];
     }
 
-    // line 19
+    // line 20
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -183,7 +182,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
         yield from [];
     }
 
-    // line 28
+    // line 27
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -226,7 +225,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  187 => 28,  165 => 19,  142 => 11,  119 => 6,  100 => 29,  96 => 28,  88 => 23,  83 => 20,  81 => 19,  71 => 12,  67 => 11,  59 => 6,  52 => 1,);
+        return array (  186 => 27,  164 => 20,  142 => 12,  119 => 6,  103 => 32,  96 => 28,  94 => 27,  90 => 25,  85 => 21,  83 => 20,  73 => 13,  69 => 12,  64 => 9,  59 => 6,  52 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -238,13 +237,14 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
 \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>{% block title %}Accueil{% endblock %} - Site Village Green</title>
     <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>\">
-    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">   
-    <link rel=\"stylesheet\" href=\"/css/style.css\">    
-    
-   {% block stylesheets %} {% endblock %} 
-    {{ encore_entry_link_tags('app') }}
+    {# <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">    #}
+    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">
+    <link rel=\"stylesheet\" href=\"/css/style.css\">        
   
-  </head>
+   {% block stylesheets %}{% endblock %}   
+   {{ encore_entry_link_tags('app') }}  
+   
+   </head>
   
   <body>
        
@@ -253,19 +253,19 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
 
     <div id=\"react-root\"></div>
 
-  \t{% include \"_partials/_footer.html.twig\" %} 
+  \t{# {% include \"_partials/_footer.html.twig\" %}  #}
 
 
-     
-
-   {% block javascripts %}{% endblock %} 
-    {{ encore_entry_script_tags('app') }}
-
-\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz\" crossorigin=\"anonymous\"></script>
+   {% block javascripts %}{% endblock %}
+   {{ encore_entry_script_tags('app') }}
+    
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js\"></script>
+    {# <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz\" crossorigin=\"anonymous\"></script> #}
     <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js\" integrity=\"sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r\" crossorigin=\"anonymous\"></script>
     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js\" integrity=\"sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy\" crossorigin=\"anonymous\"></script>
+     
   </body>
 </html>
-", "base.html.twig", "/home/ramand/Bureau/greenVillage/templates/base.html.twig");
+", "base.html.twig", "/home/ramand/Bureau/greenVillage 21112024/templates/base.html.twig");
     }
 }

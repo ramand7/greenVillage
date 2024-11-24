@@ -38,7 +38,7 @@ class Categories
     #[ORM\JoinColumn(onDelete: 'CASCADE')]
     private ?self $parent = null;
 
-    #[ORM\OneToMany(targetEntity: self::class, mappedBy: 'parent')]
+    #[ORM\OneToMany(targetEntity: self::class, mappedBy: 'parent', cascade: ['persist', 'remove'], fetch: 'EAGER')]
     private Collection $categories;
 
     #[ORM\OneToMany(targetEntity: Produit::class, mappedBy: 'categorie')]

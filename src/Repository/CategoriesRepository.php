@@ -21,6 +21,30 @@ class CategoriesRepository extends ServiceEntityRepository
         parent::__construct($registry, Categories::class);
     }
 
+    /**
+     * Récupère toutes les catégories principales avec leurs sous-catégories.
+     */
+    // public function findAllWithChildren(): array
+    // {
+    //     return $this->createQueryBuilder('c')
+    //         ->leftJoin('c.categories', 'children') // Charger les enfants
+    //         ->addSelect('children')               // Inclure dans le SELECT
+    //         ->where('c.parent IS NULL')           // Catégories principales
+    //         ->getQuery()
+    //         ->getResult();
+    // }
+
+		public function findCategoriesWithSubcategories(): array
+		{
+				$query = $this->createQueryBuilder('c')
+						->leftJoin('c.categories', 'subcategories') // Charger les sous-catégories
+						->addSelect('subcategories')               // Inclure les sous-catégories dans le SELECT
+						->where('c.parent IS NULL')                // Récupérer seulement les catégories principales
+						->getQuery();
+
+				return $query->getResult();
+		}
+
 //    /**
 //     * @return Categories[] Returns an array of Categories objects
 //     */

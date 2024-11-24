@@ -1,0 +1,12 @@
+{% macro render_categories(categories) %}
+    <ul class="dropdown-menu">
+        {% for categorie in categories %}
+            <li>
+                <a href="#">{{ categorie.nom }}</a>
+                {% if categorie.categories|length > 0 %}
+                    {{ _self.render_categories(categorie.categories) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
