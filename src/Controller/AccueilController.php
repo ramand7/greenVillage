@@ -37,38 +37,38 @@ class AccueilController extends AbstractController
     //     ]);
     // }
 
-   #[Route('/', name: 'app_accueil', requirements: ['id' => '\d+'], methods: ['GET'])]
-    public function index(int $id, CategoriesRepository $categoriesRepository): Response
-    {   
-    		$categorie = $categoriesRepository->find($id);
-    // dd($categorie);
-        $produits = [
-            [
-                'nom' => 'Produit 1',
-                'prix' => 20,
-                'image' => 'produit1.jpg',
-            ],
-            [
-                'nom' => 'Produit 2',
-                'prix' => 35,
-                'image' => 'produit2.jpg',
-            ],
-            [
-                'nom' => 'Produit 3',
-                'prix' => 50,
-                'image' => 'produit3.jpg',
-            ],
-        ];
+//    #[Route('/', name: 'app_accueil', requirements: ['id' => '\d+'], methods: ['GET'])]
+    // public function index(int $id, CategoriesRepository $categoriesRepository): Response
+    // {   
+    // 		$categorie = $categoriesRepository->find($id);
+    // // dd($categorie);
+    //     $produits = [
+    //         [
+    //             'nom' => 'Produit 1',
+    //             'prix' => 20,
+    //             'image' => 'produit1.jpg',
+    //         ],
+    //         [
+    //             'nom' => 'Produit 2',
+    //             'prix' => 35,
+    //             'image' => 'produit2.jpg',
+    //         ],
+    //         [
+    //             'nom' => 'Produit 3',
+    //             'prix' => 50,
+    //             'image' => 'produit3.jpg',
+    //         ],
+    //     ];
 
-    if (!$categorie) {
-        throw $this->createNotFoundException('Catégorie non trouvée.');
-    }
+    // if (!$categorie) {
+    //     throw $this->createNotFoundException('Catégorie non trouvée.');
+    // }
 
-    return $this->render('accueil/index.html.twig', [
-        'categorie' => $categorie,
-				'produits' => $produits,
-    ]);
-    }
+    // return $this->render('accueil/index.html.twig', [
+    //     'categorie' => $categorie,
+	// 			'produits' => $produits,
+    // ]);
+    // }
 
         // Créer une liste de produits fictifs
 
@@ -79,4 +79,4 @@ class AccueilController extends AbstractController
     //         'categories' => $categoriesRepository->findAll(),
     //     ]);
     // }
-} #}
+}

@@ -150,6 +150,6 @@ class __TwigTemplate_6ee453b88696bd73c3f2e1ae85266979 extends Template
 
 
 {% endblock %}
-", "panier/index.html.twig", "/home/ramand/Bureau/greenVillage 21112024/templates/panier/index.html.twig");
+", "panier/index.html.twig", "/home/ramand/Bureau/greenVillage/templates/panier/index.html.twig");
     }
 }

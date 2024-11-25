@@ -23,7 +23,8 @@ class MainController extends AbstractController
             // dd($categories)
         ]);
         
-        
+    }
+}       
         
         // Récupérer toutes les catégories principales (parent null)
 				// $categories = $categoriesRepository->findBy(['parent' => null]);
@@ -35,5 +36,4 @@ class MainController extends AbstractController
         //     'categories' => $categories,
 						// dd($categories)
         // ]);
-    }
-}
+

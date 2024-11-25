@@ -162,6 +162,6 @@ class __TwigTemplate_0e37db19269ae31a8c2cded0d061af18 extends Template
 
     {{ include('admin/produits/_delete_form.html.twig') }}
 {% endblock %}
-", "admin/produits/edit.html.twig", "/home/ramand/Bureau/greenVillage 21112024/templates/admin/produits/edit.html.twig");
+", "admin/produits/edit.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/produits/edit.html.twig");
     }
 }

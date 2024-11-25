@@ -255,6 +255,6 @@ class __TwigTemplate_8480cff8fc0781af02ffbe985529f8f2 extends Template
 
 \t</section>
 {% endblock %}
-", "admin/categories/edit.html.twig", "/home/ramand/Bureau/greenVillage 21112024/templates/admin/categories/edit.html.twig");
+", "admin/categories/edit.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/categories/edit.html.twig");
     }
 }
