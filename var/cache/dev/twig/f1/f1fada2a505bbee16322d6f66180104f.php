@@ -124,7 +124,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
       <div class=\"collapse navbar-collapse\" id=\"navbarNav\"> 
         <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
 
-\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t<li class=\"nav-item dropdown\">
             <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
 \t\t\t\t\t\t\tNos catégories
             </a>
@@ -172,15 +172,11 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 
 \t\t\t\t\t";
         // line 67
-        yield "
-\t\t\t\t\t\t";
-        // line 83
-        yield "\t\t\t\t\t
-\t\t\t\t\t
+        yield "\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t
 \t\t\t\t\t<li class=\"nav-item\">
           \t<a class=\"nav-link\" href=\"";
-        // line 87
+        // line 70
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sous_categories");
         yield "\">Catégories</a>
           </li>
@@ -192,7 +188,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
           </li>
           <li class=\"nav-item\">
             <a class=\"nav-link\" href=\"";
-        // line 96
+        // line 79
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
         yield "\">Contact</a>
           </li>                \t\t
@@ -213,17 +209,17 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 <section class=\"banner text-center position-relative\">
 <!--
     <img src=\"";
-        // line 114
+        // line 97
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/banniere.jpg"), "html", null, true);
         yield "\" class=\"img-fluid\" alt=\"Promotion\">
 -->
     ";
-        // line 117
+        // line 100
         yield "        <h1>Bienvenue sur le site de Village Green !</h1>
         <p>Découvrez nos meilleures offres du moment !</p>
         <a href=\"#\" class=\"btn btn-primary\">Voir les Offres</a>
     ";
-        // line 121
+        // line 104
         yield "</section>
 
 <!-- Les différentes catégories ici -->
@@ -235,14 +231,14 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
             <div class=\"col-md-3 mb-0\">
                 <div class=\"card my-3\">
 \t\t\t\t\t\t\t\t\t<a class=\"link\" href=\"";
-        // line 131
+        // line 114
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guitares");
         yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/guitare.jpg"), "html", null, true);
         yield "\" alt=\"Guitare\" class=\"card-img-top img-fluid\"></a>
 \t\t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 133
+        // line 116
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("guitares");
         yield "\" class=\"btn btn-primary\">Guitares</a>
 \t\t\t\t\t\t\t\t\t</div>
@@ -251,14 +247,14 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
             <div class=\"col-md-3 mb-0\">
                 <div class=\"card my-3\">
 \t\t\t\t\t\t\t\t\t<a class=\"link\" href=\"";
-        // line 139
+        // line 122
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("claviers");
         yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/clavier.jpg"), "html", null, true);
         yield "\" alt=\"Clavier\" class=\"card-img-top img-fluid\"></a>
 \t\t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 141
+        // line 124
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("claviers");
         yield "\" class=\"btn btn-primary\">Claviers</a>
 \t\t\t\t\t\t\t\t\t</div>
@@ -267,14 +263,14 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
             <div class=\"col-md-3 mb-0\">
                 <div class=\"card my-3\">
 \t\t\t\t\t\t\t\t\t<a class=\"link\" href=\"";
-        // line 147
+        // line 130
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("saxophones");
         yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/saxophone.jpg"), "html", null, true);
         yield "\" alt=\"Saxophone\" class=\"card-img-top img-fluid\"></a>
 \t\t\t\t\t\t\t\t\t<div class=\"card-body\">\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 149
+        // line 132
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("saxophones");
         yield "\" class=\"btn btn-primary\">Saxophones</a>
 \t\t\t\t\t\t\t\t\t</div>
@@ -283,7 +279,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
             <div class=\"col-md-3 mb-0\">
                 <div class=\"card my-3\">
 \t\t\t\t\t\t\t\t\t<a class=\"link\" href=\"";
-        // line 155
+        // line 138
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logiciels");
         yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/fl-studio.webp"), "html", null, true);
@@ -291,7 +287,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 \t\t\t\t\t\t\t\t\t<div class=\"card-body\">
 
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 158
+        // line 141
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logiciels");
         yield "\" class=\"btn btn-primary\">Logiciels</a>
 \t\t\t\t\t\t\t\t\t</div>
@@ -304,7 +300,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
             <div class=\"col-md-3 mb-2\">
                 <div class=\"card my-3\">
 \t\t\t\t\t\t\t\t\t<a class=\"link\" href=\"";
-        // line 168
+        // line 151
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("batteries");
         yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/batteries.png"), "html", null, true);
@@ -313,7 +309,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 
 
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 172
+        // line 155
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("batteries");
         yield "\" class=\"btn btn-primary\">Batteries</a>
 \t\t\t\t\t\t\t\t\t</div>
@@ -322,7 +318,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 \t\t\t\t\t\t<div class=\"col-md-3 mb-2\">
                 <div class=\"card my-3\">
 \t\t\t\t\t\t\t\t\t<a class=\"link\" href=\"";
-        // line 178
+        // line 161
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accessoires");
         yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/accessoires.webp"), "html", null, true);
@@ -331,7 +327,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 
 <!--\t\t\t<p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 182
+        // line 165
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accessoires");
         yield "\" class=\"btn btn-primary\">Accessoires</a>
 \t\t\t\t\t\t\t\t\t</div>
@@ -340,14 +336,14 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 \t\t\t\t\t\t<div class=\"col-md-3 mb-2\">
                 <div class=\"card my-3\">
 \t\t\t\t\t\t\t\t\t<a class=\"link\" href=\"";
-        // line 188
+        // line 171
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sonorisation");
         yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/sonorisation.jpg"), "html", null, true);
         yield "\" alt=\"Sonorisation\" class=\"card-img-top img-fluid\"></a>
 \t\t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 190
+        // line 173
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("sonorisation");
         yield "\" class=\"btn btn-primary\">Sonorisation</a>
 \t\t\t\t\t\t\t\t\t</div>
@@ -356,14 +352,14 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
             <div class=\"col-md-3 mb-0\">
                 <div class=\"card my-3\">
 \t\t\t\t\t\t\t\t\t<a class=\"link\" href=\"";
-        // line 196
+        // line 179
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("librairie");
         yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/librairie.png"), "html", null, true);
         yield "\" alt=\"Librairie\" class=\"card-img-top img-fluid\"></a>
 \t\t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 198
+        // line 181
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("librairie");
         yield "\" class=\"btn btn-primary\">Librairie</a>
 \t\t\t\t\t\t\t\t\t</div>
@@ -378,9 +374,9 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
  <!-- Intégrer le carousel pour faire défiler les produits phares -->
 
 ";
-        // line 210
-        yield from         $this->loadTemplate("_partials/_carousel.html.twig", "accueil/index.html.twig", 210)->unwrap()->yield($context);
-        // line 211
+        // line 193
+        yield from         $this->loadTemplate("_partials/_carousel.html.twig", "accueil/index.html.twig", 193)->unwrap()->yield($context);
+        // line 194
         yield "
 <!-- Section des témoignages / avis clients -->
 <section class=\"testimonials bg-light text-center py-5\">
@@ -437,15 +433,15 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 </html>
 
    ";
-        // line 267
+        // line 250
         yield "    
 \t";
-        // line 272
+        // line 255
         yield "    ";
-        // line 273
+        // line 256
         yield "    
     ";
-        // line 275
+        // line 258
         yield "
 ";
         
@@ -478,7 +474,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  449 => 275,  446 => 273,  444 => 272,  441 => 267,  384 => 211,  382 => 210,  367 => 198,  360 => 196,  351 => 190,  344 => 188,  335 => 182,  326 => 178,  317 => 172,  308 => 168,  295 => 158,  287 => 155,  278 => 149,  271 => 147,  262 => 141,  255 => 139,  246 => 133,  239 => 131,  227 => 121,  222 => 117,  217 => 114,  196 => 96,  184 => 87,  178 => 83,  175 => 67,  169 => 62,  160 => 60,  157 => 59,  153 => 58,  145 => 52,  104 => 12,  102 => 11,  99 => 10,  86 => 9,  64 => 5,  41 => 1,);
+        return array (  445 => 258,  442 => 256,  440 => 255,  437 => 250,  380 => 194,  378 => 193,  363 => 181,  356 => 179,  347 => 173,  340 => 171,  331 => 165,  322 => 161,  313 => 155,  304 => 151,  291 => 141,  283 => 138,  274 => 132,  267 => 130,  258 => 124,  251 => 122,  242 => 116,  235 => 114,  223 => 104,  218 => 100,  213 => 97,  192 => 79,  180 => 70,  175 => 67,  169 => 62,  160 => 60,  157 => 59,  153 => 58,  145 => 52,  104 => 12,  102 => 11,  99 => 10,  86 => 9,  64 => 5,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -517,7 +513,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
       <div class=\"collapse navbar-collapse\" id=\"navbarNav\"> 
         <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
 
-\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t<li class=\"nav-item dropdown\">
             <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
 \t\t\t\t\t\t\tNos catégories
             </a>
@@ -549,24 +545,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 \t\t\t\t\t</li>
 
 \t\t\t\t\t{# --- Fin test --- #}
-
-\t\t\t\t\t\t{# <tr>
-                <td>{{ category.id }}</td>
-                <td>{{ category.nom }}</td>
-                <td>{{ category.slug }}</td>
-                <td>
-                    <a href=\"{{ path('app_categories_show', {'id': category.id}) }}\" class=\"btn btn-sm btn-outline-primary\"><b>Voir</b></a>
-                    <a href=\"{{ path('app_categories_edit', {'id': category.id}) }}\" class=\"btn btn-sm btn-outline-success\"><b>Editer</b></a>
-
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan=\"4\">Aucune catégorie trouvée</td>
-            </tr>
-        {% endfor %} #}
-\t\t\t\t\t
-\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t
 \t\t\t\t\t<li class=\"nav-item\">
           \t<a class=\"nav-link\" href=\"{{ path('sous_categories') }}\">Catégories</a>
