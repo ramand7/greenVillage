@@ -49,12 +49,16 @@ class __TwigTemplate_46b8493c00760585e2d0e8ebc3c4a090 extends Template
         yield "
     ";
         // line 3
-        yield "    <button class=\"btn btn-outline-success\">";
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 3, $this->source); })()), "Save")) : ("Save")), "html", null, true);
-        yield "</button>
-";
+        yield "    ";
         // line 4
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), 'form_end');
+        yield "        <a href=\"";
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_new");
+        yield "\" class=\"btn btn-outline-success\">";
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 4, $this->source); })()), "Save")) : ("Save")), "html", null, true);
+        yield "</a>
+        ";
+        // line 6
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 6, $this->source); })()), 'form_end');
         yield "
 ";
         
@@ -87,14 +91,16 @@ class __TwigTemplate_46b8493c00760585e2d0e8ebc3c4a090 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  57 => 4,  52 => 3,  48 => 1,);
+        return array (  61 => 6,  54 => 4,  52 => 3,  48 => 1,);
     }
 
     public function getSourceContext(): Source
     {
         return new Source("{{ form_start(form) }}
     {# {{ form_widget(form) }} #}
-    <button class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</button>
+    {# <button> #}
+        <a href=\"{{ path('app_categories_new') }}\" class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</a>
+        {# </button> #}
 {{ form_end(form) }}
 ", "admin/categories/_form.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/categories/_form.html.twig");
     }

@@ -8721,9 +8721,10 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.4qFe4Ac" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.FR38lvQ" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\AccueilController::index" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController::indexAccès" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController::indexBat" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController::indexClav" type="service_closure" id=".service_locator.do9sDn8"/>
@@ -8755,6 +8756,7 @@
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
+        <argument key="App\Controller\AccueilController:index" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController:indexAccès" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController:indexBat" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController:indexClav" type="service_closure" id=".service_locator.do9sDn8"/>
@@ -9971,12 +9973,12 @@
       <argument type="service" id="api_platform.serializer.context_builder.filter"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.4qFe4Ac"/>
+      <argument type="service" id=".service_locator.FR38lvQ"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.4qFe4Ac"/>
+      <argument type="service" id=".service_locator.FR38lvQ"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -11182,7 +11184,7 @@
     <service id="ApiPlatform\Symfony\Security\ResourceAccessCheckerInterface" alias="api_platform.security.resource_access_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.4qFe4Ac"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.FR38lvQ"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -11209,7 +11211,7 @@
     <service id=".service_locator.17IEaOb" alias=".service_locator.Ay2l8s0"/>
     <service id=".service_locator.f9os5BO" alias=".service_locator.Gl3nBvd"/>
     <service id=".service_locator.bJkwozd" alias=".service_locator.Z9QmIxH"/>
-    <service id=".service_locator.soGhqEp" alias=".service_locator.4qFe4Ac"/>
+    <service id=".service_locator.dFO6dHG" alias=".service_locator.FR38lvQ"/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
     <service id=".service_locator.cFNZ1mS" alias=".service_locator.u44Hpja"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>

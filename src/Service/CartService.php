@@ -85,4 +85,27 @@ class CartService
 
         $this->em->flush();
     }
+
+//     public function decreaseProductQuantity(Produit $produit, int $quantity): void
+// {
+//     $cart = $this->getCart();
+
+//     $productId = $produit->getId();
+
+//     // Vérifiez si le produit est dans le panier
+//     if (!isset($cart[$productId])) {
+//         return; // Le produit n'est pas dans le panier, rien à faire
+//     }
+
+//     // Réduisez la quantité
+//     $cart[$productId] -= $quantity;
+
+//     // Si la quantité tombe à 0 ou moins, supprimez le produit
+//     if ($cart[$productId] <= 0) {
+//         unset($cart[$productId]);
+//     }
+
+//     $this->saveCart($cart);
+// }
+
 }

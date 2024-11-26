@@ -1,4 +1,6 @@
 {{ form_start(form) }}
     {# {{ form_widget(form) }} #}
-    <button class="btn btn-outline-success">{{ button_label|default('Save') }}</button>
+    {# <button> #}
+        <a href="{{ path('app_categories_new') }}" class="btn btn-outline-success">{{ button_label|default('Save') }}</a>
+        {# </button> #}
 {{ form_end(form) }}

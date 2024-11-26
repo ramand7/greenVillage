@@ -31,7 +31,7 @@
 								<td class="text-center">{{ item.quantity }}</td>
 								<td class="text-center">{{ item.produit.tva }}</td>
 								<td class="text-center">{{ item.produit.prixht * item.quantity }} €</td>
-								<td class="text-center"><a href="{{ path('cart_remove', { id: item.produit.id }) }}" class="btn btn-sm btn-outline-danger">Supprimer</a></td>
+								<td class="text-center"><a href="{{ path('cart_remove', { id: item.produit.id, quantity: 1  }) }}" class="btn btn-sm btn-outline-danger">Supprimer</a></td>
 							</tr>	
 						</div>
     			{% endfor %}

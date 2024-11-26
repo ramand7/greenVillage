@@ -153,7 +153,7 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
             yield " €</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\"><a href=\"";
             // line 34
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_remove", ["id" => CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 34), "id", [], "any", false, false, false, 34)]), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_remove", ["id" => CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 34), "id", [], "any", false, false, false, 34), "quantity" => 1]), "html", null, true);
             yield "\" class=\"btn btn-sm btn-outline-danger\">Supprimer</a></td>
 \t\t\t\t\t\t\t</tr>\t
 \t\t\t\t\t\t</div>
@@ -250,7 +250,7 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
 \t\t\t\t\t\t\t\t<td class=\"text-center\">{{ item.quantity }}</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\">{{ item.produit.tva }}</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\">{{ item.produit.prixht * item.quantity }} €</td>
-\t\t\t\t\t\t\t\t<td class=\"text-center\"><a href=\"{{ path('cart_remove', { id: item.produit.id }) }}\" class=\"btn btn-sm btn-outline-danger\">Supprimer</a></td>
+\t\t\t\t\t\t\t\t<td class=\"text-center\"><a href=\"{{ path('cart_remove', { id: item.produit.id, quantity: 1  }) }}\" class=\"btn btn-sm btn-outline-danger\">Supprimer</a></td>
 \t\t\t\t\t\t\t</tr>\t
 \t\t\t\t\t\t</div>
     \t\t\t{% endfor %}

@@ -47,22 +47,25 @@
 <section>
 
 <nav>
+	
         <ul>
-            {% for category in categories %}
+            {% for category in categories %}					
                 <li class="dropdown">
-                    <a href="#">{{ category.nom }}</a>
+                    <a href="{{ path('app_contact')}}" class="btn btn-xxl btn-outline-primary">{{ category.nom }}</a>
                     {% if category.categories is not empty %}
-                        <ul class="dropdown-content">
+                        <ul class="dropdown-content" >
                             {% for subcategory in category.categories %}
                                 <li><a href="#">{{ subcategory.nom }}</a></li>
                             {% endfor %}
                         </ul>
+
                     {% endif %}
                 </li>
             {% endfor %}
         </ul>
-    </nav>
 
+    </nav>
+	
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
     <div class="container-fluid">  
