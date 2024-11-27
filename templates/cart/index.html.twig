@@ -6,8 +6,8 @@
 
 {% include ('_partials/_nav.html.twig')  %}
 
-<h1 class="text-center text-success">Votre panier</h1>
-<div class="container w-50">
+<h1 class="text text-primary">Votre panier</h1>
+<div class="container-fluid w-50">
 	<div class="col-10">
     <table class="table table-hover table-primary">
         {# <thead> #}
@@ -30,63 +30,23 @@
 								<td class="text-center">{{ item.produit.prixht }}</td>
 								<td class="text-center">{{ item.quantity }}</td>
 								<td class="text-center">{{ item.produit.tva }}</td>
-								<td class="text-center">{{ item.produit.prixht * item.quantity }} €</td>
-								<td class="text-center"><a href="{{ path('cart_remove', { id: item.produit.id, quantity: 1  }) }}" class="btn btn-sm btn-outline-danger">Supprimer</a></td>
+								<td class="text-center">{{ (item.produit.prixht * item.quantity) * (1 + item.produit.tva) }} €</td>
+								<td class="text-center"><a href="{{ path('cart_remove', { id: item.produit.id, quantity: 1  }) }}" class="btn btn-sm btn-outline-danger"><b>Supprimer</b></a></td>
 							</tr>	
 						</div>
     			{% endfor %}
 				</div>
 			{# </tbody> #}
    	</table>
-	</div>					
+	</div>
+	<div class="col-2 ms-3">			
+		<h4 class="text-center">Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
+		<td><a href="{{ path('app_accueil') }}" class="btn btn-sm btn-outline-success"><b>Page d'accueil</b></a></td>	
+	</div>						
 </div>	
-<div class="col-2 ms-3">			
-	<h4 class="text-center">Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
-	<td><a href="{{ path('app_accueil') }}" class="btn btn-sm btn-outline-success"><b>Page d'accueil</b></a></td>	
-</div>	
-
 
 {% endblock %}						
-							{# <div>
-								{% for item in cart.items %}
-        					{# <div>
-										{# <img src="{{ item.produit.image }}" alt="{{ item.produit.libelle }}" width="100"> #}
-										{# <h2>{{ item.produit.libelle }}</h2>
-										<p>Prix unitaire : {{ item.produit.prixht }} €</p>
-										<p>Quantité : {{ item.quantity }}</p>
-										{# <p>Sous-total : {{ item.produit.prixht * item.quantity }} €</p> #}
-										{# <a href="{{ path('cart_remove', { id: item.produit.id }) }}">Supprimer</a> #}
-        					{# </div> #}
-    						{# {% endfor %}
-									<td>{{ item.produit.prixht * item.quantity }}
-            </tr> 
-         #}
-				{# {% else %}
-            <tr>
-              <td colspan="4">Aucune catégorie trouvée</td>
-            </tr>
-        {% endfor %}
-        {# </tbody> #}
- 
 
-    {# <a href="{{ path('app_categories_new') }}">Create new</a> #} 
-
-
-
-
-
-{# 
-{# <div>
-    {% for item in cart.items %}
-        <div>
-            <img src="{{ item.produit.image }}" alt="{{ item.produit.libelle }}" width="100">
-            <h2>{{ item.produit.libelle }}</h2>
-            <p>Prix unitaire : {{ item.produit.prixht }} €</p>
-            <p>Quantité : {{ item.quantity }}</p>
-            <p>Sous-total : {{ item.produit.prixht * item.quantity }} €</p>
-            <a href="{{ path('cart_remove', { id: item.produit.id }) }}">Supprimer</a>
-        </div>
-    {% endfor %} #}
 
 
 

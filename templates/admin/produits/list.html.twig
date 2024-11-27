@@ -4,12 +4,16 @@
 
 {% block body %}
     
-    <h1 class="my-4 text-center text-primary">LISTE DES PRODUITS</h1>
+  <h1 class="my-4 text-center text-primary">LISTE DES PRODUITS</h1>
+
   <div class="container my-2 mb-2">
-    <a href="{{ path('app_produit_new') }}" class="btn btn-sm btn-success mb-1"><b>CRÉER</b></a>
-    <table class="table table-striped-column table-secondary table-bordered ms-6">
+    <a href="{{ path('app_produit_new') }}" class="btn btn-sm btn-outline-success mb-1"><b>CRÉER</b></a>
+  </div>
+  
+  <div class="container my-2 mb-3">  
+    <table class="table table-striped-column table-light table-bordered border-dark ms-6">
     {# <h1>Produit index</h1> #}
-      <thead class="table-secondary table-bordered text-center">
+      <thead class="table-light table-bordered border-dark text-center">
             
             <tr>
                 <th>Id</th>
@@ -18,11 +22,11 @@
                 <th>Prixht</th>
                 <th>Tva</th>
                 <th>Stock</th>
-              <div class="row">
-                <div class="col-6">
-                  <th>Actions</th>
+                <div class="row">
+                  <div class="col">
+                    <th>Actions</th>
+                  </div>
                 </div>
-              </div>
             </tr>
       </thead>
         <tbody>
@@ -34,24 +38,40 @@
               <td>{{ produit.prixht }}</td>
               <td>{{ produit.tva }}</td>
               <td>{{ produit.stock }}</td>
-                {# <td>{{ produit.photo }}</td> #}
-              <td>
+
+                <td>
                 <div class="row">
-                  <div class="col-3">   
+                  <div class="col">
+                    <a href="{{ path('app_produit_show', {'id': produit.id}) }}" class="btn btn-outline-primary btn-sm my-2"><b>Voir</b></a>
+                    <a href="{{ path('app_produit_edit', {'id': produit.id}) }}" class="btn btn-outline-secondary btn-sm my-2"><b>Editer</b></a>
+                  </div>
+                  <div class="col">  
+                    <form method="post" action="{{ path('app_produit_delete', {'id': produit.id}) }}" style="display:inline;" onsubmit="return confirm('Êtes-vous sûr ?');">
+                      <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ produit.id) }}">
+                      <button class="btn btn-outline-danger btn-sm align-center"><b>Supprimer</b></button>
+                    </form>
+                  </div>
+                </div>
+                </td>
+
+                {# <td>{{ produit.photo }}</td> #}
+              {# <td>
+                <div class="row">
+                  <div class="col-4">   
                   {# <a href="{{ path('app_produit_show', {'id': produit.id}) }}">VOIR</a> #}
-                    <a href="{{ path('app_produit_show', {'id': produit.id}) }}" class="btn btn-primary btn-sm my-2"><b>Voir</b></a>
+                    {# <a href="{{ path('app_produit_show', {'id': produit.id}) }}" class="btn btn-outline-primary btn-sm my-2"><b>Voir</b></a>
                   </div>
                   <div class="col-4"> 
-                    <a href="{{ path('app_produit_edit', {'id': produit.id}) }}" class="btn btn-secondary btn-sm my-2"><b>Editer</b></a> 
+                    <a href="{{ path('app_produit_edit', {'id': produit.id}) }}" class="btn btn-outline-secondary btn-sm my-2"><b>Editer</b></a> 
                   </div>
                   <div class="col-4"> 
                     <form method="post" action="{{ path('app_produit_delete', {'id': produit.id}) }}" style="display:inline;" onsubmit="return confirm('Êtes-vous sûr ?');">
                       {# <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ produit.id) }}"> #}
-                      <button class="btn btn-danger btn-sm align-center my-2"><b>Supprimer</b></button>
+                      {# <button class="btn btn-outline-danger btn-sm align-center my-2"><b>Supprimer</b></button>
                     </form>
                   </div>
                 </div>
-              </td>
+              </td>  #}
             </tr>
         {% else %}
             <tr>
@@ -60,6 +80,8 @@
         {% endfor %}
         </tbody>
     </table>
+      <a href="{{ path('app_produit_new') }}" class="btn btn-sm btn-outline-success mb-1"><b>CRÉER</b></a>
 </div>
+  
     {# <a href="{{ path('app_produit_new') }}">Create new</a> #}
 {% endblock %}

@@ -100,18 +100,18 @@ class __TwigTemplate_1455dcfaed911de9ce9332d2461b8936 extends Template
         yield "    
     <h1 class=\"text-center\">LISTE DES CATEGORIES DE PRODUITS (index)</h1>
 
-<div class=\"col ms-3\">
-<a href=\"";
+<div class=\"container my-1 mb-1\">
+    <a href=\"";
         // line 10
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_new");
         yield "\" class=\"btn btn-sm btn-outline-danger\"><b>Créer</b></a>
 </div>
 
-<div class=\"container my-5 mb-3\">
+<div class=\"container my-3 mb-3\">
     
-    <table class=\"table table-sm table-bordered border-dark text-center ms-6\">
+    <table class=\"table table-sm table-w-30% table-bordered border-light text-center ms-6\">
         <thead>
-            <tr class=\"table table-secondary table-bordered border-dark\">
+            <tr class=\"table table-secondary table-bordered border-light\">
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Slug</th>
@@ -218,15 +218,15 @@ class __TwigTemplate_1455dcfaed911de9ce9332d2461b8936 extends Template
     
     <h1 class=\"text-center\">LISTE DES CATEGORIES DE PRODUITS (index)</h1>
 
-<div class=\"col ms-3\">
-<a href=\"{{ path('app_categories_new') }}\" class=\"btn btn-sm btn-outline-danger\"><b>Créer</b></a>
+<div class=\"container my-1 mb-1\">
+    <a href=\"{{ path('app_categories_new') }}\" class=\"btn btn-sm btn-outline-danger\"><b>Créer</b></a>
 </div>
 
-<div class=\"container my-5 mb-3\">
+<div class=\"container my-3 mb-3\">
     
-    <table class=\"table table-sm table-bordered border-dark text-center ms-6\">
+    <table class=\"table table-sm table-w-30% table-bordered border-light text-center ms-6\">
         <thead>
-            <tr class=\"table table-secondary table-bordered border-dark\">
+            <tr class=\"table table-secondary table-bordered border-light\">
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Slug</th>

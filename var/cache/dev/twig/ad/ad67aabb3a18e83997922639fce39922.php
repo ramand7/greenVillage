@@ -97,22 +97,35 @@ class __TwigTemplate_0e37db19269ae31a8c2cded0d061af18 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Edit Produit</h1>
-
-    ";
-        // line 8
-        yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/produits/_form.html.twig", ["button_label" => "Update"]);
         yield "
-
-    <a href=\"";
-        // line 10
+  <h1 class=\"text-center\">MODIFIER CE PRODUIT</h1>
+\t<section class=\"container my-6\">
+\t  <div class=\"container my-2 mb-2\">
+\t\t\t<table class=\"col my-3\">
+    \t\t<div class=\"row\">
+\t\t\t \t\t<div class=\"col\">     
+\t\t\t    \t<a href=\"";
+        // line 13
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_index");
-        yield "\"><b>Retour à la liste</b></a>
-
-    ";
-        // line 12
+        yield "\" class=\"btn btn-sm btn-outline-primary\"><b>Retour à la liste</b></a>
+  \t\t\t\t</div>
+    \t\t\t<div class=\"container my-2 mb-2\"><b>
+    \t\t\t\t";
+        // line 16
+        yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/produits/_form.html.twig", ["button_label" => "Mettre à jour"]);
+        yield "</b>
+  \t\t\t\t</div> 
+\t\t \t\t</div>\t\t\t
+\t\t\t</table>
+\t\t\t<div class=\"col\">     
+\t\t\t  ";
+        // line 21
         yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/produits/_delete_form.html.twig");
         yield "
+  \t\t</div>
+\t\t\t
+\t\t</div>\t
+\t</section>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -144,7 +157,7 @@ class __TwigTemplate_0e37db19269ae31a8c2cded0d061af18 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  114 => 12,  109 => 10,  104 => 8,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  123 => 21,  115 => 16,  109 => 13,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -154,13 +167,26 @@ class __TwigTemplate_0e37db19269ae31a8c2cded0d061af18 extends Template
 {% block title %}Edit Produit{% endblock %}
 
 {% block body %}
-    <h1>Edit Produit</h1>
 
-    {{ include('admin/produits/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href=\"{{ path('app_produit_index') }}\"><b>Retour à la liste</b></a>
-
-    {{ include('admin/produits/_delete_form.html.twig') }}
+  <h1 class=\"text-center\">MODIFIER CE PRODUIT</h1>
+\t<section class=\"container my-6\">
+\t  <div class=\"container my-2 mb-2\">
+\t\t\t<table class=\"col my-3\">
+    \t\t<div class=\"row\">
+\t\t\t \t\t<div class=\"col\">     
+\t\t\t    \t<a href=\"{{ path('app_produit_index') }}\" class=\"btn btn-sm btn-outline-primary\"><b>Retour à la liste</b></a>
+  \t\t\t\t</div>
+    \t\t\t<div class=\"container my-2 mb-2\"><b>
+    \t\t\t\t{{ include('admin/produits/_form.html.twig', {'button_label': 'Mettre à jour'}) }}</b>
+  \t\t\t\t</div> 
+\t\t \t\t</div>\t\t\t
+\t\t\t</table>
+\t\t\t<div class=\"col\">     
+\t\t\t  {{ include('admin/produits/_delete_form.html.twig') }}
+  \t\t</div>
+\t\t\t
+\t\t</div>\t
+\t</section>
 {% endblock %}
 ", "admin/produits/edit.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/produits/edit.html.twig");
     }

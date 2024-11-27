@@ -26,4 +26,7 @@ class PanierController extends AbstractController
 			dd($session);
 		}
 
+
+
+
 }

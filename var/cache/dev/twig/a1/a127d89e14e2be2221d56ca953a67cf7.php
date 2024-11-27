@@ -129,23 +129,26 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
         // line 38
         yield "
 \t\t\t\t\t\t<li class=\"nav-item\">
+
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 40
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_index");
-        yield "\">
-\t\t\t\t\t\t\t\t<img src=\"";
         // line 41
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_index");
+        yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/cart_2.png"), "html", null, true);
         yield "\" class=\"img-fluid\" width=\"28px\" height=\"10px\" alt=\"Panier\">
+\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">
+\t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">
+\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 45
+        // line 49
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_display");
         yield "\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 46
+        // line 50
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/usericon_1.png"), "html", null, true);
         yield "\" class=\"img-fluid\" width=\"30x\" height=\"42px\" alt=\"Mon compte\">
 \t\t\t\t\t\t\t</a>
@@ -184,7 +187,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  149 => 46,  145 => 45,  138 => 41,  134 => 40,  130 => 38,  124 => 35,  118 => 32,  115 => 31,  109 => 28,  103 => 25,  100 => 24,  98 => 23,  94 => 21,  87 => 17,  82 => 14,  80 => 13,  77 => 12,  68 => 9,  65 => 8,  61 => 7,  52 => 3,  48 => 1,);
+        return array (  152 => 50,  148 => 49,  135 => 41,  130 => 38,  124 => 35,  118 => 32,  115 => 31,  109 => 28,  103 => 25,  100 => 24,  98 => 23,  94 => 21,  87 => 17,  82 => 14,  80 => 13,  77 => 12,  68 => 9,  65 => 8,  61 => 7,  52 => 3,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -228,8 +231,12 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('cart_index') }}\">
-\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/cart_2.png') }}\" class=\"img-fluid\" width=\"28px\" height=\"10px\" alt=\"Panier\">
+
+\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('cart_index') }}\"><img src=\"{{ asset('images/cart_2.png') }}\" class=\"img-fluid\" width=\"28px\" height=\"10px\" alt=\"Panier\">
+\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">
+\t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">
+\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t</span>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">

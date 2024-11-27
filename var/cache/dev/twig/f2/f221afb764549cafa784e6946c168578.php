@@ -47,12 +47,12 @@ class __TwigTemplate_23fedad2af95b783228a1a23eee136d6 extends Template
         // line 1
         yield "<form method=\"post\" action=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
-        yield "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        yield "\" onsubmit=\"return confirm('Êtes vous sûr de vouloir supprimer ce produit ?');\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 2
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
         yield "\">
-    <button class=\"btn btn-outline-danger\"><b>Supprimer</b></button>
+    <button class=\"btn btn-sm btn-outline-danger\"><b>Supprimer</b></button>
 </form>
 ";
         
@@ -90,9 +90,9 @@ class __TwigTemplate_23fedad2af95b783228a1a23eee136d6 extends Template
 
     public function getSourceContext(): Source
     {
-        return new Source("<form method=\"post\" action=\"{{ path('app_produit_delete', {'id': produit.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        return new Source("<form method=\"post\" action=\"{{ path('app_produit_delete', {'id': produit.id}) }}\" onsubmit=\"return confirm('Êtes vous sûr de vouloir supprimer ce produit ?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ produit.id) }}\">
-    <button class=\"btn btn-outline-danger\"><b>Supprimer</b></button>
+    <button class=\"btn btn-sm btn-outline-danger\"><b>Supprimer</b></button>
 </form>
 ", "admin/produits/_delete_form.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/produits/_delete_form.html.twig");
     }

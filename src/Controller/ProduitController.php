@@ -27,7 +27,7 @@ class ProduitController extends AbstractController
 
     // Créer un nouveau produit
 
-		#[Route('/produits/new', name: 'app_produit_new', methods: ['GET', 'POST'])]
+		#[Route('/new', name: 'app_produit_new', methods: ['GET', 'POST'])]
     public function newProd(Request $request, EntityManagerInterface $entityManager): Response
     {
         $produit = new Produit();
@@ -49,7 +49,7 @@ class ProduitController extends AbstractController
 
     // Voir le détail d'un produit à l'aide de son id
 		
-		#[Route('/produits/{id}', name: 'app_produit_show', requirements: ['id' => '\d+'], methods: ['GET'])]
+		#[Route('/{id}', name: 'app_produit_show', requirements: ['id' => '\d+'], methods: ['GET'])]
     public function show(int $id, ProduitRepository $produitRepository): Response
     {
         $produit = $produitRepository->find($id);
@@ -65,7 +65,7 @@ class ProduitController extends AbstractController
 
     // Mettre à jour un produit
 		
-		#[Route('/produits/{id}/edit', name: 'app_produit_edit', methods: ['GET', 'POST'])]
+		#[Route('/{id}/edit', name: 'app_produit_edit', methods: ['GET', 'POST'])]
     public function editProd(Request $request, Produit $produit, EntityManagerInterface $entityManager): Response
     {
         $form = $this->createForm(ProduitType::class, $produit);
@@ -85,7 +85,7 @@ class ProduitController extends AbstractController
 
     // Supprimer un produit
 		
-		#[Route('produits/{id}', name: 'app_produit_delete', methods: ['POST'])]
+		#[Route('/{id}/delete', name: 'app_produit_delete', methods: ['POST'])]
     public function deleteProd(Request $request, Produit $produit, EntityManagerInterface $entityManager): Response
     {
         if ($this->isCsrfTokenValid('delete'.$produit->getId(), $request->request->get('_token'))) {

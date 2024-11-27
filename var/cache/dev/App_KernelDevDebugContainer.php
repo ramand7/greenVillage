@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerLPGV2xV\App_KernelDevDebugContainer([
     'container.build_hash' => 'LPGV2xV',
-    'container.build_id' => '69ca8f86',
-    'container.build_time' => 1732663801,
+    'container.build_id' => 'aacaafe3',
+    'container.build_time' => 1732714487,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerLPGV2xV');

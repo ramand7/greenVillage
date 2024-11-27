@@ -100,8 +100,8 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
         yield "
     <h1 class=\"text-center\">DETAILS DU PRODUIT</h1>
 
-  <div class=\"container w-50 ms-9 my-4 mb-2\">
-    <table class=\"table table-striped-column table-secondary table w-auto table-sm table-bordered border-dark text-center ms-6\">
+  <div class=\"container w-50 ms-6 my-4 mb-2\">
+    <table class=\"table table-striped-column table-secondary table w-auto table-bordered border-dark text-center ms-6\">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -153,21 +153,24 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
             </tr>
         </tbody>
     </table>
-</div>
-    <a href=\"";
+\t\t<div class=\"col my-2\">
+    \t<a href=\"";
         // line 42
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_index");
-        yield "\" class\"btn btn-outline-primary\"><b>Retour à la liste</b></a>
-
-    <a href=\"";
-        // line 44
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 44, $this->source); })()), "id", [], "any", false, false, false, 44)]), "html", null, true);
-        yield "\", class=\"btn btn-outline-success\"><b>Modifier</b></a>
-
-    ";
-        // line 46
+        yield "\" class=\"btn btn-sm btn-outline-primary\"><b>Retour à la liste</b></a>
+    \t<a href=\"";
+        // line 43
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_produit_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 43, $this->source); })()), "id", [], "any", false, false, false, 43)]), "html", null, true);
+        yield "\", class=\"btn btn-sm btn-outline-success\"><b>Modifier</b></a>
+\t\t\t<div class=\"col my-2\">
+    \t\t";
+        // line 45
         yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/produits/_delete_form.html.twig");
         yield "
+\t\t\t</div>
+\t\t</div>
+</div>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -199,7 +202,7 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  169 => 46,  164 => 44,  159 => 42,  151 => 37,  144 => 33,  137 => 29,  130 => 25,  124 => 22,  117 => 18,  110 => 14,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  168 => 45,  163 => 43,  159 => 42,  151 => 37,  144 => 33,  137 => 29,  130 => 25,  124 => 22,  117 => 18,  110 => 14,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -212,8 +215,8 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
 
     <h1 class=\"text-center\">DETAILS DU PRODUIT</h1>
 
-  <div class=\"container w-50 ms-9 my-4 mb-2\">
-    <table class=\"table table-striped-column table-secondary table w-auto table-sm table-bordered border-dark text-center ms-6\">
+  <div class=\"container w-50 ms-6 my-4 mb-2\">
+    <table class=\"table table-striped-column table-secondary table w-auto table-bordered border-dark text-center ms-6\">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -244,12 +247,15 @@ class __TwigTemplate_03f1ffd834764f175b7978e3f854aabc extends Template
             </tr>
         </tbody>
     </table>
+\t\t<div class=\"col my-2\">
+    \t<a href=\"{{ path('app_produit_index') }}\" class=\"btn btn-sm btn-outline-primary\"><b>Retour à la liste</b></a>
+    \t<a href=\"{{ path('app_produit_edit', {'id': produit.id}) }}\", class=\"btn btn-sm btn-outline-success\"><b>Modifier</b></a>
+\t\t\t<div class=\"col my-2\">
+    \t\t{{ include('admin/produits/_delete_form.html.twig') }}
+\t\t\t</div>
+\t\t</div>
 </div>
-    <a href=\"{{ path('app_produit_index') }}\" class\"btn btn-outline-primary\"><b>Retour à la liste</b></a>
 
-    <a href=\"{{ path('app_produit_edit', {'id': produit.id}) }}\", class=\"btn btn-outline-success\"><b>Modifier</b></a>
-
-    {{ include('admin/produits/_delete_form.html.twig') }}
 {% endblock %}", "admin/produits/show.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/produits/show.html.twig");
     }
 }

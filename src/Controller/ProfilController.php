@@ -19,6 +19,7 @@ class ProfilController extends AbstractController
 		{
         $this->userRepo = $userRepo;
     }
+		
 		#[Route('/', name: 'display')]
     public function index(): Response
     {
