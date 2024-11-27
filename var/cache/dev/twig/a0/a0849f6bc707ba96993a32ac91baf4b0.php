@@ -111,52 +111,50 @@ class __TwigTemplate_ab1f6fb89f7c538aedf1f97f198b3f09 extends Template
         // line 13
         yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'errors');
         yield "
-
 \t\t\t\t<fieldset class=\"my-3\">
 \t   \t\t\t";
-        // line 16
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), "nom", [], "any", false, false, false, 16), 'row');
+        // line 15
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), "nom", [], "any", false, false, false, 15), 'row');
         yield "
 \t\t\t\t</fieldset>
-
 \t\t\t\t<fieldset class=\"my-3\">
        \t\t";
-        // line 20
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), "slug", [], "any", false, false, false, 20), 'row');
+        // line 18
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), "slug", [], "any", false, false, false, 18), 'row');
         yield "
 \t\t\t\t</fieldset>
-
+\t\t\t\t<fieldset class=\"my-3\">
+\t     \t\t";
+        // line 21
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "image", [], "any", false, false, false, 21), 'row');
+        yield " 
+\t\t\t\t</fieldset>
 \t\t\t\t<fieldset class=\"my-3\">
 \t     \t\t";
         // line 24
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "image", [], "any", false, false, false, 24), 'row');
+        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "parent", [], "any", false, false, false, 24), 'row');
         yield " 
 \t\t\t\t</fieldset>
+\t\t \t</div>  
+\t\t</div>
 
-\t\t\t\t<fieldset class=\"my-3\">
-\t     \t\t";
-        // line 28
-        yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), "parent", [], "any", false, false, false, 28), 'row');
-        yield " 
-\t\t\t\t</fieldset>
-\t\t \t</div>
-    \t\t
+\t\t\t\t<button type=\"submit\" class=\"btn btn-outline-success\">";
+        // line 29
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 29, $this->source); })()), "Save")) : ("Save")), "html", null, true);
+        yield "</button> \t\t
 \t\t\t\t";
-        // line 32
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 32, $this->source); })()), 'form_end');
+        // line 30
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), 'form_end');
         yield "
 
-\t\t\t</div>
-
-    ";
-        // line 36
-        yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/categories/_form.html.twig");
+\t\t\t    ";
+        // line 33
         yield "
 
     <a href=\"";
-        // line 38
+        // line 35
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_index");
-        yield "\" class=\"btn btn-outline-primary\">back to list</a>
+        yield "\" class=\"btn btn-outline-primary\"><b>Retour à la liste</b></a>
 \t</section>
 
 ";
@@ -190,7 +188,7 @@ class __TwigTemplate_ab1f6fb89f7c538aedf1f97f198b3f09 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  158 => 38,  153 => 36,  146 => 32,  139 => 28,  132 => 24,  125 => 20,  118 => 16,  112 => 13,  108 => 12,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  156 => 35,  152 => 33,  147 => 30,  143 => 29,  135 => 24,  129 => 21,  123 => 18,  117 => 15,  112 => 13,  108 => 12,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -208,31 +206,28 @@ class __TwigTemplate_ab1f6fb89f7c538aedf1f97f198b3f09 extends Template
 
 \t\t\t\t{{ form_start(form) }}
       \t{{ form_errors(form) }}
-
 \t\t\t\t<fieldset class=\"my-3\">
 \t   \t\t\t{{ form_row(form.nom) }}
 \t\t\t\t</fieldset>
-
 \t\t\t\t<fieldset class=\"my-3\">
        \t\t{{ form_row(form.slug) }}
 \t\t\t\t</fieldset>
-
 \t\t\t\t<fieldset class=\"my-3\">
 \t     \t\t{{ form_row(form.image) }} 
 \t\t\t\t</fieldset>
-
 \t\t\t\t<fieldset class=\"my-3\">
 \t     \t\t{{ form_row(form.parent) }} 
 \t\t\t\t</fieldset>
-\t\t \t</div>
-    \t\t
+\t\t \t</div>  
+\t\t</div>
+
+\t\t\t\t<button type=\"submit\" class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</button> \t\t
 \t\t\t\t{{ form_end(form) }}
 
-\t\t\t</div>
+\t\t\t    {# {{ include('admin/categories/_form.html.twig') }} #}
 
-    {{ include('admin/categories/_form.html.twig') }}
 
-    <a href=\"{{ path('app_categories_index') }}\" class=\"btn btn-outline-primary\">back to list</a>
+    <a href=\"{{ path('app_categories_index') }}\" class=\"btn btn-outline-primary\"><b>Retour à la liste</b></a>
 \t</section>
 
 {% endblock %}

@@ -26,16 +26,18 @@ class CategoriesType extends AbstractType
             ->add('image', TextType::class, [
                 'attr' => [
                 'class' => 'form-control',
-                ]
+                ],
+                'required' => false,
             ])
 				    ->add('parent', TextType::class, [
                 'attr' => [
                 'class' => 'form-control',
-                ]
+                ],
+                'required' => false, // La catégorie parente n'a pas de parent
             ])
         ;
     }
-
+    // Pour lier le formulaire à l'entité, on va utiliser la méthode configureOptions
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([

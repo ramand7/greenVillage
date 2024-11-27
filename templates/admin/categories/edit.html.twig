@@ -29,21 +29,14 @@
 				</fieldset>
 		 	</div>
     		
-				{{ form_end(form) }}
-
-			</div>
+		</div>
 
 			<div class="row">
 				<div class="col">
-					{{ include('admin/categories/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
-				</div>
-				<div class="col">
-					<a href="{{ path('app_categories_index') }}" class="btn btn-outline-primary">Retour à la liste</a>
-				</div>
-				<div class="col">
-					{{ include('admin/categories/_delete_form.html.twig') }}
+					<button type="submit" class="btn btn-sm btn-outline-success"><b>Mettre à jour</b></button>
+					<a href="{{ path('app_categories_index') }}" class="btn btn-sm btn-outline-primary"><b>Retour à la liste</b></a>
 				</div>
 			</div>
-
+				{{ form_end(form) }}
 	</section>
 {% endblock %}

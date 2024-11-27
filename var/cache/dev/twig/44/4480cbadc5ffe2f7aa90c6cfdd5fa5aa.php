@@ -3407,6 +3407,6 @@ body.outlook p {
         min-width: 0;
     }
 }
-", "@email/zurb_2/main.css", "/home/ramand/Bureau/greenVillage20112024/vendor/symfony/twig-bridge/Resources/views/Email/zurb_2/main.css");
+", "@email/zurb_2/main.css", "/home/ramand/Bureau/greenVillage/vendor/symfony/twig-bridge/Resources/views/Email/zurb_2/main.css");
     }
 }

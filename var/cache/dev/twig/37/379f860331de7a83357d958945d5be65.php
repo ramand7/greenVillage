@@ -44,23 +44,12 @@ class __TwigTemplate_46b8493c00760585e2d0e8ebc3c4a090 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/categories/_form.html.twig"));
 
-        // line 1
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 1, $this->source); })()), 'form_start');
-        yield "
-    ";
         // line 3
         yield "    ";
-        // line 4
-        yield "        <a href=\"";
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_new");
-        yield "\" class=\"btn btn-outline-success\">";
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 4, $this->source); })()), "Save")) : ("Save")), "html", null, true);
-        yield "</a>
-        ";
         // line 6
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 6, $this->source); })()), 'form_end');
         yield "
-";
+
+ ";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -81,27 +70,20 @@ class __TwigTemplate_46b8493c00760585e2d0e8ebc3c4a090 extends Template
     /**
      * @codeCoverageIgnore
      */
-    public function isTraitable(): bool
-    {
-        return false;
-    }
-
-    /**
-     * @codeCoverageIgnore
-     */
     public function getDebugInfo(): array
     {
-        return array (  61 => 6,  54 => 4,  52 => 3,  48 => 1,);
+        return array (  50 => 6,  48 => 3,);
     }
 
     public function getSourceContext(): Source
     {
-        return new Source("{{ form_start(form) }}
+        return new Source("{# {{ form_start(form) }}
     {# {{ form_widget(form) }} #}
-    {# <button> #}
-        <a href=\"{{ path('app_categories_new') }}\" class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</a>
-        {# </button> #}
-{{ form_end(form) }}
-", "admin/categories/_form.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/categories/_form.html.twig");
+    {# <button type=\"submit\" class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</a>
+        </button>
+{{ form_end(form) }} #}
+
+
+ {# <a href=\"{{ path('app_categories_new') }}\" class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</a> #}", "admin/categories/_form.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/categories/_form.html.twig");
     }
 }

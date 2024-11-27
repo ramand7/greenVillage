@@ -81,6 +81,6 @@ class __TwigTemplate_392e04992e3163a4fdaa330056846b87 extends Template
     <path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\"></path>
     <path d=\"M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1\"></path>
 </svg>
-", "@WebProfiler/Icon/referrer.svg", "/home/ramand/Bureau/greenVillage20112024/vendor/symfony/web-profiler-bundle/Resources/views/Icon/referrer.svg");
+", "@WebProfiler/Icon/referrer.svg", "/home/ramand/Bureau/greenVillage/vendor/symfony/web-profiler-bundle/Resources/views/Icon/referrer.svg");
     }
 }

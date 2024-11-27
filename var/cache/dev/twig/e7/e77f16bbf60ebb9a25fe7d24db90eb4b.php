@@ -45,15 +45,25 @@ class __TwigTemplate_3537c95d5b058ad5ef70f079c1555fe6 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "admin/categories/_delete_form.html.twig"));
 
         // line 1
-        yield "<form method=\"post\" action=\"";
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
-        yield "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
-    <input type=\"hidden\" name=\"_token\" value=\"";
+        yield "
+<form method=\"post\" action=\"";
         // line 2
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . CoreExtension::getAttribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_delete", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2)]), "html", null, true);
+        yield "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+    
+\t\t<input type=\"hidden\" name=\"_token\" value=\"";
+        // line 4
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . CoreExtension::getAttribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 4, $this->source); })()), "id", [], "any", false, false, false, 4))), "html", null, true);
         yield "\">
-    <button class=\"btn btn-outline-danger\">Supprimer</button>
+
+\t\t";
+        // line 7
+        yield "    
+\t\t<button class=\"btn btn-sm btn-outline-danger\"><b>Supprimer</b></button>
 </form>
+
+
+
 ";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -85,15 +95,23 @@ class __TwigTemplate_3537c95d5b058ad5ef70f079c1555fe6 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  53 => 2,  48 => 1,);
+        return array (  61 => 7,  56 => 4,  51 => 2,  48 => 1,);
     }
 
     public function getSourceContext(): Source
     {
-        return new Source("<form method=\"post\" action=\"{{ path('app_categories_delete', {'id': categorie.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
-    <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ categorie.id) }}\">
-    <button class=\"btn btn-outline-danger\">Supprimer</button>
+        return new Source("
+<form method=\"post\" action=\"{{ path('app_categories_delete', {'id': categorie.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+    
+\t\t<input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ categorie.id) }}\">
+
+\t\t{# <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ categorie.id) }}\"> #}
+    
+\t\t<button class=\"btn btn-sm btn-outline-danger\"><b>Supprimer</b></button>
 </form>
+
+
+
 ", "admin/categories/_delete_form.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/categories/_delete_form.html.twig");
     }
 }

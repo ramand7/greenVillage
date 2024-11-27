@@ -141,34 +141,21 @@ class __TwigTemplate_8480cff8fc0781af02ffbe985529f8f2 extends Template
 \t\t\t\t</fieldset>
 \t\t \t</div>
     \t\t
-\t\t\t\t";
-        // line 32
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 32, $this->source); })()), 'form_end');
-        yield "
-
-\t\t\t</div>
+\t\t</div>
 
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col\">
-\t\t\t\t\t";
-        // line 38
-        yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/categories/_form.html.twig", ["button_label" => "Mettre à jour"]);
-        yield "
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col\">
+\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm btn-outline-success\"><b>Mettre à jour</b></button>
 \t\t\t\t\t<a href=\"";
-        // line 41
+        // line 37
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_index");
-        yield "\" class=\"btn btn-outline-primary\">Retour à la liste</a>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col\">
-\t\t\t\t\t";
-        // line 44
-        yield Twig\Extension\CoreExtension::include($this->env, $context, "admin/categories/_delete_form.html.twig");
-        yield "
+        yield "\" class=\"btn btn-sm btn-outline-primary\"><b>Retour à la liste</b></a>
 \t\t\t\t</div>
 \t\t\t</div>
-
+\t\t\t\t";
+        // line 40
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 40, $this->source); })()), 'form_end');
+        yield "
 \t</section>
 ";
         
@@ -201,7 +188,7 @@ class __TwigTemplate_8480cff8fc0781af02ffbe985529f8f2 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  167 => 44,  161 => 41,  155 => 38,  146 => 32,  139 => 28,  132 => 24,  125 => 20,  118 => 16,  112 => 13,  108 => 12,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  157 => 40,  151 => 37,  139 => 28,  132 => 24,  125 => 20,  118 => 16,  112 => 13,  108 => 12,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -237,22 +224,15 @@ class __TwigTemplate_8480cff8fc0781af02ffbe985529f8f2 extends Template
 \t\t\t\t</fieldset>
 \t\t \t</div>
     \t\t
-\t\t\t\t{{ form_end(form) }}
-
-\t\t\t</div>
+\t\t</div>
 
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col\">
-\t\t\t\t\t{{ include('admin/categories/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col\">
-\t\t\t\t\t<a href=\"{{ path('app_categories_index') }}\" class=\"btn btn-outline-primary\">Retour à la liste</a>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col\">
-\t\t\t\t\t{{ include('admin/categories/_delete_form.html.twig') }}
+\t\t\t\t\t<button type=\"submit\" class=\"btn btn-sm btn-outline-success\"><b>Mettre à jour</b></button>
+\t\t\t\t\t<a href=\"{{ path('app_categories_index') }}\" class=\"btn btn-sm btn-outline-primary\"><b>Retour à la liste</b></a>
 \t\t\t\t</div>
 \t\t\t</div>
-
+\t\t\t\t{{ form_end(form) }}
 \t</section>
 {% endblock %}
 ", "admin/categories/edit.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/categories/edit.html.twig");

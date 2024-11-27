@@ -25,19 +25,18 @@ class CategoriesController extends AbstractController
     #[Route('/new', name: 'app_categories_new', methods: ['GET', 'POST'])]
     public function newCat(Request $request, EntityManagerInterface $entityManager): Response
     {
-        $category = new Categories();
-        $form = $this->createForm(CategoriesType::class, $category);
-        $form->handleRequest($request);
+        $cat = new Categories(); // Créer une nouvelle instance
+        $form = $this->createForm(CategoriesType::class, $cat); // Lier l'entité au formulaire        
+				$form->handleRequest($request);  
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->persist($category);
+        if ($form->isSubmitted() && $form->isValid()) {					
+            $entityManager->persist($cat); 
             $entityManager->flush();
 
             return $this->redirectToRoute('app_categories_index', [], Response::HTTP_SEE_OTHER);
         }
-
+// dd($form->getErrors(true, false));
         return $this->render('admin/categories/new.html.twig', [
-            'category' => $category,
             'form' => $form,
         ]);
     }
@@ -75,10 +74,11 @@ class CategoriesController extends AbstractController
     #[Route('/{id}/edit', name: 'app_categories_edit', methods: ['GET', 'POST'])]
     public function editCat(Request $request, Categories $categorie, EntityManagerInterface $entityManager): Response
     {
-        $form = $this->createForm(CategoriesType::class, $categorie);
+				$form = $this->createForm(CategoriesType::class, $categorie);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+		
             $entityManager->flush();
 
             return $this->redirectToRoute('app_categories_index', [], Response::HTTP_SEE_OTHER);
@@ -90,11 +90,19 @@ class CategoriesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_categories_delete', methods: ['POST'])]
-    public function deleteCat(Request $request, Categories $category, EntityManagerInterface $entityManager): Response
+    #[Route('/{id}/delete', name: 'app_categories_delete', methods: ['POST'])]
+    public function deleteCat(Request $request, int $id, EntityManagerInterface $entityManager): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$category->getId(), $request->request->get('_token'))) {
-            $entityManager->remove($category);
+				// Rechercher la catégorie manuellement
+				$categorie = $entityManager->getRepository(Categories::class)->find($id);
+				// dd($categorie);
+
+        if (!$categorie){
+						throw $this->createNotFoundException('La catégorie n\'existe pas !');
+				}
+				if ($this->isCsrfTokenValid('delete'.$categorie->getId(), $request->request->get('_token'))) {
+				// dd('About to delete', $categorie);
+            $entityManager->remove($categorie);
             $entityManager->flush();
         }
 

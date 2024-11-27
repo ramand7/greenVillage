@@ -65,7 +65,7 @@ return [
     'app_categories_show' => [['id'], ['_controller' => 'App\\Controller\\CategoriesController::show'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/categories']], [], [], []],
     'categories_show_by_slug' => [['slug'], ['_controller' => 'App\\Controller\\CategoriesController::showBySlug'], [], [['variable', '/', '[^/]++', 'slug', true], ['text', '/categories']], [], [], []],
     'app_categories_edit' => [['id'], ['_controller' => 'App\\Controller\\CategoriesController::editCat'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/categories']], [], [], []],
-    'app_categories_delete' => [['id'], ['_controller' => 'App\\Controller\\CategoriesController::deleteCat'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/categories']], [], [], []],
+    'app_categories_delete' => [['id'], ['_controller' => 'App\\Controller\\CategoriesController::deleteCat'], [], [['text', '/delete'], ['variable', '/', '[^/]++', 'id', true], ['text', '/categories']], [], [], []],
     'app_contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], [], []],
     'app_main' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/main']], [], [], []],
     'app_produit_index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/produits/']], [], [], []],

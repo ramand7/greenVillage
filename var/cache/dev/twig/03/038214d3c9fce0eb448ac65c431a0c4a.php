@@ -141,13 +141,13 @@ class __TwigTemplate_07134ee5c6d17b5a8a758d0c2969847e extends Template
 \t\t\t\t<a href=\"";
         // line 35
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_index");
-        yield "\" class=\"btn btn-sm btn-outline-primary\">Retour à la liste</a>
+        yield "\" class=\"btn btn-sm btn-outline-primary\"><b>Retour à la liste</b></a>
 \t\t\t</div>
 \t\t\t<div class=\"col my-2\">
 \t\t\t\t<a href=\"";
         // line 38
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_categories_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, (isset($context["categorie"]) || array_key_exists("categorie", $context) ? $context["categorie"] : (function () { throw new RuntimeError('Variable "categorie" does not exist.', 38, $this->source); })()), "id", [], "any", false, false, false, 38)]), "html", null, true);
-        yield "\" class=\"btn btn-sm btn-outline-success\">Modifier</a>
+        yield "\" class=\"btn btn-sm btn-outline-success\"><b>Modifier</b></a>
 \t\t\t</div>
 \t\t</div>
     
@@ -231,10 +231,10 @@ class __TwigTemplate_07134ee5c6d17b5a8a758d0c2969847e extends Template
     </table>
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col my-2\">
-\t\t\t\t<a href=\"{{ path('app_categories_index') }}\" class=\"btn btn-sm btn-outline-primary\">Retour à la liste</a>
+\t\t\t\t<a href=\"{{ path('app_categories_index') }}\" class=\"btn btn-sm btn-outline-primary\"><b>Retour à la liste</b></a>
 \t\t\t</div>
 \t\t\t<div class=\"col my-2\">
-\t\t\t\t<a href=\"{{ path('app_categories_edit', {'id': categorie.id}) }}\" class=\"btn btn-sm btn-outline-success\">Modifier</a>
+\t\t\t\t<a href=\"{{ path('app_categories_edit', {'id': categorie.id}) }}\" class=\"btn btn-sm btn-outline-success\"><b>Modifier</b></a>
 \t\t\t</div>
 \t\t</div>
     

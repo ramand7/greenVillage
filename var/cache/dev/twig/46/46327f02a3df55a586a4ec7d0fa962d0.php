@@ -556,6 +556,6 @@ class __TwigTemplate_d90b4caa841b424cfe0b7e6df0412901 extends Template
 
 </body>
 </html>
-", "@ApiPlatform/SwaggerUi/index.html.twig", "/home/ramand/Bureau/greenVillage20112024/vendor/api-platform/core/src/Symfony/Bundle/Resources/views/SwaggerUi/index.html.twig");
+", "@ApiPlatform/SwaggerUi/index.html.twig", "/home/ramand/Bureau/greenVillage/vendor/api-platform/core/src/Symfony/Bundle/Resources/views/SwaggerUi/index.html.twig");
     }
 }
