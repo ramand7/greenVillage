@@ -22,7 +22,9 @@ class MainController extends AbstractController
             'categories' => $categories,
             // dd($categories)
         ]);
-        
+        $this->render('_partials/_nav.html.twig', [
+        'cartTotalQuantity' => $cartService->getTotalQuantity(),
+        ]);
     }
 }       
         

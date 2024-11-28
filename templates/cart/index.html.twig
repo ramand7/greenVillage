@@ -39,7 +39,7 @@
 			{# </tbody> #}
    	</table>
 	</div>
-	<div class="col-2 ms-3">			
+	<div class="col-3 ms-1">			
 		<h4 class="text-center">Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
 		<td><a href="{{ path('app_accueil') }}" class="btn btn-sm btn-outline-success"><b>Page d'accueil</b></a></td>	
 	</div>						

@@ -92,63 +92,76 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
         }
         // line 21
         yield "
+\t\t";
+        // line 23
+        yield "
 \t\t\t\t\t<ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\t
 \t\t\t\t\t\t";
-        // line 23
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23)) {
-            // line 24
+        // line 25
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "user", [], "any", false, false, false, 25)) {
+            // line 26
             yield "\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-            // line 25
+            // line 27
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_display");
             yield "\">Mon compte</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-            // line 28
+            // line 30
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             yield "\">Deconnexion</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         } else {
-            // line 31
+            // line 33
             yield "\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"";
-            // line 32
+            // line 34
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             yield "\">Inscription</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"";
-            // line 35
+            // line 37
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             yield "\">Connexion</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         }
-        // line 38
+        // line 40
         yield "
 \t\t\t\t\t\t<li class=\"nav-item\">
-
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 41
+        // line 42
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_index");
-        yield "\"><img src=\"";
+        yield "\">\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t<img src=\"";
+        // line 43
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/cart_2.png"), "html", null, true);
         yield "\" class=\"img-fluid\" width=\"28px\" height=\"10px\" alt=\"Panier\">
-\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">
-\t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">
+\t\t\t\t\t\t\t\t";
+        // line 44
+        if (((isset($context["cartTotalQuantity"]) || array_key_exists("cartTotalQuantity", $context) ? $context["cartTotalQuantity"] : (function () { throw new RuntimeError('Variable "cartTotalQuantity" does not exist.', 44, $this->source); })()) > 0)) {
+            // line 45
+            yield "\t\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">+
+\t\t\t\t\t\t\t\t\t\t";
+            // line 46
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["cartTotalQuantity"]) || array_key_exists("cartTotalQuantity", $context) ? $context["cartTotalQuantity"] : (function () { throw new RuntimeError('Variable "cartTotalQuantity" does not exist.', 46, $this->source); })()), "html", null, true);
+            yield "
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">articles dans le panier</span>
 \t\t\t\t\t\t\t\t\t</span>
-\t\t\t\t\t\t\t\t</span>
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t";
+        }
+        // line 50
+        yield "\t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 49
+        // line 52
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_display");
         yield "\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 50
+        // line 53
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/usericon_1.png"), "html", null, true);
         yield "\" class=\"img-fluid\" width=\"30x\" height=\"42px\" alt=\"Mon compte\">
 \t\t\t\t\t\t\t</a>
@@ -187,7 +200,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  152 => 50,  148 => 49,  135 => 41,  130 => 38,  124 => 35,  118 => 32,  115 => 31,  109 => 28,  103 => 25,  100 => 24,  98 => 23,  94 => 21,  87 => 17,  82 => 14,  80 => 13,  77 => 12,  68 => 9,  65 => 8,  61 => 7,  52 => 3,  48 => 1,);
+        return array (  165 => 53,  161 => 52,  157 => 50,  150 => 46,  147 => 45,  145 => 44,  141 => 43,  137 => 42,  133 => 40,  127 => 37,  121 => 34,  118 => 33,  112 => 30,  106 => 27,  103 => 26,  101 => 25,  97 => 23,  94 => 21,  87 => 17,  82 => 14,  80 => 13,  77 => 12,  68 => 9,  65 => 8,  61 => 7,  52 => 3,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -213,6 +226,8 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t\t\t</script>
 \t\t\t{% endif %}
 
+\t\t{# Pour acceder  #}
+
 \t\t\t\t\t<ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\t
 \t\t\t\t\t\t{% if(app.user) %}
 \t\t\t\t\t\t<li class=\"nav-item\">
@@ -231,13 +246,14 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t\t<li class=\"nav-item\">
-
-\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('cart_index') }}\"><img src=\"{{ asset('images/cart_2.png') }}\" class=\"img-fluid\" width=\"28px\" height=\"10px\" alt=\"Panier\">
-\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">
-\t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">
+\t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('cart_index') }}\">\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/cart_2.png') }}\" class=\"img-fluid\" width=\"28px\" height=\"10px\" alt=\"Panier\">
+\t\t\t\t\t\t\t\t{% if cartTotalQuantity > 0 %}
+\t\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">+
+\t\t\t\t\t\t\t\t\t\t{{ cartTotalQuantity }}
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">articles dans le panier</span>
 \t\t\t\t\t\t\t\t\t</span>
-\t\t\t\t\t\t\t\t</span>
-\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('profil_display') }}\">

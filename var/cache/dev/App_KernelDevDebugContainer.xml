@@ -631,6 +631,26 @@
       <argument type="service" id="security.user_password_hasher"/>
       <argument type="service" id="slugger"/>
     </service>
+    <service id="App\EventSubscriber\CartSubscriber" class="App\EventSubscriber\CartSubscriber" autowire="true" autoconfigure="true">
+      <tag name="kernel.event_subscriber"/>
+      <tag name="container.hot_path"/>
+      <argument type="service" id="App\Service\CartService"/>
+      <argument type="service" id="App\Repository\CartRepository"/>
+      <argument type="service" id="twig"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+    </service>
+    <service id="App\EventSubscriber\LoginSubscriber" class="App\EventSubscriber\LoginSubscriber" autowire="true" autoconfigure="true">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="App\Service\CartService"/>
+      <argument type="service" id="App\Repository\CartRepository"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument type="service" id="security.helper"/>
+    </service>
+    <service id="App\EventSubscriber\LogoutSubscriber" class="App\EventSubscriber\LogoutSubscriber" autowire="true" autoconfigure="true">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="App\Service\CartService"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+    </service>
     <service id="App\Form\CategoriesType" class="App\Form\CategoriesType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -719,7 +739,9 @@
     </service>
     <service id="App\Service\CartService" class="App\Service\CartService" autowire="true" autoconfigure="true">
       <argument type="service" id="request_stack"/>
+      <argument type="service" id="App\Repository\CartRepository"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument type="service" id="security.helper"/>
     </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
@@ -2932,6 +2954,30 @@
           <argument>onSecurityPostValidation</argument>
         </argument>
         <argument>63</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.controller</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="App\EventSubscriber\CartSubscriber"/>
+          <argument>onControllerEvent</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>security.interactive_login</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="App\EventSubscriber\LoginSubscriber"/>
+          <argument>onInteractiveLogin</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>Symfony\Component\Security\Http\Event\LogoutEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="App\EventSubscriber\LogoutSubscriber"/>
+          <argument>onLogoutEvent</argument>
+        </argument>
+        <argument>0</argument>
       </call>
       <call method="addListener">
         <argument>kernel.response</argument>
@@ -6665,6 +6711,22 @@
         <argument>1024</argument>
       </call>
       <call method="addListener">
+        <argument>security.interactive_login</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="App\EventSubscriber\LoginSubscriber"/>
+          <argument>onInteractiveLogin</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>Symfony\Component\Security\Http\Event\LogoutEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="App\EventSubscriber\LogoutSubscriber"/>
+          <argument>onLogoutEvent</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
         <argument>Symfony\Component\Security\Http\Event\CheckPassportEvent</argument>
         <argument type="collection">
           <argument type="service_closure" id="security.listener.check_authenticator_credentials"/>
@@ -8208,6 +8270,12 @@
     <service id=".abstract.instanceof.App\DataFixtures\ProduitFixtures" class="App\DataFixtures\ProduitFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\UtilisateurFixtures" class="App\DataFixtures\UtilisateurFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\UtilisateurFixtures" class="App\DataFixtures\UtilisateurFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\EventDispatcher\EventSubscriberInterface.0.App\EventSubscriber\CartSubscriber" class="App\EventSubscriber\CartSubscriber" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\EventSubscriber\CartSubscriber" class="App\EventSubscriber\CartSubscriber" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\EventDispatcher\EventSubscriberInterface.0.App\EventSubscriber\LoginSubscriber" class="App\EventSubscriber\LoginSubscriber" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\EventSubscriber\LoginSubscriber" class="App\EventSubscriber\LoginSubscriber" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\EventDispatcher\EventSubscriberInterface.0.App\EventSubscriber\LogoutSubscriber" class="App\EventSubscriber\LogoutSubscriber" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\EventSubscriber\LogoutSubscriber" class="App\EventSubscriber\LogoutSubscriber" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CategoriesType" class="App\Form\CategoriesType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CategoriesType" class="App\Form\CategoriesType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactFormType" class="App\Form\ContactFormType" autowire="true" abstract="true"/>

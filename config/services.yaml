@@ -32,5 +32,15 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-    # add more service definitions when explicit configuration is needed
+    App\EventSubscriber\CartSubscriber:
+        arguments:
+            $cartService: '@App\Service\CartService'
+            $twig: '@twig'
+            $cartRepository: '@App\Repository\CartRepository'
+            $entityManager: '@doctrine.orm.entity_manager'            
+        tags: ['kernel.event_subscriber']
+    
+
+
+# add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

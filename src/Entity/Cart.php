@@ -23,6 +23,7 @@ class Cart
     private ?bool $isActive = true;
 
     #[ORM\ManyToOne(targetEntity: Utilisateur::class, inversedBy: 'carts')]
+    #[ORM\JoinColumn(nullable: false)] // Le panier doit être associé à un utilisateur
     private ?Utilisateur $user = null;
 
     public function __construct()
