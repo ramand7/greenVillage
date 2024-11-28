@@ -10,60 +10,55 @@ use App\Entity\CartItem;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Bundle\SecurityBundle\Security;
+// use Symfony\Component\HttpFoundation\Session\Session;
 
 class CartService
 {
-    private $session;
-    private RequestStack $requestStack;
-    private EntityManagerInterface $em;
+    // private $session;
+    private $requestStack;
+    private $em;
 		private $security;
     private $cartRepository;
 
+
     public function __construct(RequestStack $requestStack, CartRepository $cartRepository, EntityManagerInterface $em, Security $security)
     {
-        $this->requestStack = $requestStack;
+        
+				$this->requestStack = $requestStack;
         $this->em = $em;
-				// $this->user = $tokenStorage->getToken()->getUser;
-				$this->security = $security;
+        $this->security = $security;
+				// $user = $this->security->getUser; dd($user);
+        // $this->session = $session;
+
     }
 		
 		public function getCart(): Cart
     {
         $session = $this->requestStack->getSession();
         $cartId = $session->get('cart_id');
+				// dd($session);
+				// Si un utilisateur est connecté, cherchez son panier
 				$user = $this->security->getUser();
-
-					if ($user) {
-						$cart = $this->em->getRepository(Cart::class)->findOneBy(['user' => $user, 'isActive' => true]);
+			
+				if ($user) {
+					$cart = $this->em->getRepository(Cart::class)->findOneBy(['user' => $user, 'isActive' => true]);
+					
 						if ($cart) {
-								$session->set('cart_id', $cart->getId());
-								return $cart;
+
+							$session->set('cart_id', $cart->getId()); 
+							// dd($cart);
+							$this->em->persist($cart);
+							$this->em->flush();
+							dd($cart);
+							return $cart; 
 						}					
 				} 
-				// }
-        // if ($cartId) {
-        //     $cart = $this->em->getRepository(Cart::class)->find($cartId);
-        //     if ($cart) {
-        //         return $cart;
-        //     }
-        // }
-
-				// Si un utilisateur est connecté, cherchez son panier
-				// $user = $this->security->getUser();
-				// if ($user) {
-				// 		$cart = $this->em->getRepository(Cart::class)->findOneBy(['user' => $user, 'isActive' => true]);
-				// 		if ($cart) {
-				// 				$session->set('cart_id', $cart->getId());
-				// 				return $cart;
-				// 		}					
-				// } 
-
-
-				
+					
 				// Sinon, créez un nouveau panier
-        $cart = new Cart();
+				// dd($user);
+				$cart = new Cart();
 				if ($user) {
-						$cart->setUser($user); 
+					$cart->setUser($user); 
 				}
 				
         $this->em->persist($cart);
@@ -81,15 +76,15 @@ class CartService
     		$session->set('cart_id', $cart->getId());
 		}
 
-		// private function getUser(): ?Utilisateur
-		// {
+		private function getUser(): ?Utilisateur
+		{
     
-		// 		$user = $this->security->getUser();
+				$user = $this->security->getUser();
 
-		// 		return $this;
+				return $this;
 		
 		// return $this->requestStack->getSession()->get('security.token_storage')->getToken()->getUser();
-		// }
+		}
 
     public function addProduct(Produit $produit, int $quantity = 1): void
     {
@@ -126,46 +121,46 @@ class CartService
         }
     }
 
-    public function clearCart(): void
-    {
-        $cart = $this->getCart();
+    // public function clearCart(): void
+    // {
+    //     $cart = $this->getCart();
 
-        foreach ($cart->getItems() as $item) {
-            $this->em->remove($item);
-        }
+    //     foreach ($cart->getItems() as $item) {
+    //         $this->em->remove($item);
+    //     }
 
-        $this->em->flush();
-    }
+    //     $this->em->flush();
+    // }
 
-    public function persistCart()
-    {
-        $user = $this->security->getUser();
-        if ($user) {
-            $cart = $this->session->get('cart', []);
-            $existingCart = $this->cartRepository->findOneBy(['user' => $user]);
+    // public function persistCart()
+    // {
+    //     $user = $this->security->getUser();
+    //     if ($user) {
+    //         $cart = $this->session->get('cart', []);
+    //         $existingCart = $this->cartRepository->findOneBy(['user' => $user]);
 
-            if (!$existingCart) {
-                $existingCart = new Cart();
-                $existingCart->setUser($user);
-            }
+    //         if (!$existingCart) {
+    //             $existingCart = new Cart();
+    //             $existingCart->setUser($user);
+    //         }
 
-            $existingCart->setItems($cart);
-            $this->em->persist($existingCart);
-            $this->em->flush();
-        }
-    }
+    //         $existingCart->setItems($cart);
+    //         $this->em->persist($existingCart);
+    //         $this->em->flush();
+    //     }
+    // }
 
-    public function loadCart()
-    {
-        $user = $this->security->getUser();
-        if ($user) {
-            $existingCart = $this->cartRepository->findOneBy(['user' => $user]);
+    // public function loadCart()
+    // {
+    //     $user = $this->security->getUser();
+    //     if ($user) {
+    //         $existingCart = $this->cartRepository->findOneBy(['user' => $user]);
 
-            if ($existingCart) {
-                $this->session->set('cart', $existingCart->getItems());
-            }
-        }
-    }
+    //         if ($existingCart) {
+    //             $this->session->set('cart', $existingCart->getItems());
+    //         }
+    //     }
+    // }
 
 
 		public function getTotalQuantity(): int

@@ -31,7 +31,7 @@ class Categories
     public function __toString(): string
     {
         // Retournez ici une propriété descriptive, par exemple "nom"
-        return $this->nom ?? 'Unknown Category';
+        return $this->nom ?? 'Catégorie inconnue';
     }
 
     #[ORM\ManyToOne(targetEntity: self::class, inversedBy: 'categories')]

@@ -23,7 +23,7 @@ class Cart
     private ?bool $isActive = true;
 
     #[ORM\ManyToOne(targetEntity: Utilisateur::class, inversedBy: 'carts')]
-    #[ORM\JoinColumn(nullable: false)] // Le panier doit être associé à un utilisateur
+    #[ORM\JoinColumn(nullable: false, name: 'user_id', referencedColumnName: 'id')] // Le panier doit être associé à un utilisateur
     private ?Utilisateur $user = null;
 
     public function __construct()
@@ -57,7 +57,7 @@ class Cart
     public function removeItem(CartItem $item): static
     {
         if ($this->items->removeElement($item)) {
-            // set the owning side to null (unless already changed)
+            // Mettre la valeur null s'il n'y a pas de modification
             if ($item->getCart() === $this) {
                 $item->setCart(null);
             }
