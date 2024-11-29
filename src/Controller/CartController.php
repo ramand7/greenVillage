@@ -10,14 +10,26 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CartController extends AbstractController
 {
-    #[Route('/cart', name: 'cart_index')]
+    private CartService $cartService;
+
+		public function __construct(CartService $cartService)
+		{
+				$this->cartService = $cartService;
+		}
+		
+		#[Route('/cart', name: 'cart_index')]
     public function index(CartService $cartService): Response
     {
-        $cart = $cartService->getCart();
+        // Récupérer le panier de l'utilisateur connecté
+				$cart = $cartService->getUserCart();
 
-				return $this->render('cart/index.html.twig', [
+				// if (!$cart) {
+				// 		$cart = $this->cartService->getUserCart();
+				// }
+				// Renvoyer le panier à la vue
+        return $this->render('cart/index.html.twig', [
             'cart' => $cart,
-        ]);
+				]);
     }
 
 		#[Route('/cart/add/{id}', name: 'cart_add', requirements: ['id' => '\d+'])]
