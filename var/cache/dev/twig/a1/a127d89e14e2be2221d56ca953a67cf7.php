@@ -49,7 +49,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
   \t<div class=\"container-fluid\">
     \t<a class=\"navbar-brand\" href=\"";
         // line 3
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accueil");
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_main");
         yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo1.png"), "html", null, true);
         yield "\" alt=\"Nom du Site\" height=\"50\"></a>
@@ -207,7 +207,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
     {
         return new Source("  <nav class=\"navbar navbar-expand-lg bg-body-tertiary\">
   \t<div class=\"container-fluid\">
-    \t<a class=\"navbar-brand\" href=\"{{ path('app_accueil') }}\"><img src=\"{{ asset('images/logo1.png') }}\" alt=\"Nom du Site\" height=\"50\"></a>
+    \t<a class=\"navbar-brand\" href=\"{{ path('app_main') }}\"><img src=\"{{ asset('images/logo1.png') }}\" alt=\"Nom du Site\" height=\"50\"></a>
 \t\t\t<a class=\"navbar-brand\" href=\"#\"><h1>Village Green</h1></a>
 \t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
 \t\t\t\t\t

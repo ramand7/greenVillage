@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Produits{% endblock %}
+
+{% block body %}
+
+{% include "_partials/_nav.html.twig" %}
+    <h1>Liste des Produits</h1>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.libelle }}</td>
+                    <td>{{ product.prixht }} €</td>
+                    <td>
+                        <a href="{{ path('cart_add', { id: product.id, _token: csrf_token('cart_add') }) }}" class="btn btn-sm btn-primary btn-sm">
+                            Ajouter au panier
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('cart_index') }}" class="btn btn-secondary mt-3">Voir le panier</a>
+{% endblock %}

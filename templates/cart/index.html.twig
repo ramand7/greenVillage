@@ -7,12 +7,20 @@
 {% include ('_partials/_nav.html.twig')  %}
 
 <h1 class="text text-primary">Votre panier</h1>
+
+    <h1>Votre Panier</h1>
+
+    <p><b>Panier ID :</b> {{ cart.id }}</p>
+    <p><b>Utilisateur : </b>{{ cart.user.nom }}</p>
+    <!-- Ajoutez d'autres informations du panier ici -->
+
 <div class="container-fluid w-50">
 	<div class="col-10">
     <table class="table table-hover table-primary">
         {# <thead> #}
             <tr class="text-center">
-                <th>Désignation</th>
+                <th>id</th>
+								<th>Désignation</th>
 								<th>Prix unitaire</th>
 								<th>Qté</th>   
                 <th>TVA</th>
@@ -21,11 +29,11 @@
             </tr>
         {# </thead> #}
         {# <tbody> #}
-        <div>
+        {# <div> #}
 					{% for item in cart.items %}
-						<div>
+						{# <div> #}
 							<tr>
-								{# <td>{{ item.produit.id }}</td> #}
+								<td>{{ item.produit.id }}</td>
 								<td>{{ item.produit.libelle }}</td>
 								<td class="text-center">{{ item.produit.prixht }}</td>
 								<td class="text-center">{{ item.quantity }}</td>
@@ -33,9 +41,9 @@
 								<td class="text-center">{{ (item.produit.prixht * item.quantity) * (1 + item.produit.tva) }} €</td>
 								<td class="text-center"><a href="{{ path('cart_remove', { id: item.produit.id, quantity: 1  }) }}" class="btn btn-sm btn-outline-danger"><b>Supprimer</b></a></td>
 							</tr>	
-						</div>
+						{# </div> #}
     			{% endfor %}
-				</div>
+				{# </div> #}
 			{# </tbody> #}
    	</table>
 	</div>

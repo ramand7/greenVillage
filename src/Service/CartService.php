@@ -9,7 +9,6 @@ use App\Entity\CartItem;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Bundle\SecurityBundle\Security;
-use Symfony\Component\Routing\Annotation\Route;
 
 class CartService
 {
@@ -21,19 +20,20 @@ class CartService
     public function __construct(RequestStack $requestStack, CartRepository $cartRepository, EntityManagerInterface $entityManager, Security $security)
     {
         $this->requestStack = $requestStack;
+        $this->cartRepository = $cartRepository;
         $this->entityManager = $entityManager;
 				$this->security = $security;
-        $this->cartRepository = $cartRepository;
     }
 		
-		public function getUserCart(): Cart
+		// Associer le panier à l'utilisateur connecté
+    public function getUserCart(): Cart
     {
         // Récupérer l'utilisateur connecté
-        $user = $this->security->getUser();// dd($user);
+        $user = $this->security->getUser();
+				// dd($user);
 
         if (!$user) {
-            // throw new \LogicException('Aucun utilisateur connecté');
-            
+            // throw new \LogicException('Aucun utilisateur connecté'); 
         }
 
         // Vérifier si un panier existe déjà pour cet utilisateur
@@ -50,80 +50,54 @@ class CartService
         return $cart;
     }
 
-    
-    
-    
-    // public function getCart(): Cart
-    // {
-    //     $session = $this->requestStack->getSession();
-    //     $cartId = $session->get('cart_id');
-
-    //     // Si un utilisateur est connecté, cherchez son panier
-		// 		$user = $this->security->getUser();
-
-		// 			if ($user) {
-		// 				$cart = $this->em->getRepository(Cart::class)->findOneBy(['user' => $user, 'isActive' => true]);
-		// 				if (!$cart) {
-		// 						throw $this->NotFoundException('Votre panier est vide.');
-		// 				}
-								
-		// 						$session->set('cart_id', $cart->getId());
-		// 						return $cart;
-		// 				}	
-		// 		    $cart = new Cart();
-		// 				if ($user) {
-		// 				$cart->setUser($user); 
-		// 				}
-				
-				
-				// Sinon, créez un nouveau panier
-			
-        // $this->em->persist($cart); 
-
-        // $this->em->flush();
-
-        // $session->set('cart_id', $cart->getId());
-
-        // return $cart;
-    // }
-
 		public function setCart(Cart $cart): void
 		{
     		$session = $this->requestStack->getSession();
     		$session->set('cart_id', $cart->getId());
 		}
 
-		// private function getUser(): ?Utilisateur
-		// {
-    
-		// 		$user = $this->security->getUser();
-
-		// 		return $this;
-		
-		// return $this->requestStack->getSession()->get('security.token_storage')->getToken()->getUser();
-		// }
-
+    // Pour ajouter un produit dans le panier
     public function addProduct(Produit $produit, int $quantity = 1): void
     {
+        // Récupération du panier de l'utilisateur
         $cart = $this->getUserCart();
 
-        foreach ($cart->getItems() as $item) {
+        // Vérification des doublons dans les items existants
+        foreach ($cart->getItems() as $item) { 
+						if (!is_int($produit->getId())) {
+    						throw new \InvalidArgumentException('L\'ID du produit doit être un entier.');
+						}
+   
+// 	 dd([
+//     'Produit actuel ID' => $produit->getId(),
+//     'Produit panier ID' => array_map(fn($item) => $item->getProduit()->getId(), $cart->getItems())
+// ]);
             if ($item->getProduit()->getId() === $produit->getId()) {
+                // Mise à jour de la quantité si l'article est déjà dans le panier
                 $item->setQuantity($item->getQuantity() + $quantity);
+
+								$this->entityManager->persist($item);
                 $this->entityManager->flush();
                 return;
             }
+            
         }
 
+        // Si le produit n'existe pas encore, créer un nouvel item
         $cartItem = new CartItem();
         $cartItem->setProduit($produit);
         $cartItem->setQuantity($quantity);
         $cartItem->setCart($cart);
 
+        // Ajouter l'item à la collection du panier
+        $cart->addItem($cartItem);
+
+        // Persister et sauvegarder
         $this->entityManager->persist($cartItem);
         $this->entityManager->flush();
     }
 
+    // Pour supprimer un produit du panier    
     public function removeProduct(Produit $produit): void
     {
         $cart = $this->getUserCart();
@@ -138,6 +112,7 @@ class CartService
         }
     }
 
+    // Compter les articles dans le panier à afficher dans la badge de notification
 		public function getTotalQuantity(): int
 		{
 				$cart = $this->getUserCart(); // Récupère le panier actuel
@@ -145,8 +120,7 @@ class CartService
 
 				foreach ($cart->getItems() as $item){
 						$totalQuantity += $item->getQuantity();
-				}
-				
+				}			
 				return $totalQuantity;
 		}
 

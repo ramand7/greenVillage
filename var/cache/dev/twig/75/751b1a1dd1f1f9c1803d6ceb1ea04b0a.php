@@ -104,13 +104,27 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
         // line 8
         yield "
 <h1 class=\"text text-primary\">Votre panier</h1>
+
+    <h1>Votre Panier</h1>
+
+    <p><b>Panier ID :</b> ";
+        // line 13
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 13, $this->source); })()), "id", [], "any", false, false, false, 13), "html", null, true);
+        yield "</p>
+    <p><b>Utilisateur : </b>";
+        // line 14
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 14, $this->source); })()), "user", [], "any", false, false, false, 14), "nom", [], "any", false, false, false, 14), "html", null, true);
+        yield "</p>
+    <!-- Ajoutez d'autres informations du panier ici -->
+
 <div class=\"container-fluid w-50\">
 \t<div class=\"col-10\">
     <table class=\"table table-hover table-primary\">
         ";
-        // line 14
+        // line 21
         yield "            <tr class=\"text-center\">
-                <th>Désignation</th>
+                <th>id</th>
+\t\t\t\t\t\t\t\t<th>Désignation</th>
 \t\t\t\t\t\t\t\t<th>Prix unitaire</th>
 \t\t\t\t\t\t\t\t<th>Qté</th>   
                 <th>TVA</th>
@@ -118,63 +132,69 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
 \t\t\t\t\t\t\t\t<th>Action</th>
             </tr>
         ";
-        // line 23
+        // line 31
         yield "        ";
-        // line 24
-        yield "        <div>
-\t\t\t\t\t";
-        // line 25
+        // line 32
+        yield "        ";
+        // line 33
+        yield "\t\t\t\t\t";
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 25, $this->source); })()), "items", [], "any", false, false, false, 25));
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 33, $this->source); })()), "items", [], "any", false, false, false, 33));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 26
-            yield "\t\t\t\t\t\t<div>
-\t\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t\t";
-            // line 29
-            yield "\t\t\t\t\t\t\t\t<td>";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 29), "libelle", [], "any", false, false, false, 29), "html", null, true);
+            // line 34
+            yield "\t\t\t\t\t\t";
+            // line 35
+            yield "\t\t\t\t\t\t\t<tr>
+\t\t\t\t\t\t\t\t<td>";
+            // line 36
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 36), "id", [], "any", false, false, false, 36), "html", null, true);
+            yield "</td>
+\t\t\t\t\t\t\t\t<td>";
+            // line 37
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 37), "libelle", [], "any", false, false, false, 37), "html", null, true);
             yield "</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\">";
-            // line 30
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 30), "prixht", [], "any", false, false, false, 30), "html", null, true);
+            // line 38
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 38), "prixht", [], "any", false, false, false, 38), "html", null, true);
             yield "</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\">";
-            // line 31
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["item"], "quantity", [], "any", false, false, false, 31), "html", null, true);
+            // line 39
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["item"], "quantity", [], "any", false, false, false, 39), "html", null, true);
             yield "</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\">";
-            // line 32
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 32), "tva", [], "any", false, false, false, 32), "html", null, true);
+            // line 40
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 40), "tva", [], "any", false, false, false, 40), "html", null, true);
             yield "</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\">";
-            // line 33
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 33), "prixht", [], "any", false, false, false, 33) * CoreExtension::getAttribute($this->env, $this->source, $context["item"], "quantity", [], "any", false, false, false, 33)) * (1 + CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 33), "tva", [], "any", false, false, false, 33))), "html", null, true);
+            // line 41
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 41), "prixht", [], "any", false, false, false, 41) * CoreExtension::getAttribute($this->env, $this->source, $context["item"], "quantity", [], "any", false, false, false, 41)) * (1 + CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 41), "tva", [], "any", false, false, false, 41))), "html", null, true);
             yield " €</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\"><a href=\"";
-            // line 34
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_remove", ["id" => CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 34), "id", [], "any", false, false, false, 34), "quantity" => 1]), "html", null, true);
+            // line 42
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_remove", ["id" => CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["item"], "produit", [], "any", false, false, false, 42), "id", [], "any", false, false, false, 42), "quantity" => 1]), "html", null, true);
             yield "\" class=\"btn btn-sm btn-outline-danger\"><b>Supprimer</b></a></td>
 \t\t\t\t\t\t\t</tr>\t
-\t\t\t\t\t\t</div>
-    \t\t\t";
+\t\t\t\t\t\t";
+            // line 45
+            yield "    \t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['item'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
-        yield "\t\t\t\t</div>
-\t\t\t";
-        // line 40
+        // line 46
+        yield "\t\t\t\t";
+        // line 47
+        yield "\t\t\t";
+        // line 48
         yield "   \t</table>
 \t</div>
 \t<div class=\"col-3 ms-1\">\t\t\t
 \t\t<h4 class=\"text-center\">Total : ";
-        // line 43
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(Twig\Extension\CoreExtension::reduce($this->env, CoreExtension::getAttribute($this->env, $this->source, (isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 43, $this->source); })()), "items", [], "any", false, false, false, 43), function ($__total__, $__item__) use ($context, $macros) { $context["total"] = $__total__; $context["item"] = $__item__; return ((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 43, $this->source); })()) + (CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 43, $this->source); })()), "produit", [], "any", false, false, false, 43), "prixht", [], "any", false, false, false, 43) * CoreExtension::getAttribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 43, $this->source); })()), "quantity", [], "any", false, false, false, 43))); }, 0), "html", null, true);
+        // line 51
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(Twig\Extension\CoreExtension::reduce($this->env, CoreExtension::getAttribute($this->env, $this->source, (isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 51, $this->source); })()), "items", [], "any", false, false, false, 51), function ($__total__, $__item__) use ($context, $macros) { $context["total"] = $__total__; $context["item"] = $__item__; return ((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 51, $this->source); })()) + (CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 51, $this->source); })()), "produit", [], "any", false, false, false, 51), "prixht", [], "any", false, false, false, 51) * CoreExtension::getAttribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 51, $this->source); })()), "quantity", [], "any", false, false, false, 51))); }, 0), "html", null, true);
         yield " €</h4>
 \t\t<td><a href=\"";
-        // line 44
+        // line 52
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accueil");
         yield "\" class=\"btn btn-sm btn-outline-success\"><b>Page d'accueil</b></a></td>\t
 \t</div>\t\t\t\t\t\t
@@ -211,7 +231,7 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  178 => 44,  174 => 43,  169 => 40,  166 => 38,  156 => 34,  152 => 33,  148 => 32,  144 => 31,  140 => 30,  135 => 29,  131 => 26,  127 => 25,  124 => 24,  122 => 23,  112 => 14,  105 => 8,  103 => 7,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  198 => 52,  194 => 51,  189 => 48,  187 => 47,  185 => 46,  179 => 45,  174 => 42,  170 => 41,  166 => 40,  162 => 39,  158 => 38,  154 => 37,  150 => 36,  147 => 35,  145 => 34,  140 => 33,  138 => 32,  136 => 31,  125 => 21,  116 => 14,  112 => 13,  105 => 8,  103 => 7,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -225,12 +245,20 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
 {% include ('_partials/_nav.html.twig')  %}
 
 <h1 class=\"text text-primary\">Votre panier</h1>
+
+    <h1>Votre Panier</h1>
+
+    <p><b>Panier ID :</b> {{ cart.id }}</p>
+    <p><b>Utilisateur : </b>{{ cart.user.nom }}</p>
+    <!-- Ajoutez d'autres informations du panier ici -->
+
 <div class=\"container-fluid w-50\">
 \t<div class=\"col-10\">
     <table class=\"table table-hover table-primary\">
         {# <thead> #}
             <tr class=\"text-center\">
-                <th>Désignation</th>
+                <th>id</th>
+\t\t\t\t\t\t\t\t<th>Désignation</th>
 \t\t\t\t\t\t\t\t<th>Prix unitaire</th>
 \t\t\t\t\t\t\t\t<th>Qté</th>   
                 <th>TVA</th>
@@ -239,11 +267,11 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
             </tr>
         {# </thead> #}
         {# <tbody> #}
-        <div>
+        {# <div> #}
 \t\t\t\t\t{% for item in cart.items %}
-\t\t\t\t\t\t<div>
+\t\t\t\t\t\t{# <div> #}
 \t\t\t\t\t\t\t<tr>
-\t\t\t\t\t\t\t\t{# <td>{{ item.produit.id }}</td> #}
+\t\t\t\t\t\t\t\t<td>{{ item.produit.id }}</td>
 \t\t\t\t\t\t\t\t<td>{{ item.produit.libelle }}</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\">{{ item.produit.prixht }}</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\">{{ item.quantity }}</td>
@@ -251,9 +279,9 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
 \t\t\t\t\t\t\t\t<td class=\"text-center\">{{ (item.produit.prixht * item.quantity) * (1 + item.produit.tva) }} €</td>
 \t\t\t\t\t\t\t\t<td class=\"text-center\"><a href=\"{{ path('cart_remove', { id: item.produit.id, quantity: 1  }) }}\" class=\"btn btn-sm btn-outline-danger\"><b>Supprimer</b></a></td>
 \t\t\t\t\t\t\t</tr>\t
-\t\t\t\t\t\t</div>
+\t\t\t\t\t\t{# </div> #}
     \t\t\t{% endfor %}
-\t\t\t\t</div>
+\t\t\t\t{# </div> #}
 \t\t\t{# </tbody> #}
    \t</table>
 \t</div>

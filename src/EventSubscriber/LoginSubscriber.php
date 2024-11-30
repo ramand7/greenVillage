@@ -43,7 +43,7 @@ class LoginSubscriber implements EventSubscriberInterface
                 $cart = $this->cartService->getUserCart();
                 $cart->setUser($user);
 
-								$this->entityManager->persist($cart);
+				$this->entityManager->persist($cart);
                 $this->entityManager->flush();
             }
         }

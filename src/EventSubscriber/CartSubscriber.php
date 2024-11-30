@@ -15,13 +15,13 @@ class CartSubscriber implements EventSubscriberInterface
     private $cartService;
 		private $cartRepository;
 		private $entityManager;
-        private $twig;
+    private $twig;
 
     public function __construct(CartService $cartService, CartRepository $cartRepository, Environment $twig, EntityManagerInterface $entityManager)
     {
         $this->cartService = $cartService;
-				$this->cartRepository = $cartRepository;
-				$this->entityManager = $entityManager;
+		$this->cartRepository = $cartRepository;
+		$this->entityManager = $entityManager;
         $this->twig = $twig;
     }
 
@@ -41,5 +41,4 @@ class CartSubscriber implements EventSubscriberInterface
             KernelEvents::CONTROLLER =>'onControllerEvent',
         ];
     }
-
 }

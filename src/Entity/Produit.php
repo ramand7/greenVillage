@@ -16,7 +16,7 @@ class Produit
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column(type: 'integer')]
     private ?int $id = null;
 
     #[ORM\Column(length: 30)]
@@ -52,6 +52,17 @@ class Produit
         $this->cartItems = new ArrayCollection();
     }
 
+    // Attention ! cette méthode est utilisée seulement pour les test
+    // --> A supprimer en production !!!
+    
+    // public function setTestId(int $id): self
+    // {
+    //     $reflection = new \ReflectionProperty($this, 'id');
+    //     $reflection->setAccessible(true);
+    //     $reflection->setValue($this, $id);
+    //     return $this;
+    // }
+    
     public function getId(): ?int
     {
         return $this->id;

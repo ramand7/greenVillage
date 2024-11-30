@@ -13,15 +13,26 @@ class CartItem
     #[ORM\Column]
     private ?int $id;
 
-    #[ORM\ManyToOne(inversedBy: 'items')]
-    private ?Cart $cart;
+    #[ORM\ManyToOne(targetEntity: Cart::class, inversedBy: 'items')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Cart $cart = null;
 
-    #[ORM\ManyToOne(inversedBy: 'cartItems')]
+    #[ORM\ManyToOne(targetEntity: Produit::class, inversedBy: 'cartItems')]
+    #[ORM\JoinColumn(nullable: false)]
     private ?Produit $produit;
 
     #[ORM\Column]
     private ?int $quantity = 1;
 
+    // Juste pour le test mais à supprimer quand on passe en production
+	// In App\Entity\Cart.php
+	// public function setTestId(int $id): self
+	// {
+	// 	$this->id = $id; // Directement définir l'ID pour les tests
+	// 	return $this;
+	// }
+
+    
     public function getId(): ?int
     {
         return $this->id;

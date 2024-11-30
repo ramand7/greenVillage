@@ -69,6 +69,7 @@ return [
     'app_contact' => [[], ['_controller' => 'App\\Controller\\ContactController::index'], [], [['text', '/contact']], [], [], []],
     'app_main' => [[], ['_controller' => 'App\\Controller\\MainController::index'], [], [['text', '/main']], [], [], []],
     'app_produit_index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/produits/']], [], [], []],
+    'liste_produits' => [[], ['_controller' => 'App\\Controller\\ProduitController::list'], [], [['text', '/produits/achat']], [], [], []],
     'app_produit_new' => [[], ['_controller' => 'App\\Controller\\ProduitController::newProd'], [], [['text', '/produits/new']], [], [], []],
     'app_produit_show' => [['id'], ['_controller' => 'App\\Controller\\ProduitController::show'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/produits']], [], [], []],
     'app_produit_edit' => [['id'], ['_controller' => 'App\\Controller\\ProduitController::editProd'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/produits']], [], [], []],

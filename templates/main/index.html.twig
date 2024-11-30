@@ -51,7 +51,7 @@
         <ul>
             {% for category in categories %}					
                 <li class="dropdown">
-                    <a href="{{ path('app_contact')}}" class="btn btn-xxl btn-outline-primary">{{ category.nom }}</a>
+                    <a href="{{ path('app_contact') }}" class="btn btn-xxl btn-outline-primary">{{ category.nom }}</a>
                     {% if category.categories is not empty %}
                         <ul class="dropdown-content" >
                             {% for subcategory in category.categories %}
@@ -168,8 +168,11 @@
 					
 					
 					
-					<li class="nav-item">
+		    	<li class="nav-item">
           	<a class="nav-link" href="{{ path('sous_categories') }}">Catégories</a>
+          </li>
+					<li class="nav-item">
+          	<a class="nav-link" href="{{ path('liste_produits') }}">Acheter produits</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="">Promotions</a>

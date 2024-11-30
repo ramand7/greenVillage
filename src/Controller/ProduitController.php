@@ -23,6 +23,20 @@ class ProduitController extends AbstractController
             'produits' => $produitRepository->findAll(),
         ]);
     }
+
+    #[Route('/achat', name: 'liste_produits')]
+    public function list(ProduitRepository $produitRepository): Response
+    {
+        // Récupérer tous les produits ou une sélection
+        $products = $produitRepository->findAll();
+
+        return $this->render('produits/index.html.twig', [
+            'products' => $products,
+        ]);
+    }
+
+
+
 		// Pour la gestion des produits (CRUD)
 
     // Créer un nouveau produit

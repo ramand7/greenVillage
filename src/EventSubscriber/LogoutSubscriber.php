@@ -20,7 +20,7 @@ class LogoutSubscriber implements EventSubscriberInterface
 
     public function onLogoutEvent(LogoutEvent $event): void
     {
-        $cart = $this->cartService->getCart();
+        $cart = $this->cartService->getUserCart();
         $cart->setIsActive(false);
         $this->entityManager->flush();
     }
