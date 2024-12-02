@@ -143,20 +143,16 @@ class __TwigTemplate_31e088592bab91bd8c7a1c13f1e168fb extends Template
 \t\t\t\t<label for=\"inputPassword\">Mot de passe</label>
 \t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
 
-    \t\t<input type=\"hidden\" name=\"_csrf_token\"
-           value=\"";
-        // line 30
+    \t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"";
+        // line 29
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
-        yield "\"
-    \t\t>
+        yield "\">
 
-    \t\t<button class=\"btn btn-sm btn-outline-primary mt-3\" type=\"submit\"><h6>Me connecter</h6>
-        \t
-    \t\t</button>
+    \t\t<button class=\"btn btn-sm btn-outline-primary mt-3\" type=\"submit\"><b>Me connecter</b></button>
 \t\t\t\t<a class=\"btn btn-sm btn-outline-success mt-3\" href=\"";
-        // line 36
+        // line 32
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-        yield "\"><h6>M'inscrire</h6></a>
+        yield "\"><b>M'inscrire</b></a>
 \t\t\t</form>
 \t\t</div>
 \t</div>
@@ -195,7 +191,7 @@ class __TwigTemplate_31e088592bab91bd8c7a1c13f1e168fb extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  158 => 36,  149 => 30,  141 => 25,  136 => 22,  128 => 19,  125 => 18,  123 => 17,  120 => 16,  114 => 14,  112 => 13,  105 => 8,  103 => 7,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  154 => 32,  148 => 29,  141 => 25,  136 => 22,  128 => 19,  125 => 18,  123 => 17,  120 => 16,  114 => 14,  112 => 13,  105 => 8,  103 => 7,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -228,14 +224,10 @@ class __TwigTemplate_31e088592bab91bd8c7a1c13f1e168fb extends Template
 \t\t\t\t<label for=\"inputPassword\">Mot de passe</label>
 \t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
 
-    \t\t<input type=\"hidden\" name=\"_csrf_token\"
-           value=\"{{ csrf_token('authenticate') }}\"
-    \t\t>
+    \t\t<input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
 
-    \t\t<button class=\"btn btn-sm btn-outline-primary mt-3\" type=\"submit\"><h6>Me connecter</h6>
-        \t
-    \t\t</button>
-\t\t\t\t<a class=\"btn btn-sm btn-outline-success mt-3\" href=\"{{ path('app_register') }}\"><h6>M'inscrire</h6></a>
+    \t\t<button class=\"btn btn-sm btn-outline-primary mt-3\" type=\"submit\"><b>Me connecter</b></button>
+\t\t\t\t<a class=\"btn btn-sm btn-outline-success mt-3\" href=\"{{ path('app_register') }}\"><b>M'inscrire</b></a>
 \t\t\t</form>
 \t\t</div>
 \t</div>

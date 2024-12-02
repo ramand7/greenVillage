@@ -35,8 +35,6 @@ class ProduitController extends AbstractController
         ]);
     }
 
-
-
 		// Pour la gestion des produits (CRUD)
 
     // Créer un nouveau produit

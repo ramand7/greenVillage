@@ -59,6 +59,7 @@ return [
     'guit_classiques' => [['id'], ['_controller' => 'App\\Controller\\AdminController::showGuitClass'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/souscategories/guitares']], [], [], []],
     'cart_index' => [[], ['_controller' => 'App\\Controller\\CartController::index'], [], [['text', '/cart']], [], [], []],
     'cart_add' => [['id'], ['_controller' => 'App\\Controller\\CartController::add'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/cart/add']], [], [], []],
+    'cart_decrease' => [['id'], ['_controller' => 'App\\Controller\\CartController::decreaseQuantity'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/cart/decrease']], [], [], []],
     'cart_remove' => [['id'], ['_controller' => 'App\\Controller\\CartController::remove'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/cart/remove']], [], [], []],
     'app_categories_index' => [[], ['_controller' => 'App\\Controller\\CategoriesController::index'], [], [['text', '/categories/']], [], [], []],
     'app_categories_new' => [[], ['_controller' => 'App\\Controller\\CategoriesController::newCat'], [], [['text', '/categories/new']], [], [], []],
