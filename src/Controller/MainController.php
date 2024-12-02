@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
-    #[Route('/main', name: 'app_main', methods: ['GET'])]
+    #[Route('/', name: 'app_main', methods: ['GET'])]
     public function index(CategoriesRepository $categoriesRepository): Response
     {
         // Récupérer les catégories principales et leurs sous-catégories

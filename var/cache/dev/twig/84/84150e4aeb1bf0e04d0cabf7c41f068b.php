@@ -146,6 +146,6 @@ class __TwigTemplate_b2c638e7705ae4869598d50641ccf7e6 extends Template
 {{ form_end(form) }}
 
 
-", "admin/produits/_form.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/produits/_form.html.twig");
+", "admin/produits/_form.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/templates/admin/produits/_form.html.twig");
     }
 }

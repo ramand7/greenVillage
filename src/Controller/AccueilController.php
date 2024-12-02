@@ -37,7 +37,7 @@ class AccueilController extends AbstractController
     //     ]);
     // }
 
-   #[Route('/', name: 'app_accueil', requirements: ['id' => '\d+'], methods: ['GET'])]
+   #[Route('/accueil', name: 'app_accueil', requirements: ['id' => '\d+'], methods: ['GET'])]
     public function index(CategoriesRepository $categoriesRepository): Response
     {   
     		

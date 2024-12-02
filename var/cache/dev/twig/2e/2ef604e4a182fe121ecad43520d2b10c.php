@@ -1866,6 +1866,6 @@ class __TwigTemplate_99147c8e45218ccf18dcf7a2dd6d13d9 extends Template
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/home/ramand/Bureau/greenVillage/vendor/doctrine/doctrine-bundle/templates/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/vendor/doctrine/doctrine-bundle/templates/Collector/db.html.twig");
     }
 }

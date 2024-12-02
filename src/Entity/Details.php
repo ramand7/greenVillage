@@ -3,28 +3,35 @@
 namespace App\Entity;
 
 use App\Repository\DetailsRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: DetailsRepository::class)]
 class Details
 {
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column]
+    private ?int $id = null;
 
     #[ORM\Column]
     private ?int $quantite = null;
 
-    #[ORM\Column(type: Types::DECIMAL, precision: 7, scale: 2)]
-    private ?string $prixunitaire = null;
+    #[ORM\Column(type: Types::DECIMAL, precision: 8, scale: 2)]
+    private ?string $prix = null;
 
-    #[ORM\Id]
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\ManyToOne(inversedBy: 'articles')]
+    #[ORM\JoinColumn(nullable: false)]
     private ?Commande $commande = null;
 
-    #[ORM\Id]
-    #[ORM\ManyToOne(inversedBy: 'details')]
+    #[ORM\ManyToOne(targetEntity: Produit::class, inversedBy: 'details')]
+    #[ORM\JoinColumn(nullable: false)]
     private ?Produit $produit = null;
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
     public function getQuantite(): ?int
     {
@@ -38,14 +45,14 @@ class Details
         return $this;
     }
 
-    public function getPrixunitaire(): ?string
+    public function getPrix(): ?string
     {
-        return $this->prixunitaire;
+        return $this->prix;
     }
 
-    public function setPrixunitaire(string $prixunitaire): static
+    public function setPrix(string $prix): static
     {
-        $this->prixunitaire = $prixunitaire;
+        $this->prix = $prix;
 
         return $this;
     }

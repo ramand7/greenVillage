@@ -263,6 +263,6 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
     \t</div>
   \t</div>
 \t</nav> 
-", "_partials/_nav.html.twig", "/home/ramand/Bureau/greenVillage/templates/_partials/_nav.html.twig");
+", "_partials/_nav.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/templates/_partials/_nav.html.twig");
     }
 }

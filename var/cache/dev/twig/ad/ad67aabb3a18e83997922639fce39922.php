@@ -188,6 +188,6 @@ class __TwigTemplate_0e37db19269ae31a8c2cded0d061af18 extends Template
 \t\t</div>\t
 \t</section>
 {% endblock %}
-", "admin/produits/edit.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/produits/edit.html.twig");
+", "admin/produits/edit.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/templates/admin/produits/edit.html.twig");
     }
 }

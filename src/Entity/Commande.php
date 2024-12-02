@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Entity\Trait\DateTrait;
+use App\Entity\User\Utilisateur;
 use App\Repository\CommandeRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -22,12 +23,7 @@ class Commande
     #[ORM\Column(type: Types::DECIMAL, precision: 8, scale: 2)]
     private ?string $total = null;
 
-    #[ORM\Column(length: 20)]
-    private ?string $modepaiement = null;
-
-    #[ORM\Column(type: Types::DECIMAL, precision: 5, scale: 2)]
-    private ?string $frais = null;
-
+    
     #[ORM\OneToMany(targetEntity: Facture::class, mappedBy: 'commande')]
     private Collection $factures;
 
@@ -37,12 +33,20 @@ class Commande
     #[ORM\OneToMany(targetEntity: Coupon::class, mappedBy: 'commande')]
     private Collection $coupons;
 
+    #[ORM\ManyToOne(targetEntity: Utilisateur::class, inversedBy: 'commandes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Utilisateur $user = null;
+
+    #[ORM\OneToMany(targetEntity: Details::class, mappedBy: 'commande')]
+    private Collection $articles;
+
     public function __construct()
     {
         $this->factures = new ArrayCollection();
         $this->livraisons = new ArrayCollection();
         $this->coupons = new ArrayCollection();
         $this->date = new \DateTimeImmutable();
+        $this->articles = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -58,30 +62,6 @@ class Commande
     public function setTotal(string $total): static
     {
         $this->total = $total;
-
-        return $this;
-    }
-
-    public function getModepaiement(): ?string
-    {
-        return $this->modepaiement;
-    }
-
-    public function setModepaiement(string $modepaiement): static
-    {
-        $this->modepaiement = $modepaiement;
-
-        return $this;
-    }
-
-    public function getFrais(): ?string
-    {
-        return $this->frais;
-    }
-
-    public function setFrais(string $frais): static
-    {
-        $this->frais = $frais;
 
         return $this;
     }
@@ -170,6 +150,48 @@ class Commande
             // set the owning side to null (unless already changed)
             if ($coupon->getCommande() === $this) {
                 $coupon->setCommande(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getUser(): ?Utilisateur
+    {
+        return $this->user;
+    }
+
+    public function setUser(?Utilisateur $user): static
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Details>
+     */
+    public function getArticles(): Collection
+    {
+        return $this->articles;
+    }
+
+    public function addArticle(Details $article): static
+    {
+        if (!$this->articles->contains($article)) {
+            $this->articles->add($article);
+            $article->setCommande($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArticle(Details $article): static
+    {
+        if ($this->articles->removeElement($article)) {
+            // set the owning side to null (unless already changed)
+            if ($article->getCommande() === $this) {
+                $article->setCommande(null);
             }
         }
 

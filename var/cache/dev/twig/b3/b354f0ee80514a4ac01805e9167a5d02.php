@@ -121,6 +121,6 @@ class __TwigTemplate_339aa785c8a48afa82e0ce12fe34cddc extends Template
             <span class=\"visually-hidden\">Suivant</span>
         </button>
     </div>
-</section>", "_partials/_carousel.html.twig", "/home/ramand/Bureau/greenVillage/templates/_partials/_carousel.html.twig");
+</section>", "_partials/_carousel.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/templates/_partials/_carousel.html.twig");
     }
 }

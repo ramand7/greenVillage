@@ -35,7 +35,7 @@ class CartController extends AbstractController
 				]);
     }
 
-		#[Route('/cart/add/{id}', name: 'cart_add', requirements: ['id' => '\d+'], methods: ['GET'])]
+		#[Route('/cart/add/{id}', name: 'cart_add', requirements: ['id' => '\d+'])]
 		public function add(int $id, Request $request, ProduitRepository $produitRepository, CartService $cartService): Response
 		{
 				// Vérifier le token CSRF

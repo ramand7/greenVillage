@@ -40,16 +40,16 @@ class Produit
     #[ORM\ManyToOne(inversedBy: 'produits')]
     private ?Categories $categorie = null;
 
-    #[ORM\OneToMany(targetEntity: Details::class, mappedBy: 'produit')]
-    private Collection $details;
-
     #[ORM\OneToMany(targetEntity: CartItem::class, mappedBy: 'produit')]
     private Collection $cartItems;
 
+    #[ORM\OneToMany(targetEntity: Details::class, mappedBy: 'produit')]
+    private Collection $details;
+
     public function __construct()
     {
-        $this->details = new ArrayCollection();
         $this->cartItems = new ArrayCollection();
+        $this->details = new ArrayCollection();
     }
 
     // Attention ! cette méthode est utilisée seulement pour les test
@@ -153,36 +153,6 @@ class Produit
     }
 
     /**
-     * @return Collection<int, Details>
-     */
-    public function getDetails(): Collection
-    {
-        return $this->details;
-    }
-
-    public function addDetail(Details $detail): static
-    {
-        if (!$this->details->contains($detail)) {
-            $this->details->add($detail);
-            $detail->setProduit($this);
-        }
-
-        return $this;
-    }
-
-    public function removeDetail(Details $detail): static
-    {
-        if ($this->details->removeElement($detail)) {
-            // set the owning side to null (unless already changed)
-            if ($detail->getProduit() === $this) {
-                $detail->setProduit(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
      * @return Collection<int, CartItem>
      */
     public function getCartItems(): Collection
@@ -206,6 +176,36 @@ class Produit
             // set the owning side to null (unless already changed)
             if ($cartItem->getProduit() === $this) {
                 $cartItem->setProduit(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Details>
+     */
+    public function getDetails(): Collection
+    {
+        return $this->details;
+    }
+
+    public function addDetail(Details $detail): static
+    {
+        if (!$this->details->contains($detail)) {
+            $this->details->add($detail);
+            $detail->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDetail(Details $detail): static
+    {
+        if ($this->details->removeElement($detail)) {
+            // set the owning side to null (unless already changed)
+            if ($detail->getProduit() === $this) {
+                $detail->setProduit(null);
             }
         }
 

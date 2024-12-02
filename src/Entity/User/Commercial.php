@@ -2,7 +2,6 @@
 
 namespace App\Entity\User;
 
-use App\Entity\Client\Client;
 use App\Repository\CommercialRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -19,15 +18,15 @@ class Commercial
     #[ORM\Column(length: 50)]
     private ?string $fonction = null;
 
-    #[ORM\OneToMany(targetEntity: Client::class, mappedBy: 'commercial')]
-    private Collection $clients;
-
     #[ORM\Column(length: 5)]
     private ?string $matricule = null;
 
+    #[ORM\OneToMany(targetEntity: Utilisateur::class, mappedBy: 'commercial')]
+    private Collection $utilisateurs;
+
     public function __construct()
     {
-        $this->clients = new ArrayCollection();
+        $this->utilisateurs = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -47,36 +46,6 @@ class Commercial
         return $this;
     }
 
-    /**
-     * @return Collection<int, Client>
-     */
-    public function getClients(): Collection
-    {
-        return $this->clients;
-    }
-
-    public function addClient(Client $client): static
-    {
-        if (!$this->clients->contains($client)) {
-            $this->clients->add($client);
-            $client->setCommercial($this);
-        }
-
-        return $this;
-    }
-
-    public function removeClient(Client $client): static
-    {
-        if ($this->clients->removeElement($client)) {
-            // set the owning side to null (unless already changed)
-            if ($client->getCommercial() === $this) {
-                $client->setCommercial(null);
-            }
-        }
-
-        return $this;
-    }
-
     public function getMatricule(): ?string
     {
         return $this->matricule;
@@ -85,6 +54,36 @@ class Commercial
     public function setMatricule(string $matricule): static
     {
         $this->matricule = $matricule;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Utilisateur>
+     */
+    public function getUtilisateurs(): Collection
+    {
+        return $this->utilisateurs;
+    }
+
+    public function addUtilisateur(Utilisateur $utilisateur): static
+    {
+        if (!$this->utilisateurs->contains($utilisateur)) {
+            $this->utilisateurs->add($utilisateur);
+            $utilisateur->setCommercial($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUtilisateur(Utilisateur $utilisateur): static
+    {
+        if ($this->utilisateurs->removeElement($utilisateur)) {
+            // set the owning side to null (unless already changed)
+            if ($utilisateur->getCommercial() === $this) {
+                $utilisateur->setCommercial(null);
+            }
+        }
 
         return $this;
     }

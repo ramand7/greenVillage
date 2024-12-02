@@ -441,6 +441,6 @@ class __TwigTemplate_68a7c7a682ba2b4b3f061c8f492506bd extends Template
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/home/ramand/Bureau/greenVillage/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

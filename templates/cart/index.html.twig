@@ -6,12 +6,13 @@
 
 {% include ('_partials/_nav.html.twig')  %}
 
-<h1 class="text text-primary">Votre panier</h1>
+<h1 class="text text-center text-primary">Votre panier</h1>
 
-    <h1>Votre Panier</h1>
+    <p></p>
+		{# <h1>Votre Panier</h1> #}
 
-    <p><b>Panier ID :</b> {{ cart.id }}</p>
-    <p><b>Utilisateur : </b>{{ cart.user.nom }}</p>
+    {# <p><b>Panier ID :</b> {{ cart.id }}</p> #}
+    {# <p><b>Utilisateur : </b>{{ cart.user.nom }}</p> #}
     <!-- Ajoutez d'autres informations du panier ici -->
 
 <div class="container-fluid w-50">
@@ -49,7 +50,7 @@
 	</div>
 	<div class="col-3 ms-1">			
 		<h4 class="text-center">Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
-		<td><a href="{{ path('app_accueil') }}" class="btn btn-sm btn-outline-success"><b>Page d'accueil</b></a></td>	
+		<td><a href="{{ path('app_main') }}" class="btn btn-sm btn-outline-success"><b>Page d'accueil</b></a></td>	
 	</div>						
 </div>	
 

@@ -4,6 +4,7 @@ namespace App\Entity\User;
 
 use ApiPlatform\Metadata\ApiResource;
 use App\Entity\Cart;
+use App\Entity\Commande;
 use App\Entity\Coupon;
 use App\Entity\Trait\DateTrait;
 use App\Repository\UtilisateurRepository;
@@ -51,11 +52,37 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(targetEntity: Cart::class, mappedBy: 'user')]
     private Collection $carts;
 
+    #[ORM\Column(length: 50, nullable: true)]
+    private ?string $adresse = null;
+
+    #[ORM\Column(length: 30)]
+    private ?string $ville = null;
+
+    #[ORM\Column(length: 5)]
+    private ?string $codepostal = null;
+
+    #[ORM\Column(length: 20)]
+    private ?string $telephone = null;
+
+    #[ORM\ManyToOne(inversedBy: 'utilisateurs')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Commercial $commercial = null;
+
+    #[ORM\Column(length: 50, nullable: true)]
+    private ?string $denomination = null;
+
+    #[ORM\Column(length: 14, nullable: true)]
+    private ?string $siret = null;
+
+    #[ORM\OneToMany(targetEntity: Commande::class, mappedBy: 'user')]
+    private Collection $commandes;
+
     public function __construct()
     {
         $this->coupons = new ArrayCollection();
         $this->date = new \DateTimeImmutable();
         $this->carts = new ArrayCollection();
+        $this->commandes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -206,6 +233,120 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($cart->getUser() === $this) {
                 $cart->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): static
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(string $ville): static
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    public function getCodepostal(): ?string
+    {
+        return $this->codepostal;
+    }
+
+    public function setCodepostal(string $codepostal): static
+    {
+        $this->codepostal = $codepostal;
+
+        return $this;
+    }
+
+    public function getTelephone(): ?string
+    {
+        return $this->telephone;
+    }
+
+    public function setTelephone(string $telephone): static
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getCommercial(): ?Commercial
+    {
+        return $this->commercial;
+    }
+
+    public function setCommercial(?Commercial $commercial): static
+    {
+        $this->commercial = $commercial;
+
+        return $this;
+    }
+
+    public function getDenomination(): ?string
+    {
+        return $this->denomination;
+    }
+
+    public function setDenomination(?string $denomination): static
+    {
+        $this->denomination = $denomination;
+
+        return $this;
+    }
+
+    public function getSiret(): ?string
+    {
+        return $this->siret;
+    }
+
+    public function setSiret(?string $siret): static
+    {
+        $this->siret = $siret;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Commande>
+     */
+    public function getCommandes(): Collection
+    {
+        return $this->commandes;
+    }
+
+    public function addCommande(Commande $commande): static
+    {
+        if (!$this->commandes->contains($commande)) {
+            $this->commandes->add($commande);
+            $commande->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommande(Commande $commande): static
+    {
+        if ($this->commandes->removeElement($commande)) {
+            // set the owning side to null (unless already changed)
+            if ($commande->getUser() === $this) {
+                $commande->setUser(null);
             }
         }
 

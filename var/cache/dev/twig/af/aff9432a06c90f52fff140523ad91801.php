@@ -300,6 +300,6 @@ class __TwigTemplate_3bbafb02d1fd40f25411e4992469e606 extends Template
 
 </body>
 </html>
-", "@ApiPlatform/Graphiql/index.html.twig", "/home/ramand/Bureau/greenVillage/vendor/api-platform/core/src/Symfony/Bundle/Resources/views/Graphiql/index.html.twig");
+", "@ApiPlatform/Graphiql/index.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/vendor/api-platform/core/src/Symfony/Bundle/Resources/views/Graphiql/index.html.twig");
     }
 }

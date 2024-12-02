@@ -44,7 +44,7 @@ class CartService
             $cart = new Cart();
             $cart->setUser($user);
 
-            $this->entityManager->persist($cart);
+            // $this->entityManager->persist($cart);
             $this->entityManager->flush();
         }
         return $cart;

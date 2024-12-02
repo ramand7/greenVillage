@@ -21,10 +21,10 @@ class ProduitFixtures extends Fixture
 
 				$produit->setLibelle($faker->text(8));
 				$produit->setDescription($faker->text(255));
-				$produit->setPrixht($faker->numberBetween(60, 3000));
+				$produit->setPrixht($faker->numberBetween(60, 2500));
 				$produit->setTva($faker->numberBetween(0.18, 0.20));
 				$produit->setStock($faker->numberBetween(0, 20));
-				$produit->setPhoto($faker->text(10));
+				$produit->setPhoto($faker->text(15));
 				$produit->setLibelle($faker->text(15));
 				
 				// On va chercher une référence de catégorie
