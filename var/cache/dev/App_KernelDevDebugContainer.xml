@@ -84,6 +84,8 @@
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
+    <parameter key="stripe_secret_key">%env(STRIPE_SECRET_KEY)%</parameter>
+    <parameter key="stripe_public_key">%env(STRIPE_PUBLIC_KEY)%</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -570,6 +572,13 @@
         <argument type="service" id=".service_locator.CshazM0.App\Controller\CategoriesController"/>
       </call>
     </service>
+    <service id="App\Controller\CommandeController" class="App\Controller\CommandeController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\CommandeController"/>
+      </call>
+    </service>
     <service id="App\Controller\ContactController" class="App\Controller\ContactController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -582,6 +591,13 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.CshazM0.App\Controller\MainController"/>
+      </call>
+    </service>
+    <service id="App\Controller\PaiementController" class="App\Controller\PaiementController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\PaiementController"/>
       </call>
     </service>
     <service id="App\Controller\PanierController" class="App\Controller\PanierController" public="true" autowire="true" autoconfigure="true">
@@ -732,6 +748,7 @@
       <argument type="service" id="App\Repository\CartRepository"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <argument type="service" id="security.helper"/>
+      <argument type="service" id="router.default"/>
     </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
@@ -8233,12 +8250,18 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CategoriesController" class="App\Controller\CategoriesController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CategoriesController" class="App\Controller\CategoriesController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CategoriesController" class="App\Controller\CategoriesController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CommandeController" class="App\Controller\CommandeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CommandeController" class="App\Controller\CommandeController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CommandeController" class="App\Controller\CommandeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MainController" class="App\Controller\MainController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MainController" class="App\Controller\MainController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\MainController" class="App\Controller\MainController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PaiementController" class="App\Controller\PaiementController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PaiementController" class="App\Controller\PaiementController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PaiementController" class="App\Controller\PaiementController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PanierController" class="App\Controller\PanierController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PanierController" class="App\Controller\PanierController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\PanierController" class="App\Controller\PanierController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -8738,6 +8761,13 @@
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
+    <service id=".service_locator.3E9bLaI" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="commande" type="service_closure" id=".errored..service_locator.3E9bLaI.App\Entity\Commande"/>
+        <argument key="params" type="service_closure" id="parameter_bag"/>
+      </argument>
+    </service>
     <service id=".service_locator.vRUAr7Q" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -8766,7 +8796,7 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.QheUyYn" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.OAkb8od" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccueilController::index" type="service_closure" id=".service_locator.do9sDn8"/>
@@ -8788,8 +8818,10 @@
         <argument key="App\Controller\CategoriesController::newCat" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\CategoriesController::show" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\CategoriesController::showBySlug" type="service_closure" id=".service_locator.do9sDn8"/>
+        <argument key="App\Controller\CommandeController::validation" type="service_closure" id=".service_locator.IxD9RLm"/>
         <argument key="App\Controller\ContactController::index" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\MainController::index" type="service_closure" id=".service_locator.do9sDn8"/>
+        <argument key="App\Controller\PaiementController::paiement" type="service_closure" id=".service_locator.3E9bLaI"/>
         <argument key="App\Controller\ProduitController::deleteProd" type="service_closure" id=".service_locator.Gl3nBvd"/>
         <argument key="App\Controller\ProduitController::editProd" type="service_closure" id=".service_locator.Gl3nBvd"/>
         <argument key="App\Controller\ProduitController::index" type="service_closure" id=".service_locator.vRUAr7Q"/>
@@ -8821,8 +8853,10 @@
         <argument key="App\Controller\CategoriesController:newCat" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\CategoriesController:show" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\CategoriesController:showBySlug" type="service_closure" id=".service_locator.do9sDn8"/>
+        <argument key="App\Controller\CommandeController:validation" type="service_closure" id=".service_locator.IxD9RLm"/>
         <argument key="App\Controller\ContactController:index" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\MainController:index" type="service_closure" id=".service_locator.do9sDn8"/>
+        <argument key="App\Controller\PaiementController:paiement" type="service_closure" id=".service_locator.3E9bLaI"/>
         <argument key="App\Controller\ProduitController:deleteProd" type="service_closure" id=".service_locator.Gl3nBvd"/>
         <argument key="App\Controller\ProduitController:editProd" type="service_closure" id=".service_locator.Gl3nBvd"/>
         <argument key="App\Controller\ProduitController:index" type="service_closure" id=".service_locator.vRUAr7Q"/>
@@ -9515,6 +9549,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
+    <service id=".service_locator.CshazM0.App\Controller\CommandeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\CommandeController"/>
+      <argument>App\Controller\CommandeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
     <service id=".service_locator.CshazM0.App\Controller\ContactController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\ContactController"/>
       <argument>App\Controller\ContactController</argument>
@@ -9524,6 +9564,12 @@
     <service id=".service_locator.CshazM0.App\Controller\MainController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\MainController"/>
       <argument>App\Controller\MainController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
+    <service id=".service_locator.CshazM0.App\Controller\PaiementController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\PaiementController"/>
+      <argument>App\Controller\PaiementController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
@@ -10017,12 +10063,12 @@
       <argument type="service" id="api_platform.serializer.context_builder.filter"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.QheUyYn"/>
+      <argument type="service" id=".service_locator.OAkb8od"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.QheUyYn"/>
+      <argument type="service" id=".service_locator.OAkb8od"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -10046,6 +10092,7 @@
     </service>
     <service id=".errored..service_locator.y4_Zrx..Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
     <service id=".errored..service_locator.vBGnsRU.App\Entity\Categories" class="App\Entity\Categories"/>
+    <service id=".errored..service_locator.3E9bLaI.App\Entity\Commande" class="App\Entity\Commande"/>
     <service id=".errored..service_locator.Gl3nBvd.App\Entity\Produit" class="App\Entity\Produit"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
@@ -11227,7 +11274,7 @@
     <service id="ApiPlatform\Symfony\Security\ResourceAccessCheckerInterface" alias="api_platform.security.resource_access_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.QheUyYn"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.OAkb8od"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -11254,7 +11301,7 @@
     <service id=".service_locator.17IEaOb" alias=".service_locator.Ay2l8s0"/>
     <service id=".service_locator.f9os5BO" alias=".service_locator.Gl3nBvd"/>
     <service id=".service_locator.bJkwozd" alias=".service_locator.Z9QmIxH"/>
-    <service id=".service_locator.9dnJAok" alias=".service_locator.QheUyYn"/>
+    <service id=".service_locator.Pz6Bl_M" alias=".service_locator.OAkb8od"/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
     <service id=".service_locator.cFNZ1mS" alias=".service_locator.u44Hpja"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
@@ -11388,6 +11435,7 @@
     <service id=".service_locator.fCLKmQQ" alias=".service_locator.Ay2l8s0"/>
     <service id=".service_locator.9e2t_lq" alias=".service_locator.CsMkqUa"/>
     <service id=".service_locator.Jll9iEo" alias=".service_locator.vBGnsRU"/>
+    <service id=".service_locator.VMfwHZX" alias=".service_locator.3E9bLaI"/>
     <service id=".service_locator.6O1FQxc" alias=".service_locator.vRUAr7Q"/>
     <service id=".service_locator.6ypCEBT" alias=".service_locator.Gl3nBvd"/>
     <service id=".service_locator.9f8bEDz" alias=".service_locator.Z9QmIxH"/>

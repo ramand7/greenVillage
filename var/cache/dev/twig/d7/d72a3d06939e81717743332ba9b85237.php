@@ -926,6 +926,6 @@ $context["used"] === false)) {
     {% endfor %}
 {% endblock %}
 
-", "@ApiPlatform/DataCollector/request.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/vendor/api-platform/core/src/Symfony/Bundle/Resources/views/DataCollector/request.html.twig");
+", "@ApiPlatform/DataCollector/request.html.twig", "/home/ramand/Bureau/greenVillage/vendor/api-platform/core/src/Symfony/Bundle/Resources/views/DataCollector/request.html.twig");
     }
 }

@@ -707,6 +707,6 @@ class __TwigTemplate_963fe4400b968249303793e4836154a8 extends Template
     });
 })();
 </script>
-", "@WebProfiler/Profiler/settings.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/settings.html.twig");
+", "@WebProfiler/Profiler/settings.html.twig", "/home/ramand/Bureau/greenVillage/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/settings.html.twig");
     }
 }

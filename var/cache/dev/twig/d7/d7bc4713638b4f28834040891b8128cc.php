@@ -453,6 +453,6 @@ class __TwigTemplate_9324d7fa3f6c311177ef03ab40b6dbe8 extends Template
 {% endblock body_javascript %}
 </body>
 </html>
-", "@ApiPlatform/GraphQlPlayground/index.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/vendor/api-platform/core/src/Symfony/Bundle/Resources/views/GraphQlPlayground/index.html.twig");
+", "@ApiPlatform/GraphQlPlayground/index.html.twig", "/home/ramand/Bureau/greenVillage/vendor/api-platform/core/src/Symfony/Bundle/Resources/views/GraphQlPlayground/index.html.twig");
     }
 }

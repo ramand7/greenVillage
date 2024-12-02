@@ -37,7 +37,7 @@ class Commande
     #[ORM\JoinColumn(nullable: false)]
     private ?Utilisateur $user = null;
 
-    #[ORM\OneToMany(targetEntity: Details::class, mappedBy: 'commande')]
+    #[ORM\OneToMany(targetEntity: Details::class, mappedBy: 'commande', cascade: ['persist', 'remove'])]
     private Collection $articles;
 
     public function __construct()

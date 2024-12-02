@@ -191,11 +191,15 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
         // line 52
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(Twig\Extension\CoreExtension::reduce($this->env, CoreExtension::getAttribute($this->env, $this->source, (isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 52, $this->source); })()), "items", [], "any", false, false, false, 52), function ($__total__, $__item__) use ($context, $macros) { $context["total"] = $__total__; $context["item"] = $__item__; return ((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 52, $this->source); })()) + (CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 52, $this->source); })()), "produit", [], "any", false, false, false, 52), "prixht", [], "any", false, false, false, 52) * CoreExtension::getAttribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 52, $this->source); })()), "quantity", [], "any", false, false, false, 52))); }, 0), "html", null, true);
         yield " €</h4>
-\t\t<td><a href=\"";
-        // line 53
+\t</div>
+\t<td><a href=\"";
+        // line 54
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_main");
-        yield "\" class=\"btn btn-sm btn-outline-success\"><b>Page d'accueil</b></a></td>\t
-\t</div>\t\t\t\t\t\t
+        yield "\" class=\"btn btn-sm btn-outline-primary\"><b>Page d'accueil</b></a></td>
+\t<td><a href=\"";
+        // line 55
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("validation_commande");
+        yield "\" class=\"btn btn-sm btn-outline-success\"><b>Passez la commande</b></a></td>\t\t\t\t\t\t
 </div>\t
 
 ";
@@ -229,7 +233,7 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  196 => 53,  192 => 52,  187 => 49,  185 => 48,  183 => 47,  177 => 46,  172 => 43,  168 => 42,  164 => 41,  160 => 40,  156 => 39,  152 => 38,  148 => 37,  145 => 36,  143 => 35,  138 => 34,  136 => 33,  134 => 32,  123 => 22,  116 => 16,  114 => 15,  111 => 13,  105 => 8,  103 => 7,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  201 => 55,  197 => 54,  192 => 52,  187 => 49,  185 => 48,  183 => 47,  177 => 46,  172 => 43,  168 => 42,  164 => 41,  160 => 40,  156 => 39,  152 => 38,  148 => 37,  145 => 36,  143 => 35,  138 => 34,  136 => 33,  134 => 32,  123 => 22,  116 => 16,  114 => 15,  111 => 13,  105 => 8,  103 => 7,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -286,8 +290,9 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
 \t</div>
 \t<div class=\"col-3 ms-1\">\t\t\t
 \t\t<h4 class=\"text-center\">Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
-\t\t<td><a href=\"{{ path('app_main') }}\" class=\"btn btn-sm btn-outline-success\"><b>Page d'accueil</b></a></td>\t
-\t</div>\t\t\t\t\t\t
+\t</div>
+\t<td><a href=\"{{ path('app_main') }}\" class=\"btn btn-sm btn-outline-primary\"><b>Page d'accueil</b></a></td>
+\t<td><a href=\"{{ path('validation_commande') }}\" class=\"btn btn-sm btn-outline-success\"><b>Passez la commande</b></a></td>\t\t\t\t\t\t
 </div>\t
 
 {% endblock %}\t\t\t\t\t\t

@@ -990,6 +990,6 @@ class __TwigTemplate_27f6fd6d7f04d66845af5f8d81c3246d extends Template
         </td>
     </tr>
 {% endmacro %}
-", "@DoctrineMigrations/Collector/migrations.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/vendor/doctrine/doctrine-migrations-bundle/Resources/views/Collector/migrations.html.twig");
+", "@DoctrineMigrations/Collector/migrations.html.twig", "/home/ramand/Bureau/greenVillage/vendor/doctrine/doctrine-migrations-bundle/Resources/views/Collector/migrations.html.twig");
     }
 }

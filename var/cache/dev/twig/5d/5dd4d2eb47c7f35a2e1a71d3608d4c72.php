@@ -1096,6 +1096,6 @@ class __TwigTemplate_8aae9414f45625abd8f5b7f61b999c72 extends Template
         {%- endif -%}
     {% endmacro %}
 {% endblock %}
-", "@WebProfiler/Collector/mailer.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/vendor/symfony/web-profiler-bundle/Resources/views/Collector/mailer.html.twig");
+", "@WebProfiler/Collector/mailer.html.twig", "/home/ramand/Bureau/greenVillage/vendor/symfony/web-profiler-bundle/Resources/views/Collector/mailer.html.twig");
     }
 }

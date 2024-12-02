@@ -102,4 +102,10 @@ class Cart
 
         return $this;
     }
+
+//     public function __toString(): string
+// {
+//     return sprintf('Cart #%d for user %s', $this->id ?? 0, $this->user->getUsername() ?? 'unknown');
+// }
+
 }

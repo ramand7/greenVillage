@@ -108,6 +108,6 @@ class __TwigTemplate_802225c1a1565c1d72759c8d4e2a7964 extends Template
        </form>
     </div>
 </div>
-", "@WebProfiler/Profiler/header.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/header.html.twig");
+", "@WebProfiler/Profiler/header.html.twig", "/home/ramand/Bureau/greenVillage/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/header.html.twig");
     }
 }

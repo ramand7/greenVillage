@@ -180,6 +180,6 @@ class __TwigTemplate_3924afc147175182b42a77ee03f29d1c extends Template
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: profiler_url, name: 'time', status: status_color }) }}
 {% endblock %}
-", "@WebProfiler/Collector/memory.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/vendor/symfony/web-profiler-bundle/Resources/views/Collector/memory.html.twig");
+", "@WebProfiler/Collector/memory.html.twig", "/home/ramand/Bureau/greenVillage/vendor/symfony/web-profiler-bundle/Resources/views/Collector/memory.html.twig");
     }
 }
