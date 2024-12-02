@@ -84,6 +84,6 @@ class __TwigTemplate_46b8493c00760585e2d0e8ebc3c4a090 extends Template
 {{ form_end(form) }} #}
 
 
- {# <a href=\"{{ path('app_categories_new') }}\" class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</a> #}", "admin/categories/_form.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/templates/admin/categories/_form.html.twig");
+ {# <a href=\"{{ path('app_categories_new') }}\" class=\"btn btn-outline-success\">{{ button_label|default('Save') }}</a> #}", "admin/categories/_form.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/categories/_form.html.twig");
     }
 }

@@ -295,6 +295,6 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
 
 
 
-", "cart/index.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage29112024/templates/cart/index.html.twig");
+", "cart/index.html.twig", "/home/ramand/Bureau/greenVillage/templates/cart/index.html.twig");
     }
 }

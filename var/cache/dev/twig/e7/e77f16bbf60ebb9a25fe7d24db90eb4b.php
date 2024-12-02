@@ -112,6 +112,6 @@ class __TwigTemplate_3537c95d5b058ad5ef70f079c1555fe6 extends Template
 
 
 
-", "admin/categories/_delete_form.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/templates/admin/categories/_delete_form.html.twig");
+", "admin/categories/_delete_form.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/categories/_delete_form.html.twig");
     }
 }

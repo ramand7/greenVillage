@@ -94,6 +94,6 @@ class __TwigTemplate_23fedad2af95b783228a1a23eee136d6 extends Template
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ produit.id) }}\">
     <button class=\"btn btn-sm btn-outline-danger\"><b>Supprimer</b></button>
 </form>
-", "admin/produits/_delete_form.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/templates/admin/produits/_delete_form.html.twig");
+", "admin/produits/_delete_form.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/produits/_delete_form.html.twig");
     }
 }

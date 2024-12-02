@@ -235,6 +235,6 @@ class __TwigTemplate_8480cff8fc0781af02ffbe985529f8f2 extends Template
 \t\t\t\t{{ form_end(form) }}
 \t</section>
 {% endblock %}
-", "admin/categories/edit.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/templates/admin/categories/edit.html.twig");
+", "admin/categories/edit.html.twig", "/home/ramand/Bureau/greenVillage/templates/admin/categories/edit.html.twig");
     }
 }

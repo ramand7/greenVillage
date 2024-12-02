@@ -738,6 +738,6 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
     {# {% endblock %}  #}
 
 {% endblock %}
-", "accueil/index.html.twig", "/home/ramand/Bureau/Copie de greenVillage/greenVillage/templates/accueil/index.html.twig");
+", "accueil/index.html.twig", "/home/ramand/Bureau/greenVillage/templates/accueil/index.html.twig");
     }
 }
