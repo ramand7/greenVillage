@@ -6264,7 +6264,7 @@
         <argument>null</argument>
       </call>
       <call method="add">
-        <argument type="service" id=".security.request_matcher.zk3GsK."/>
+        <argument type="service" id=".security.request_matcher.r7_Xh1T"/>
         <argument type="collection">
           <argument>ROLE_ADMIN</argument>
         </argument>
@@ -6973,12 +6973,12 @@
         <argument type="service" id=".security.request_matcher.sbPdkU6"/>
       </argument>
     </service>
-    <service id=".security.request_matcher.3MWijcV" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/produits</argument>
+    <service id=".security.request_matcher.Jzp62yU" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/souscategories</argument>
     </service>
-    <service id=".security.request_matcher.zk3GsK." class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+    <service id=".security.request_matcher.r7_Xh1T" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
       <argument type="collection">
-        <argument type="service" id=".security.request_matcher.3MWijcV"/>
+        <argument type="service" id=".security.request_matcher.Jzp62yU"/>
       </argument>
     </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">

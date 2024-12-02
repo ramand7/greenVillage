@@ -26,6 +26,7 @@ class AccessDeniedHandler implements AccessDeniedHandlerInterface
     {
         // Récupérer la session à partir de la requête courante
         $session = $this->requestStack->getSession();
+        // dd($session);
 
         // Vérifier que la session est bien une instance de Symfony\Component\HttpFoundation\Session\Session
         if ($session instanceof Session) {
@@ -39,7 +40,8 @@ class AccessDeniedHandler implements AccessDeniedHandlerInterface
         }
 
         // Rediriger l'utilisateur
-        return new RedirectResponse($this->router->generate('app_accueil'));
+        // return new RedirectResponse($this->router->generate('app_accueil'));
+        return new RedirectResponse($this->router->generate('app_main'));
     }
 }
 

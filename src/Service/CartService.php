@@ -33,7 +33,7 @@ class CartService
 				// dd($user);
 
         if (!$user) {
-            // throw new \LogicException('Aucun utilisateur connecté'); 
+            throw new \LogicException('Aucun utilisateur connecté'); 
         }
 
         // Vérifier si un panier existe déjà pour cet utilisateur
