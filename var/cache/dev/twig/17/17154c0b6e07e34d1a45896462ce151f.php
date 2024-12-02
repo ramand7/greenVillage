@@ -148,8 +148,8 @@ class __TwigTemplate_21d5811fd8d000a382d8302a2b06ef46 extends Template
         yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(CoreExtension::getAttribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 32, $this->source); })()), "RGPDConsent", [], "any", false, false, false, 32), 'row');
         yield "
 
-        \t<button type=\"submit\" class=\"btn btn-success btn-sm mt-3\"><h6>M'inscrire</h6></button>
-\t\t\t\t\t<a class=\"btn btn-sm btn-primary mt-3\" href=\"";
+        \t<button type=\"submit\" class=\"btn btn-sm btn-outline-success btn-sm mt-3\"><h6>M'inscrire</h6></button>
+\t\t\t\t\t<a class=\"btn btn-sm btn-outline-primary mt-3\" href=\"";
         // line 35
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         yield "\"><h6>Me connecter</h6></a>
@@ -233,8 +233,8 @@ class __TwigTemplate_21d5811fd8d000a382d8302a2b06ef46 extends Template
 
         \t{{ form_row(registrationForm.RGPDConsent) }}
 
-        \t<button type=\"submit\" class=\"btn btn-success btn-sm mt-3\"><h6>M'inscrire</h6></button>
-\t\t\t\t\t<a class=\"btn btn-sm btn-primary mt-3\" href=\"{{ path('app_login') }}\"><h6>Me connecter</h6></a>
+        \t<button type=\"submit\" class=\"btn btn-sm btn-outline-success btn-sm mt-3\"><h6>M'inscrire</h6></button>
+\t\t\t\t\t<a class=\"btn btn-sm btn-outline-primary mt-3\" href=\"{{ path('app_login') }}\"><h6>Me connecter</h6></a>
     \t\t\t{{ form_end(registrationForm) }}
 \t\t\t\t</div>
 \t\t\t</div>
