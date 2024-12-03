@@ -1,7 +1,7 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
   	<div class="container-fluid">
-    	<a class="navbar-brand" href="{{ path('app_main') }}"><img src="{{ asset('images/logo1.png') }}" alt="Nom du Site" height="50"></a>
-			<a class="navbar-brand" href="#"><h1><b>Village Green</b></h1></a>
+    	<a class="navbar-brand" href="{{ path('app_main') }}"><img src="{{ asset('images/logo1.png') }}" alt="Nom du Site" height="48"></a>
+			<a class="navbar-brand" href="{{ path('app_main') }}"><h1><b>Village Green</b></h1></a>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					
 			{% for message in app.flashes('error') %}
@@ -13,13 +13,13 @@
 			{% if app.flashes('error') is not empty %}
 					<script>
 							// Redirection après 3 secondes
-							setTimeout(function () {
+							setTimeout(function() {
 									window.location.href = "{{ redirect_to|default(app.request.headers.get('referer') ?: path('app_contact')) }}";
 							}, 3000);
 					</script>
 			{% endif %}
 
-		{# Pour acceder  #}
+		{# Pour accéder  #}
 
 					<ul class="navbar-nav ms-auto mb-3 mb-lg-0">	
 						{% if(app.user) %}
@@ -42,7 +42,7 @@
 								<img src="{{ asset('images/cart_2.png') }}" class="img-fluid" width="26px" alt="Panier">
 								{% if cartTotalQuantity > 0 %}
 									<span class="position-absolute translate-middle badge rounded-pill bg-danger">+{{ cartTotalQuantity }}</span>
-											<span class="visually-hidden">articles dans le panier</span>									
+									<span class="visually-hidden">articles dans le panier</span>									
 								{% endif %}
 							</a>
 						</li>
@@ -51,6 +51,7 @@
 								<img src="{{ asset('images/usericon_1.png') }}" class="img-fluid" width="28x" alt="Mon compte">
 							</a>
 						</li>
+					</ul>
     	</div>
   	</div>
 	</nav> 

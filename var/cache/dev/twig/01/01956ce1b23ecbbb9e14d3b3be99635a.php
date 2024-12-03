@@ -77,29 +77,27 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
   
   <body>
        
-
     ";
-        // line 20
+        // line 19
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 21
+        // line 20
         yield "
     <div id=\"react-root\"></div>
 
   \t";
-        // line 25
+        // line 24
         yield "
-
    ";
-        // line 27
+        // line 25
         yield from $this->unwrap()->yieldBlock('javascripts', $context, $blocks);
-        // line 28
+        // line 26
         yield "   ";
         yield $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         yield "
     
 \t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js\"></script>
     ";
-        // line 32
+        // line 30
         yield "    <script src=\"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js\" integrity=\"sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r\" crossorigin=\"anonymous\"></script>
     <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js\" integrity=\"sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy\" crossorigin=\"anonymous\"></script>
      
@@ -160,7 +158,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
         yield from [];
     }
 
-    // line 20
+    // line 19
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -182,7 +180,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
         yield from [];
     }
 
-    // line 27
+    // line 25
     /**
      * @return iterable<null|scalar|\Stringable>
      */
@@ -225,7 +223,7 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  186 => 27,  164 => 20,  142 => 12,  119 => 6,  103 => 32,  96 => 28,  94 => 27,  90 => 25,  85 => 21,  83 => 20,  73 => 13,  69 => 12,  64 => 9,  59 => 6,  52 => 1,);
+        return array (  184 => 25,  162 => 19,  140 => 12,  117 => 6,  101 => 30,  94 => 26,  92 => 25,  89 => 24,  84 => 20,  82 => 19,  73 => 13,  69 => 12,  64 => 9,  59 => 6,  52 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -248,13 +246,11 @@ class __TwigTemplate_af2375a3cb7df6041455f5cfe4b2c635 extends Template
   
   <body>
        
-
     {% block body %}{% endblock %}
 
     <div id=\"react-root\"></div>
 
   \t{# {% include \"_partials/_footer.html.twig\" %}  #}
-
 
    {% block javascripts %}{% endblock %}
    {{ encore_entry_script_tags('app') }}

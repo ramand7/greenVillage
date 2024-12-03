@@ -4,6 +4,7 @@
 
 {% block body %}
 
+{% include ('_partials/_nav.html.twig')  %}
 
 <form action="https://checkout.stripe.com/pay/{{ checkout_session_id }}" method="POST">
     <button type="submit" class="btn btn-sm btn-primary">Payer avec Stripe</button>

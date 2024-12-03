@@ -115,7 +115,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 
 <header>
 <section>
-  <nav class=\"navbar navbar-expand-lg navbar-dark bg-secondary\">
+  <nav class=\"navbar navbar-expand-lg navbar-dark bg-secondary\">Quantity
     <div class=\"container-fluid\">  
 \t\t  <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"> 
         <span class=\"navbar-toggler-icon\"></span> 
@@ -504,7 +504,7 @@ class __TwigTemplate_70e45340a21dd62c1e12281a5906ff3d extends Template
 
 <header>
 <section>
-  <nav class=\"navbar navbar-expand-lg navbar-dark bg-secondary\">
+  <nav class=\"navbar navbar-expand-lg navbar-dark bg-secondary\">Quantity
     <div class=\"container-fluid\">  
 \t\t  <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"> 
         <span class=\"navbar-toggler-icon\"></span> 
