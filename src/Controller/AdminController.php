@@ -77,7 +77,7 @@ class AdminController extends AbstractController
     }
 
 		#[Route('/sonorisation', name: 'sonorisation', methods: ['GET'])]
-    public function indexAccès(CategoriesRepository $categoriesRepository): Response
+    public function indexAcces(CategoriesRepository $categoriesRepository): Response
     {
         return $this->render('souscategories/sonorisation/index.html.twig', [
             'categories' => $categoriesRepository->findAll(),

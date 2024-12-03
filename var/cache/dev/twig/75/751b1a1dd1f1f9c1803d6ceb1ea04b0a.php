@@ -195,7 +195,7 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
         yield "   \t</table>
 \t</div>
 \t<div class=\"col-3 ms-1\">\t\t\t
-\t\t<h4 class=\"text-center\">Total : ";
+\t\t<h4 class=\"text-center\"><b>Total :</b> ";
         // line 56
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(Twig\Extension\CoreExtension::reduce($this->env, CoreExtension::getAttribute($this->env, $this->source, (isset($context["cart"]) || array_key_exists("cart", $context) ? $context["cart"] : (function () { throw new RuntimeError('Variable "cart" does not exist.', 56, $this->source); })()), "items", [], "any", false, false, false, 56), function ($__total__, $__item__) use ($context, $macros) { $context["total"] = $__total__; $context["item"] = $__item__; return ((isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 56, $this->source); })()) + (CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 56, $this->source); })()), "produit", [], "any", false, false, false, 56), "prixht", [], "any", false, false, false, 56) * CoreExtension::getAttribute($this->env, $this->source, (isset($context["item"]) || array_key_exists("item", $context) ? $context["item"] : (function () { throw new RuntimeError('Variable "item" does not exist.', 56, $this->source); })()), "quantity", [], "any", false, false, false, 56))); }, 0), "html", null, true);
         yield " €</h4>
@@ -301,7 +301,7 @@ class __TwigTemplate_c69d1523e1a0e0d9e8e723f91ad39d1e extends Template
    \t</table>
 \t</div>
 \t<div class=\"col-3 ms-1\">\t\t\t
-\t\t<h4 class=\"text-center\">Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
+\t\t<h4 class=\"text-center\"><b>Total :</b> {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
 \t</div>
 \t<td><a href=\"{{ path('app_main') }}\" class=\"btn btn-sm btn-outline-primary\"><b>Page d'accueil</b></a></td>
 \t<td><a href=\"{{ path('validation_commande') }}\" class=\"btn btn-sm btn-outline-success\"><b>Passez la commande</b></a></td>\t\t\t\t\t\t

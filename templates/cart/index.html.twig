@@ -53,7 +53,7 @@
    	</table>
 	</div>
 	<div class="col-3 ms-1">			
-		<h4 class="text-center">Total : {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
+		<h4 class="text-center"><b>Total :</b> {{ cart.items|reduce((total, item) => total + (item.produit.prixht * item.quantity), 0) }} €</h4>
 	</div>
 	<td><a href="{{ path('app_main') }}" class="btn btn-sm btn-outline-primary"><b>Page d'accueil</b></a></td>
 	<td><a href="{{ path('validation_commande') }}" class="btn btn-sm btn-outline-success"><b>Passez la commande</b></a></td>						

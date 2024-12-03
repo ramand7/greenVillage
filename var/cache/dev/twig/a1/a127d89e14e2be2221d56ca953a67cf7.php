@@ -53,7 +53,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
         yield "\"><img src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo1.png"), "html", null, true);
         yield "\" alt=\"Nom du Site\" height=\"50\"></a>
-\t\t\t<a class=\"navbar-brand\" href=\"#\"><h1>Village Green</h1></a>
+\t\t\t<a class=\"navbar-brand\" href=\"#\"><h1><b>Village Green</b></h1></a>
 \t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
 \t\t\t\t\t
 \t\t\t";
@@ -95,7 +95,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t";
         // line 23
         yield "
-\t\t\t\t\t<ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\t
+\t\t\t\t\t<ul class=\"navbar-nav ms-auto mb-3 mb-lg-0\">\t
 \t\t\t\t\t\t";
         // line 25
         if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "user", [], "any", false, false, false, 25)) {
@@ -130,40 +130,37 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t\t\t\t";
         }
         // line 40
-        yield "
-\t\t\t\t\t\t<li class=\"nav-item\">
+        yield "\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 42
+        // line 41
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_index");
         yield "\">\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 43
+        // line 42
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/cart_2.png"), "html", null, true);
-        yield "\" class=\"img-fluid\" width=\"28px\" height=\"10px\" alt=\"Panier\">
+        yield "\" class=\"img-fluid\" width=\"26px\" alt=\"Panier\">
 \t\t\t\t\t\t\t\t";
-        // line 44
-        if (((isset($context["cartTotalQuantity"]) || array_key_exists("cartTotalQuantity", $context) ? $context["cartTotalQuantity"] : (function () { throw new RuntimeError('Variable "cartTotalQuantity" does not exist.', 44, $this->source); })()) > 0)) {
-            // line 45
-            yield "\t\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">+
-\t\t\t\t\t\t\t\t\t\t";
-            // line 46
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["cartTotalQuantity"]) || array_key_exists("cartTotalQuantity", $context) ? $context["cartTotalQuantity"] : (function () { throw new RuntimeError('Variable "cartTotalQuantity" does not exist.', 46, $this->source); })()), "html", null, true);
-            yield "
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">articles dans le panier</span>
-\t\t\t\t\t\t\t\t\t</span>
+        // line 43
+        if (((isset($context["cartTotalQuantity"]) || array_key_exists("cartTotalQuantity", $context) ? $context["cartTotalQuantity"] : (function () { throw new RuntimeError('Variable "cartTotalQuantity" does not exist.', 43, $this->source); })()) > 0)) {
+            // line 44
+            yield "\t\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">+";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["cartTotalQuantity"]) || array_key_exists("cartTotalQuantity", $context) ? $context["cartTotalQuantity"] : (function () { throw new RuntimeError('Variable "cartTotalQuantity" does not exist.', 44, $this->source); })()), "html", null, true);
+            yield "</span>
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">articles dans le panier</span>\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t";
         }
-        // line 50
-        yield "\t\t\t\t\t\t</li>
+        // line 47
+        yield "\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 52
+        // line 50
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_display");
         yield "\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 53
+        // line 51
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/usericon_1.png"), "html", null, true);
-        yield "\" class=\"img-fluid\" width=\"30x\" height=\"42px\" alt=\"Mon compte\">
+        yield "\" class=\"img-fluid\" width=\"28x\" alt=\"Mon compte\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
     \t</div>
@@ -200,7 +197,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  165 => 53,  161 => 52,  157 => 50,  150 => 46,  147 => 45,  145 => 44,  141 => 43,  137 => 42,  133 => 40,  127 => 37,  121 => 34,  118 => 33,  112 => 30,  106 => 27,  103 => 26,  101 => 25,  97 => 23,  94 => 21,  87 => 17,  82 => 14,  80 => 13,  77 => 12,  68 => 9,  65 => 8,  61 => 7,  52 => 3,  48 => 1,);
+        return array (  162 => 51,  158 => 50,  153 => 47,  146 => 44,  144 => 43,  140 => 42,  136 => 41,  133 => 40,  127 => 37,  121 => 34,  118 => 33,  112 => 30,  106 => 27,  103 => 26,  101 => 25,  97 => 23,  94 => 21,  87 => 17,  82 => 14,  80 => 13,  77 => 12,  68 => 9,  65 => 8,  61 => 7,  52 => 3,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -208,7 +205,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
         return new Source("  <nav class=\"navbar navbar-expand-lg bg-body-tertiary\">
   \t<div class=\"container-fluid\">
     \t<a class=\"navbar-brand\" href=\"{{ path('app_main') }}\"><img src=\"{{ asset('images/logo1.png') }}\" alt=\"Nom du Site\" height=\"50\"></a>
-\t\t\t<a class=\"navbar-brand\" href=\"#\"><h1>Village Green</h1></a>
+\t\t\t<a class=\"navbar-brand\" href=\"#\"><h1><b>Village Green</b></h1></a>
 \t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
 \t\t\t\t\t
 \t\t\t{% for message in app.flashes('error') %}
@@ -228,7 +225,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 
 \t\t{# Pour acceder  #}
 
-\t\t\t\t\t<ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\t
+\t\t\t\t\t<ul class=\"navbar-nav ms-auto mb-3 mb-lg-0\">\t
 \t\t\t\t\t\t{% if(app.user) %}
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('profil_display') }}\">Mon compte</a>
@@ -244,20 +241,18 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"{{ path('app_login') }}\">Connexion</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t{% endif %}
-
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('cart_index') }}\">\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/cart_2.png') }}\" class=\"img-fluid\" width=\"28px\" height=\"10px\" alt=\"Panier\">
+\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/cart_2.png') }}\" class=\"img-fluid\" width=\"26px\" alt=\"Panier\">
 \t\t\t\t\t\t\t\t{% if cartTotalQuantity > 0 %}
-\t\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">+
-\t\t\t\t\t\t\t\t\t\t{{ cartTotalQuantity }}
-\t\t\t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">articles dans le panier</span>
-\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">+{{ cartTotalQuantity }}</span>
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">articles dans le panier</span>\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('profil_display') }}\">
-\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/usericon_1.png') }}\" class=\"img-fluid\" width=\"30x\" height=\"42px\" alt=\"Mon compte\">
+\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/usericon_1.png') }}\" class=\"img-fluid\" width=\"28x\" alt=\"Mon compte\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
     \t</div>

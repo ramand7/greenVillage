@@ -588,6 +588,13 @@
         <argument type="service" id=".service_locator.CshazM0.App\Controller\ContactController"/>
       </call>
     </service>
+    <service id="App\Controller\DashboardController" class="App\Controller\DashboardController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.CshazM0.App\Controller\DashboardController"/>
+      </call>
+    </service>
     <service id="App\Controller\MainController" class="App\Controller\MainController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -743,6 +750,9 @@
       <argument type="service" id="App\Repository\CartRepository"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <argument type="service" id="security.helper"/>
+    </service>
+    <service id="App\Service\StatistiquesService" class="App\Service\StatistiquesService" autowire="true" autoconfigure="true">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
     </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
@@ -6267,20 +6277,6 @@
         </argument>
         <argument>null</argument>
       </call>
-      <call method="add">
-        <argument type="service" id=".security.request_matcher.BBddSQr"/>
-        <argument type="collection">
-          <argument>ROLE_ADMIN</argument>
-        </argument>
-        <argument>null</argument>
-      </call>
-      <call method="add">
-        <argument type="service" id=".security.request_matcher.r7_Xh1T"/>
-        <argument type="collection">
-          <argument>ROLE_ADMIN</argument>
-        </argument>
-        <argument>null</argument>
-      </call>
     </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener">
       <tag name="monolog.logger" channel="security"/>
@@ -6974,22 +6970,6 @@
     <service id=".security.request_matcher.28NqKnb" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
       <argument type="collection">
         <argument type="service" id=".security.request_matcher.obhk0jm"/>
-      </argument>
-    </service>
-    <service id=".security.request_matcher.sbPdkU6" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/categories</argument>
-    </service>
-    <service id=".security.request_matcher.BBddSQr" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
-      <argument type="collection">
-        <argument type="service" id=".security.request_matcher.sbPdkU6"/>
-      </argument>
-    </service>
-    <service id=".security.request_matcher.Jzp62yU" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/souscategories</argument>
-    </service>
-    <service id=".security.request_matcher.r7_Xh1T" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
-      <argument type="collection">
-        <argument type="service" id=".security.request_matcher.Jzp62yU"/>
       </argument>
     </service>
     <service id="security.command.user_password_hash" class="Symfony\Component\PasswordHasher\Command\UserPasswordHashCommand">
@@ -8250,6 +8230,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DashboardController" class="App\Controller\DashboardController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MainController" class="App\Controller\MainController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MainController" class="App\Controller\MainController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\MainController" class="App\Controller\MainController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -8810,11 +8793,11 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.ZBJXbMv" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.lgTzztU" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccueilController::index" type="service_closure" id=".service_locator.do9sDn8"/>
-        <argument key="App\Controller\AdminController::indexAccès" type="service_closure" id=".service_locator.do9sDn8"/>
+        <argument key="App\Controller\AdminController::indexAcces" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController::indexBat" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController::indexClav" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController::indexGuit" type="service_closure" id=".service_locator.do9sDn8"/>
@@ -8850,7 +8833,7 @@
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
         <argument key="App\Controller\AccueilController:index" type="service_closure" id=".service_locator.do9sDn8"/>
-        <argument key="App\Controller\AdminController:indexAccès" type="service_closure" id=".service_locator.do9sDn8"/>
+        <argument key="App\Controller\AdminController:indexAcces" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController:indexBat" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController:indexClav" type="service_closure" id=".service_locator.do9sDn8"/>
         <argument key="App\Controller\AdminController:indexGuit" type="service_closure" id=".service_locator.do9sDn8"/>
@@ -9577,6 +9560,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.CshazM0" method="withContext"/>
     </service>
+    <service id=".service_locator.CshazM0.App\Controller\DashboardController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\DashboardController"/>
+      <argument>App\Controller\DashboardController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.CshazM0" method="withContext"/>
+    </service>
     <service id=".service_locator.CshazM0.App\Controller\MainController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\MainController"/>
       <argument>App\Controller\MainController</argument>
@@ -10073,12 +10062,12 @@
       <argument type="service" id="api_platform.serializer.context_builder.filter"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.ZBJXbMv"/>
+      <argument type="service" id=".service_locator.lgTzztU"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.ZBJXbMv"/>
+      <argument type="service" id=".service_locator.lgTzztU"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -11285,7 +11274,7 @@
     <service id="ApiPlatform\Symfony\Security\ResourceAccessCheckerInterface" alias="api_platform.security.resource_access_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.7nzbL4K" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.ZBJXbMv"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.lgTzztU"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -11314,7 +11303,7 @@
     <service id=".service_locator.17IEaOb" alias=".service_locator.Ay2l8s0"/>
     <service id=".service_locator.f9os5BO" alias=".service_locator.Gl3nBvd"/>
     <service id=".service_locator.bJkwozd" alias=".service_locator.Z9QmIxH"/>
-    <service id=".service_locator.hMrOOOa" alias=".service_locator.ZBJXbMv"/>
+    <service id=".service_locator.gnOg7mD" alias=".service_locator.lgTzztU"/>
     <service id=".service_locator.9XMoc9I" alias=".service_locator.kzegaci"/>
     <service id=".service_locator.cFNZ1mS" alias=".service_locator.u44Hpja"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
