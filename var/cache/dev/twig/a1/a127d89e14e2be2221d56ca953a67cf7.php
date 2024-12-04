@@ -65,105 +65,103 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
         $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 7, $this->source); })()), "flashes", ["error"], "method", false, false, false, 7));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
             // line 8
-            yield "\t\t\t\t\t<div class=\"alert alert-danger\">
-\t\t\t\t\t\t\t";
+            yield "\t\t\t\t<div class=\"alert alert-danger\">
+\t\t\t\t\t";
             // line 9
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["message"], "html", null, true);
             yield "
-\t\t\t\t\t</div>
+\t\t\t\t</div>
 \t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['message'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 12
-        yield "
-\t\t\t";
-        // line 13
-        if ( !Twig\Extension\CoreExtension::testEmpty(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "flashes", ["error"], "method", false, false, false, 13))) {
-            // line 14
-            yield "\t\t\t\t\t<script>
-\t\t\t\t\t\t\t// Redirection après 3 secondes
-\t\t\t\t\t\t\tsetTimeout(function() {
-\t\t\t\t\t\t\t\t\twindow.location.href = \"";
-            // line 17
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("redirect_to", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["redirect_to"]) || array_key_exists("redirect_to", $context) ? $context["redirect_to"] : (function () { throw new RuntimeError('Variable "redirect_to" does not exist.', 17, $this->source); })()), ((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "request", [], "any", false, false, false, 17), "headers", [], "any", false, false, false, 17), "get", ["referer"], "method", false, false, false, 17)) ?: ($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact"))))) : (((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "request", [], "any", false, false, false, 17), "headers", [], "any", false, false, false, 17), "get", ["referer"], "method", false, false, false, 17)) ?: ($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact"))))), "html", null, true);
+        yield "\t\t\t";
+        if ( !Twig\Extension\CoreExtension::testEmpty(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "flashes", ["error"], "method", false, false, false, 12))) {
+            // line 13
+            yield "\t\t\t\t<script>
+\t\t\t\t\t// Redirection après 3 secondes
+\t\t\t\t\tsetTimeout(function() {
+\t\t\t\t\t\twindow.location.href = \"";
+            // line 16
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("redirect_to", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["redirect_to"]) || array_key_exists("redirect_to", $context) ? $context["redirect_to"] : (function () { throw new RuntimeError('Variable "redirect_to" does not exist.', 16, $this->source); })()), ((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "request", [], "any", false, false, false, 16), "headers", [], "any", false, false, false, 16), "get", ["referer"], "method", false, false, false, 16)) ?: ($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact"))))) : (((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "request", [], "any", false, false, false, 16), "headers", [], "any", false, false, false, 16), "get", ["referer"], "method", false, false, false, 16)) ?: ($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact"))))), "html", null, true);
             yield "\";
-\t\t\t\t\t\t\t}, 3000);
-\t\t\t\t\t</script>
+\t\t\t\t\t}, 3000);
+\t\t\t\t</script>
 \t\t\t";
         }
-        // line 21
+        // line 20
         yield "
 \t\t";
-        // line 23
+        // line 22
         yield "
 \t\t\t\t\t<ul class=\"navbar-nav ms-auto mb-3 mb-lg-0\">\t
 \t\t\t\t\t\t";
-        // line 25
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "user", [], "any", false, false, false, 25)) {
-            // line 26
+        // line 24
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "user", [], "any", false, false, false, 24)) {
+            // line 25
             yield "\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-            // line 27
+            // line 26
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_display");
             yield "\">Mon compte</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-            // line 30
+            // line 29
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             yield "\">Deconnexion</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         } else {
-            // line 33
+            // line 32
             yield "\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"";
-            // line 34
+            // line 33
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             yield "\">Inscription</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active text-bold\" aria-current=\"page\" href=\"";
-            // line 37
+            // line 36
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             yield "\">Connexion</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         }
-        // line 40
+        // line 39
         yield "\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 41
+        // line 40
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("cart_index");
         yield "\">\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 42
+        // line 41
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/cart_2.png"), "html", null, true);
-        yield "\" class=\"img-fluid\" width=\"26px\" alt=\"Panier\">
+        yield "\" class=\"img-fluid\" width=\"20px\" alt=\"Panier\">
 \t\t\t\t\t\t\t\t";
-        // line 43
-        if (((isset($context["cartTotalQuantity"]) || array_key_exists("cartTotalQuantity", $context) ? $context["cartTotalQuantity"] : (function () { throw new RuntimeError('Variable "cartTotalQuantity" does not exist.', 43, $this->source); })()) > 0)) {
-            // line 44
+        // line 42
+        if (((isset($context["cartTotalQuantity"]) || array_key_exists("cartTotalQuantity", $context) ? $context["cartTotalQuantity"] : (function () { throw new RuntimeError('Variable "cartTotalQuantity" does not exist.', 42, $this->source); })()) > 0)) {
+            // line 43
             yield "\t\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">+";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["cartTotalQuantity"]) || array_key_exists("cartTotalQuantity", $context) ? $context["cartTotalQuantity"] : (function () { throw new RuntimeError('Variable "cartTotalQuantity" does not exist.', 44, $this->source); })()), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["cartTotalQuantity"]) || array_key_exists("cartTotalQuantity", $context) ? $context["cartTotalQuantity"] : (function () { throw new RuntimeError('Variable "cartTotalQuantity" does not exist.', 43, $this->source); })()), "html", null, true);
             yield "</span>
 \t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">articles dans le panier</span>\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t";
         }
-        // line 47
+        // line 46
         yield "\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"";
-        // line 50
+        // line 49
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil_display");
         yield "\">
 \t\t\t\t\t\t\t\t<img src=\"";
-        // line 51
+        // line 50
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/usericon_1.png"), "html", null, true);
-        yield "\" class=\"img-fluid\" width=\"28x\" alt=\"Mon compte\">
+        yield "\" class=\"img-fluid\" width=\"22x\" alt=\"Mon compte\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t</ul>
@@ -201,7 +199,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  165 => 51,  161 => 50,  156 => 47,  149 => 44,  147 => 43,  143 => 42,  139 => 41,  136 => 40,  130 => 37,  124 => 34,  121 => 33,  115 => 30,  109 => 27,  106 => 26,  104 => 25,  100 => 23,  97 => 21,  90 => 17,  85 => 14,  83 => 13,  80 => 12,  71 => 9,  68 => 8,  64 => 7,  58 => 4,  52 => 3,  48 => 1,);
+        return array (  163 => 50,  159 => 49,  154 => 46,  147 => 43,  145 => 42,  141 => 41,  137 => 40,  134 => 39,  128 => 36,  122 => 33,  119 => 32,  113 => 29,  107 => 26,  104 => 25,  102 => 24,  98 => 22,  95 => 20,  88 => 16,  83 => 13,  80 => 12,  71 => 9,  68 => 8,  64 => 7,  58 => 4,  52 => 3,  48 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -213,18 +211,17 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
 \t\t\t\t\t
 \t\t\t{% for message in app.flashes('error') %}
-\t\t\t\t\t<div class=\"alert alert-danger\">
-\t\t\t\t\t\t\t{{ message }}
-\t\t\t\t\t</div>
+\t\t\t\t<div class=\"alert alert-danger\">
+\t\t\t\t\t{{ message }}
+\t\t\t\t</div>
 \t\t\t{% endfor %}
-
 \t\t\t{% if app.flashes('error') is not empty %}
-\t\t\t\t\t<script>
-\t\t\t\t\t\t\t// Redirection après 3 secondes
-\t\t\t\t\t\t\tsetTimeout(function() {
-\t\t\t\t\t\t\t\t\twindow.location.href = \"{{ redirect_to|default(app.request.headers.get('referer') ?: path('app_contact')) }}\";
-\t\t\t\t\t\t\t}, 3000);
-\t\t\t\t\t</script>
+\t\t\t\t<script>
+\t\t\t\t\t// Redirection après 3 secondes
+\t\t\t\t\tsetTimeout(function() {
+\t\t\t\t\t\twindow.location.href = \"{{ redirect_to|default(app.request.headers.get('referer') ?: path('app_contact')) }}\";
+\t\t\t\t\t}, 3000);
+\t\t\t\t</script>
 \t\t\t{% endif %}
 
 \t\t{# Pour accéder  #}
@@ -247,7 +244,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('cart_index') }}\">\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/cart_2.png') }}\" class=\"img-fluid\" width=\"26px\" alt=\"Panier\">
+\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/cart_2.png') }}\" class=\"img-fluid\" width=\"20px\" alt=\"Panier\">
 \t\t\t\t\t\t\t\t{% if cartTotalQuantity > 0 %}
 \t\t\t\t\t\t\t\t\t<span class=\"position-absolute translate-middle badge rounded-pill bg-danger\">+{{ cartTotalQuantity }}</span>
 \t\t\t\t\t\t\t\t\t<span class=\"visually-hidden\">articles dans le panier</span>\t\t\t\t\t\t\t\t\t
@@ -256,7 +253,7 @@ class __TwigTemplate_4254ba81fed83c785306b41cc2382b17 extends Template
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('profil_display') }}\">
-\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/usericon_1.png') }}\" class=\"img-fluid\" width=\"28x\" alt=\"Mon compte\">
+\t\t\t\t\t\t\t\t<img src=\"{{ asset('images/usericon_1.png') }}\" class=\"img-fluid\" width=\"22x\" alt=\"Mon compte\">
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t</ul>

@@ -46,26 +46,25 @@
 <header>
 <section>
 
-<nav>
-	
-        <ul>
-            {% for category in categories %}					
-                <li class="dropdown">
-                    {# <a href="{{ path('app_contact') }}" class="btn btn-xxl btn-outline-primary">{{ category.nom }}</a> #}
-                    <a href="{{ path('app_categories_index', { id: category.id }) }}" class="btn btn-xxl btn-outline-primary">{{ category.nom }}</a>
-                    {% if category.categories is not empty %}
-                        <ul class="dropdown-content" >
-                            {% for subcategory in category.categories %}
-                                <li><a href="{{ path('sous_categories', { id: subcategory.id }) }}"">{{ subcategory.nom }}</a></li>
-                            {% endfor %}
-                        </ul>
-
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-
-    </nav>
+	<nav>
+		<ul>
+      {% for category in categories %}					
+      	<li class="dropdown">
+        {# <a href="{{ path('app_contact') }}" class="btn btn-xxl btn-outline-primary">{{ category.nom }}</a> #}
+        	<a href="{{ path('app_categories_index', { id: category.id }) }}" class="btn btn-xxl btn-outline-primary">{{ category.nom }}</a>
+        		{% if category.categories is not empty %}
+          		<ul class="dropdown-content" >
+            		{% for subcategory in category.categories %}
+            			<li>
+										<a href="{{ path('sous_categories', { id: subcategory.id }) }}">{{ subcategory.nom }}</a>
+									</li>
+            		{% endfor %}
+          		</ul>
+          	{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
 	
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
