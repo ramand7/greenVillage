@@ -49,164 +49,176 @@ return [
                 .'|/api(?'
                     .'|/(?'
                         .'|\\.well\\-known/genid/([^/]++)(*:46)'
-                        .'|errors(?:/(\\d+))?(*:70)'
-                        .'|validation_errors/([^/]++)(*:103)'
+                        .'|errors/(\\d+)(*:65)'
+                        .'|validation_errors/([^/]++)(*:98)'
                     .')'
-                    .'|(?:/(index)(?:\\.([^/]++))?)?(*:140)'
+                    .'|(?:/(index)(?:\\.([^/]++))?)?(*:134)'
                     .'|/(?'
-                        .'|docs(?:\\.([^/]++))?(*:171)'
+                        .'|docs(?:\\.([^/]++))?(*:165)'
                         .'|c(?'
-                            .'|ontexts/([^.]+)(?:\\.(jsonld))?(*:213)'
+                            .'|ontexts/([^.]+)(?:\\.(jsonld))?(*:207)'
                             .'|ategoriess(?'
-                                .'|/([^/\\.]++)(?:\\.([^/]++))?(*:260)'
+                                .'|/([^/\\.]++)(?:\\.([^/]++))?(*:254)'
                                 .'|(?:\\.([^/]++))?(?'
-                                    .'|(*:286)'
+                                    .'|(*:280)'
                                 .')'
                                 .'|/([^/\\.]++)(?:\\.([^/]++))?(?'
-                                    .'|(*:324)'
+                                    .'|(*:318)'
                                 .')'
                             .')'
                         .')'
+                        .'|validation_errors/([^/]++)(?'
+                            .'|(*:358)'
+                        .')'
                         .'|fournisseurs(?'
-                            .'|/([^/\\.]++)(?:\\.([^/]++))?(*:376)'
+                            .'|/([^/\\.]++)(?:\\.([^/]++))?(*:408)'
                             .'|(?:\\.([^/]++))?(?'
-                                .'|(*:402)'
+                                .'|(*:434)'
                             .')'
                             .'|/([^/\\.]++)(?:\\.([^/]++))?(?'
-                                .'|(*:440)'
+                                .'|(*:472)'
                             .')'
                         .')'
                         .'|produits(?'
-                            .'|/([^/\\.]++)(?:\\.([^/]++))?(*:487)'
+                            .'|/([^/\\.]++)(?:\\.([^/]++))?(*:519)'
                             .'|(?:\\.([^/]++))?(?'
-                                .'|(*:513)'
+                                .'|(*:545)'
                             .')'
                             .'|/([^/\\.]++)(?:\\.([^/]++))?(?'
-                                .'|(*:551)'
+                                .'|(*:583)'
                             .')'
                         .')'
                         .'|utilisateurs(?'
-                            .'|/([^/\\.]++)(?:\\.([^/]++))?(*:602)'
+                            .'|/([^/\\.]++)(?:\\.([^/]++))?(*:634)'
                             .'|(?:\\.([^/]++))?(?'
-                                .'|(*:628)'
+                                .'|(*:660)'
                             .')'
                             .'|/([^/\\.]++)(?:\\.([^/]++))?(?'
-                                .'|(*:666)'
+                                .'|(*:698)'
                             .')'
                         .')'
                     .')'
                 .')'
                 .'|/_(?'
-                    .'|error/(\\d+)(?:\\.([^/]++))?(*:709)'
-                    .'|wdt/([^/]++)(*:729)'
-                    .'|profiler/([^/]++)(?'
-                        .'|/(?'
-                            .'|search/results(*:775)'
-                            .'|router(*:789)'
-                            .'|exception(?'
-                                .'|(*:809)'
-                                .'|\\.css(*:822)'
+                    .'|error/(\\d+)(?:\\.([^/]++))?(*:741)'
+                    .'|wdt/([^/]++)(*:761)'
+                    .'|profiler/(?'
+                        .'|font/([^/\\.]++)\\.woff2(*:803)'
+                        .'|([^/]++)(?'
+                            .'|/(?'
+                                .'|search/results(*:840)'
+                                .'|router(*:854)'
+                                .'|exception(?'
+                                    .'|(*:874)'
+                                    .'|\\.css(*:887)'
+                                .')'
                             .')'
+                            .'|(*:897)'
                         .')'
-                        .'|(*:832)'
                     .')'
                 .')'
-                .'|/souscategories/guitares/(\\d+)(*:872)'
+                .'|/souscategories/guitares/(\\d+)(*:938)'
                 .'|/c(?'
                     .'|a(?'
                         .'|rt/(?'
-                            .'|add/(\\d+)(*:904)'
-                            .'|decrease/([^/]++)(*:929)'
-                            .'|remove/(\\d+)(*:949)'
+                            .'|add/(\\d+)(*:970)'
+                            .'|decrease/([^/]++)(*:995)'
+                            .'|remove/(\\d+)(*:1015)'
                         .')'
                         .'|tegories/(?'
-                            .'|(\\d+)(*:975)'
+                            .'|(\\d+)(*:1042)'
                             .'|([^/]++)(?'
-                                .'|(*:994)'
+                                .'|(*:1062)'
                                 .'|/(?'
-                                    .'|edit(*:1010)'
-                                    .'|delete(*:1025)'
+                                    .'|edit(*:1079)'
+                                    .'|delete(*:1094)'
                                 .')'
                             .')'
                         .')'
                     .')'
-                    .'|ommande/([^/]++)/paiement(*:1063)'
+                    .'|ommande/([^/]++)/paiement(*:1132)'
                 .')'
                 .'|/produits/(?'
-                    .'|(\\d+)(*:1091)'
+                    .'|(\\d+)(*:1160)'
                     .'|([^/]++)/(?'
-                        .'|edit(*:1116)'
-                        .'|delete(*:1131)'
+                        .'|edit(*:1185)'
+                        .'|delete(*:1200)'
                     .')'
                 .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        46 => [[['_route' => 'api_genid', '_controller' => 'api_platform.action.not_exposed', '_api_respond' => 'true'], ['id'], null, null, false, true, null]],
-        70 => [[['_route' => 'api_errors', '_controller' => 'api_platform.action.not_exposed', 'status' => '500'], ['status'], null, null, false, true, null]],
-        103 => [[['_route' => 'api_validation_errors', '_controller' => 'api_platform.action.not_exposed'], ['id'], null, null, false, true, null]],
-        140 => [[['_route' => 'api_entrypoint', '_controller' => 'api_platform.action.entrypoint', '_format' => '', '_api_respond' => 'true', 'index' => 'index'], ['index', '_format'], null, null, false, true, null]],
-        171 => [[['_route' => 'api_doc', '_controller' => 'api_platform.action.documentation', '_format' => '', '_api_respond' => 'true'], ['_format'], null, null, false, true, null]],
-        213 => [[['_route' => 'api_jsonld_context', '_controller' => 'api_platform.jsonld.action.context', '_format' => 'jsonld', '_api_respond' => 'true'], ['shortName', '_format'], null, null, false, true, null]],
-        260 => [[['_route' => '_api_/categoriess/{id}{._format}_get', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
-        286 => [
-            [['_route' => '_api_/categoriess{._format}_get_collection', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
-            [['_route' => '_api_/categoriess{._format}_post', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
+        46 => [[['_route' => 'api_genid', '_controller' => 'api_platform.action.not_exposed', '_api_respond' => 'true'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        65 => [[['_route' => 'api_errors', '_controller' => 'api_platform.action.error_page'], ['status'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        98 => [[['_route' => 'api_validation_errors', '_controller' => 'api_platform.action.not_exposed'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        134 => [[['_route' => 'api_entrypoint', '_controller' => 'api_platform.action.entrypoint', '_format' => '', '_api_respond' => 'true', 'index' => 'index'], ['index', '_format'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        165 => [[['_route' => 'api_doc', '_controller' => 'api_platform.action.documentation', '_format' => '', '_api_respond' => 'true'], ['_format'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        207 => [[['_route' => 'api_jsonld_context', '_controller' => 'api_platform.jsonld.action.context', '_format' => 'jsonld', '_api_respond' => 'true'], ['shortName', '_format'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        254 => [[['_route' => '_api_/categoriess/{id}{._format}_get', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
+        280 => [
+            [['_route' => '_api_/categoriess{._format}_get_collection', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
+            [['_route' => '_api_/categoriess{._format}_post', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
         ],
-        324 => [
-            [['_route' => '_api_/categoriess/{id}{._format}_put', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
-            [['_route' => '_api_/categoriess/{id}{._format}_patch', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
-            [['_route' => '_api_/categoriess/{id}{._format}_delete', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],
+        318 => [
+            [['_route' => '_api_/categoriess/{id}{._format}_put', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
+            [['_route' => '_api_/categoriess/{id}{._format}_patch', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
+            [['_route' => '_api_/categoriess/{id}{._format}_delete', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Categories', '_api_operation_name' => '_api_/categoriess/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],
         ],
-        376 => [[['_route' => '_api_/fournisseurs/{id}{._format}_get', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
-        402 => [
-            [['_route' => '_api_/fournisseurs{._format}_get_collection', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
-            [['_route' => '_api_/fournisseurs{._format}_post', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
+        358 => [
+            [['_route' => '_api_validation_errors_problem', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'ApiPlatform\\Validator\\Exception\\ValidationException', '_api_operation_name' => '_api_validation_errors_problem'], ['id'], ['GET' => 0], null, false, true, null],
+            [['_route' => '_api_validation_errors_hydra', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'ApiPlatform\\Validator\\Exception\\ValidationException', '_api_operation_name' => '_api_validation_errors_hydra'], ['id'], ['GET' => 0], null, false, true, null],
+            [['_route' => '_api_validation_errors_jsonapi', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'ApiPlatform\\Validator\\Exception\\ValidationException', '_api_operation_name' => '_api_validation_errors_jsonapi'], ['id'], ['GET' => 0], null, false, true, null],
         ],
-        440 => [
-            [['_route' => '_api_/fournisseurs/{id}{._format}_put', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
-            [['_route' => '_api_/fournisseurs/{id}{._format}_patch', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
-            [['_route' => '_api_/fournisseurs/{id}{._format}_delete', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],
+        408 => [[['_route' => '_api_/fournisseurs/{id}{._format}_get', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
+        434 => [
+            [['_route' => '_api_/fournisseurs{._format}_get_collection', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
+            [['_route' => '_api_/fournisseurs{._format}_post', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
         ],
-        487 => [[['_route' => '_api_/produits/{id}{._format}_get', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
-        513 => [
-            [['_route' => '_api_/produits{._format}_get_collection', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
-            [['_route' => '_api_/produits{._format}_post', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
+        472 => [
+            [['_route' => '_api_/fournisseurs/{id}{._format}_put', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
+            [['_route' => '_api_/fournisseurs/{id}{._format}_patch', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
+            [['_route' => '_api_/fournisseurs/{id}{._format}_delete', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Fournisseur', '_api_operation_name' => '_api_/fournisseurs/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],
         ],
-        551 => [
-            [['_route' => '_api_/produits/{id}{._format}_put', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
-            [['_route' => '_api_/produits/{id}{._format}_patch', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
-            [['_route' => '_api_/produits/{id}{._format}_delete', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],
+        519 => [[['_route' => '_api_/produits/{id}{._format}_get', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
+        545 => [
+            [['_route' => '_api_/produits{._format}_get_collection', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
+            [['_route' => '_api_/produits{._format}_post', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
         ],
-        602 => [[['_route' => '_api_/utilisateurs/{id}{._format}_get', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
-        628 => [
-            [['_route' => '_api_/utilisateurs{._format}_get_collection', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
-            [['_route' => '_api_/utilisateurs{._format}_post', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
+        583 => [
+            [['_route' => '_api_/produits/{id}{._format}_put', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
+            [['_route' => '_api_/produits/{id}{._format}_patch', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
+            [['_route' => '_api_/produits/{id}{._format}_delete', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\Produit', '_api_operation_name' => '_api_/produits/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],
         ],
-        666 => [
-            [['_route' => '_api_/utilisateurs/{id}{._format}_put', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
-            [['_route' => '_api_/utilisateurs/{id}{._format}_patch', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
-            [['_route' => '_api_/utilisateurs/{id}{._format}_delete', '_controller' => 'api_platform.symfony.main_controller', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],
+        634 => [[['_route' => '_api_/utilisateurs/{id}{._format}_get', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs/{id}{._format}_get'], ['id', '_format'], ['GET' => 0], null, false, true, null]],
+        660 => [
+            [['_route' => '_api_/utilisateurs{._format}_get_collection', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs{._format}_get_collection'], ['_format'], ['GET' => 0], null, false, true, null],
+            [['_route' => '_api_/utilisateurs{._format}_post', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs{._format}_post'], ['_format'], ['POST' => 0], null, false, true, null],
         ],
-        709 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        729 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
-        775 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
-        789 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
-        809 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
-        822 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        832 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        872 => [[['_route' => 'guit_classiques', '_controller' => 'App\\Controller\\AdminController::showGuitClass'], ['id'], ['GET' => 0], null, false, true, null]],
-        904 => [[['_route' => 'cart_add', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
-        929 => [[['_route' => 'cart_decrease', '_controller' => 'App\\Controller\\CartController::decreaseQuantity'], ['id'], null, null, false, true, null]],
-        949 => [[['_route' => 'cart_remove', '_controller' => 'App\\Controller\\CartController::remove'], ['id'], null, null, false, true, null]],
-        975 => [[['_route' => 'app_categories_show', '_controller' => 'App\\Controller\\CategoriesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        994 => [[['_route' => 'categories_show_by_slug', '_controller' => 'App\\Controller\\CategoriesController::showBySlug'], ['slug'], null, null, false, true, null]],
-        1010 => [[['_route' => 'app_categories_edit', '_controller' => 'App\\Controller\\CategoriesController::editCat'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        1025 => [[['_route' => 'app_categories_delete', '_controller' => 'App\\Controller\\CategoriesController::deleteCat'], ['id'], ['POST' => 0], null, false, false, null]],
-        1063 => [[['_route' => 'paiement', '_controller' => 'App\\Controller\\PaiementController::paiement'], ['id'], null, null, false, false, null]],
-        1091 => [[['_route' => 'app_produit_show', '_controller' => 'App\\Controller\\ProduitController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        1116 => [[['_route' => 'app_produit_edit', '_controller' => 'App\\Controller\\ProduitController::editProd'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        1131 => [
+        698 => [
+            [['_route' => '_api_/utilisateurs/{id}{._format}_put', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs/{id}{._format}_put'], ['id', '_format'], ['PUT' => 0], null, false, true, null],
+            [['_route' => '_api_/utilisateurs/{id}{._format}_patch', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs/{id}{._format}_patch'], ['id', '_format'], ['PATCH' => 0], null, false, true, null],
+            [['_route' => '_api_/utilisateurs/{id}{._format}_delete', '_controller' => 'api_platform.action.placeholder', '_format' => null, '_stateless' => true, '_api_resource_class' => 'App\\Entity\\User\\Utilisateur', '_api_operation_name' => '_api_/utilisateurs/{id}{._format}_delete'], ['id', '_format'], ['DELETE' => 0], null, false, true, null],
+        ],
+        741 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        761 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
+        803 => [[['_route' => '_profiler_font', '_controller' => 'web_profiler.controller.profiler::fontAction'], ['fontName'], null, null, false, false, null]],
+        840 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
+        854 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
+        874 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
+        887 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
+        897 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        938 => [[['_route' => 'guit_classiques', '_controller' => 'App\\Controller\\AdminController::showGuitClass'], ['id'], ['GET' => 0], null, false, true, null]],
+        970 => [[['_route' => 'cart_add', '_controller' => 'App\\Controller\\CartController::add'], ['id'], null, null, false, true, null]],
+        995 => [[['_route' => 'cart_decrease', '_controller' => 'App\\Controller\\CartController::decreaseQuantity'], ['id'], null, null, false, true, null]],
+        1015 => [[['_route' => 'cart_remove', '_controller' => 'App\\Controller\\CartController::remove'], ['id'], null, null, false, true, null]],
+        1042 => [[['_route' => 'app_categories_show', '_controller' => 'App\\Controller\\CategoriesController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        1062 => [[['_route' => 'categories_show_by_slug', '_controller' => 'App\\Controller\\CategoriesController::showBySlug'], ['slug'], null, null, false, true, null]],
+        1079 => [[['_route' => 'app_categories_edit', '_controller' => 'App\\Controller\\CategoriesController::editCat'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        1094 => [[['_route' => 'app_categories_delete', '_controller' => 'App\\Controller\\CategoriesController::deleteCat'], ['id'], ['POST' => 0], null, false, false, null]],
+        1132 => [[['_route' => 'paiement', '_controller' => 'App\\Controller\\PaiementController::paiement'], ['id'], null, null, false, false, null]],
+        1160 => [[['_route' => 'app_produit_show', '_controller' => 'App\\Controller\\ProduitController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        1185 => [[['_route' => 'app_produit_edit', '_controller' => 'App\\Controller\\ProduitController::editProd'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        1200 => [
             [['_route' => 'app_produit_delete', '_controller' => 'App\\Controller\\ProduitController::deleteProd'], ['id'], ['POST' => 0], null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],
